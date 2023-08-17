@@ -65,7 +65,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if (!isDrawing) {
       return;
     }
-    final p = Offset(localPosition.dx, localPosition.dy);
+    final p = Offset(localPosition.dx, localPosition.dy + offsetY);
     if (isOldDrawing) {
       queuePoints.add(p);
     } else {
@@ -79,6 +79,8 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
+  static const offsetY = -50;
+
   // 描画開始イベント
   Future<void> newGestureDetector(
     Offset globalPosition,
@@ -86,8 +88,9 @@ class _MyHomePageState extends State<MyHomePage> {
   ) async {
     const margin = 20;
     // 画面上下端からのスタートは無視する
-    if (globalPosition.dy < margin ||
-        globalPosition.dy > (MediaQuery.of(context).size.height - margin)) {
+    if (globalPosition.dy + offsetY < margin ||
+        globalPosition.dy + offsetY >
+            (MediaQuery.of(context).size.height - margin)) {
       isDrawing = false;
       return;
     }
@@ -99,7 +102,7 @@ class _MyHomePageState extends State<MyHomePage> {
       await setOldImage();
       nowPoints.clear();
     }
-    final p = Offset(localPosition.dx, localPosition.dy);
+    final p = Offset(localPosition.dx, localPosition.dy + offsetY);
     setState(() {
       undoLines.clear();
       queuePoints.add(p);
