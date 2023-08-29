@@ -2,8 +2,8 @@
 
 import 'package:flutter_learning/plugins/logger.dart';
 
-class Class2 {
-  Class2();
+class ClassPP2 {
+  ClassPP2();
   String _name = '';
 
   String get name => _name;
