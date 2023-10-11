@@ -20,3 +20,9 @@ class Unfreezed with _$Unfreezed {
     required String age,
   }) = _Unfreezed;
 }
+
+class Sample {
+  Sample(this.text, this.num);
+  String text;
+  int num;
+}
