@@ -15,6 +15,7 @@ class WarnDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     final messageArea = Expanded(
       child: Container(
+        color: Colors.black,
         padding: const EdgeInsets.all(4),
         alignment: Alignment.center,
         child: Text(
@@ -34,7 +35,7 @@ class WarnDialog extends StatelessWidget {
       height: 40,
       child: TextButton(
         style: TextButton.styleFrom(
-          backgroundColor: Colors.yellowAccent,
+          backgroundColor: Colors.indigo,
           shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.zero),
           ),
@@ -43,6 +44,7 @@ class WarnDialog extends StatelessWidget {
         child: const Text(
           'OK',
           style: TextStyle(
+            color: Colors.white,
             fontSize: 20,
             fontFamily: 'NotoSansJP',
           ),
@@ -59,7 +61,7 @@ class WarnDialog extends StatelessWidget {
           decoration: BoxDecoration(
             color: Colors.white,
             border: Border.all(
-              color: Colors.yellowAccent,
+              color: Colors.blueGrey,
               width: 4,
             ),
             borderRadius: BorderRadius.circular(8),

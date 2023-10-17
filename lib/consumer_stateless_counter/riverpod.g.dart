@@ -20,7 +20,7 @@ final counterProvider = StreamNotifierProvider<Counter, int>.internal(
 );
 
 typedef _$Counter = StreamNotifier<int>;
-String _$counterManualHash() => r'f3c8a988d55527c0dc14578ab5d9f9fbec0a14f2';
+String _$counterManualHash() => r'7a7ef67af414c1553a04a4ab9bac104574cefe9f';
 
 /// See also [CounterManual].
 @ProviderFor(CounterManual)
@@ -35,4 +35,5 @@ final counterManualProvider = NotifierProvider<CounterManual, int>.internal(
 );
 
 typedef _$CounterManual = Notifier<int>;
-// ignore_for_file: unnecessary_raw_strings, subtype_of_sealed_class, invalid_use_of_internal_member, do_not_use_environment, prefer_const_constructors, public_member_api_docs, avoid_private_typedef_functions
+// ignore_for_file: type=lint
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member

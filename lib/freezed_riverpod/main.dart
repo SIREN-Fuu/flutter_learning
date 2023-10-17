@@ -38,46 +38,45 @@ class Home extends ConsumerWidget {
             const Text(
               'You have pushed the button this many times:',
             ),
-            // Text(
-            //   'Basic: ${ref.watch(counterProvider)}',
-            //   style: Theme.of(context).textTheme.headlineMedium,
-            // ),
-            // Text(
-            //   'Freezed: ${ref.watch(freezedCounterProvider).age}',
-            //   style: Theme.of(context).textTheme.headlineMedium,
-            // ),
-            //
-            // Text(
-            //   'Freezed List: ${ref.watch(freezedCounterProvider).lengthCounter.length.toString()}',
-            //   style: Theme.of(context).textTheme.headlineMedium,
-            // ),
-            //
-            // Text(
-            //   'Unfreezed: ${ref.watch(unfreezedCounterProvider).age}',
-            //   style: Theme.of(context).textTheme.headlineMedium,
-            // ),
+            Text(
+              'Basic: ${ref.watch(counterProvider)}',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            Text(
+              'Freezed: ${ref.watch(freezedCounterProvider).age}',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+
+            Text(
+              'Freezed List: ${ref.watch(freezedCounterProvider).lengthCounter.length.toString()}',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+
+            Text(
+              'Unfreezed: ${ref.watch(unfreezedCounterProvider).age}',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
             Text(
               'Unfreezed: ${ref.watch(unfreezedCounterProvider).normalClass.age}',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            // Text(
-            //   'Unfreezed List: ${ref.watch(unfreezedCounterProvider).lengthCounter.length.toString()}',
-            //   style: Theme.of(context).textTheme.headlineMedium,
-            // ),
+            Text(
+              'Unfreezed List: ${ref.watch(unfreezedCounterProvider).lengthCounter.length.toString()}',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
             // Text(
             //   'UnfreezedEx List: ${ref.watch(unfreezedCounterExProvider).lengthCounter.length.toString()}',
             //   style: Theme.of(context).textTheme.headlineMedium,
             // ),
-            // Text(
-            //   'Normal List: ${ref.watch(normalListCounterProvider).length.toString()}',
-            //   style: Theme.of(context).textTheme.headlineMedium,
-            // ),
-            //
-            // Text(
-            //   'Normal List Ex: ${ref.watch(normalListCounterExProvider)[0]}',
-            //   style: Theme.of(context).textTheme.headlineMedium,
-            // ),
-            //
+            Text(
+              'Normal List: ${ref.watch(normalListCounterProvider).length.toString()}',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+
+            Text(
+              'Normal List Ex: ${ref.watch(normalListCounterExProvider)[0]}',
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
           ],
         ),
       ),

@@ -6,7 +6,7 @@ part of 'riverpod.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$counterHash() => r'4de77757b294e15da063f721782ef89d3bd521a8';
+String _$counterHash() => r'e8c012fa7a233f58fe861b0bc4a6face5ab01910';
 
 /// See also [Counter].
 @ProviderFor(Counter)
@@ -20,4 +20,5 @@ final counterProvider = StreamNotifierProvider<Counter, int>.internal(
 );
 
 typedef _$Counter = StreamNotifier<int>;
-// ignore_for_file: unnecessary_raw_strings, subtype_of_sealed_class, invalid_use_of_internal_member, do_not_use_environment, prefer_const_constructors, public_member_api_docs, avoid_private_typedef_functions
+// ignore_for_file: type=lint
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member

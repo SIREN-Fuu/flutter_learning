@@ -20,37 +20,37 @@ final counterProvider = AutoDisposeNotifierProvider<Counter, int>.internal(
 );
 
 typedef _$Counter = AutoDisposeNotifier<int>;
-String _$freezedCounterHash() => r'db06c1fc3bca82fb42227a3421758a4d467da428';
+String _$simpleNotifierHash() => r'a5a1321e512cfd41f2b7984c1d5c2c479562bbbe';
 
-/// See also [FreezedCounter].
-@ProviderFor(FreezedCounter)
-final freezedCounterProvider =
-    AutoDisposeNotifierProvider<FreezedCounter, Freezed>.internal(
-  FreezedCounter.new,
-  name: r'freezedCounterProvider',
+/// See also [SimpleNotifier].
+@ProviderFor(SimpleNotifier)
+final simpleNotifierProvider =
+    AutoDisposeNotifierProvider<SimpleNotifier, AccountInfo>.internal(
+  SimpleNotifier.new,
+  name: r'simpleNotifierProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$freezedCounterHash,
+      : _$simpleNotifierHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$FreezedCounter = AutoDisposeNotifier<Freezed>;
-String _$unfreezedCounterHash() => r'38634c7d515f2b4a54ca58e08e32550f65b930ac';
+typedef _$SimpleNotifier = AutoDisposeNotifier<AccountInfo>;
+String _$futureOrNotifierHash() => r'24c430d87eff2337e36c16aae5a5611c20411c4a';
 
-/// See also [UnfreezedCounter].
-@ProviderFor(UnfreezedCounter)
-final unfreezedCounterProvider =
-    AutoDisposeNotifierProvider<UnfreezedCounter, Unfreezed>.internal(
-  UnfreezedCounter.new,
-  name: r'unfreezedCounterProvider',
+/// See also [FutureOrNotifier].
+@ProviderFor(FutureOrNotifier)
+final futureOrNotifierProvider =
+    AutoDisposeAsyncNotifierProvider<FutureOrNotifier, AccountInfo>.internal(
+  FutureOrNotifier.new,
+  name: r'futureOrNotifierProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$unfreezedCounterHash,
+      : _$futureOrNotifierHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$UnfreezedCounter = AutoDisposeNotifier<Unfreezed>;
+typedef _$FutureOrNotifier = AutoDisposeAsyncNotifier<AccountInfo>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member

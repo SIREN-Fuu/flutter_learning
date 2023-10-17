@@ -41,6 +41,7 @@ class App extends StatelessWidget {
       routeInformationProvider: router.routeInformationProvider,
       routeInformationParser: router.routeInformationParser,
       routerDelegate: router.routerDelegate,
+      theme: ThemeData(fontFamily: 'NotoSans', brightness: Brightness.dark),
     );
   }
 }
