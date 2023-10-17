@@ -25,7 +25,7 @@ class SimpleNotifier extends _$SimpleNotifier {
   }
 
   void updateState({bool loadingState = true}) {
-    state = state.copyWith(age: state.age + 1);
+    state = state.copyWith(counter: state.counter + 1);
   }
 }
 

@@ -33,8 +33,8 @@ class Home extends ConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     // addPostFrameCallbackは必須
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      ref.watch(simpleAccountInfoProvider).execute();
-      ref.watch(futureOrAccountInfoProvider).execute();
+      ref.read(simpleAccountInfoProvider).execute();
+      ref.read(futureOrAccountInfoProvider).execute();
     });
 
     final simple = ref.watch(simpleNotifierProvider);
@@ -57,11 +57,11 @@ class Home extends ConsumerWidget {
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             Text(
-              'SimpleNotifierProvider: ${simple.age}',
+              'SimpleNotifierProvider: ${simple.counter}',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             Text(
-              'FutureOrNotifierProvider: ${futureOr.requireValue.age}',
+              'FutureOrNotifierProvider: ${futureOr.requireValue.counter}',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],

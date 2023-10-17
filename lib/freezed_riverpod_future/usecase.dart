@@ -77,6 +77,7 @@ class FutureOrUsecase {
 
   late FutureOrNotifier _getAccountInfoNotifier;
   bool _isExecuting = false;
+  final apiSimulator = ApiSimulator();
 
   void info({
     required FutureOrNotifier getAccountInfoNotifier,
@@ -95,14 +96,14 @@ class FutureOrUsecase {
       _isExecuting = true;
       // タイマーの前に1度取得
       await _getAccountInfoNotifier.updateState(
-        ApiSimulator().accountFuture(),
+        apiSimulator.accountFuture(),
         loadingState: loadingState,
       );
 
       final timer = Timer.periodic(const Duration(seconds: 6), (t) async {
         //タイマー間隔で取得
         await _getAccountInfoNotifier.updateState(
-          ApiSimulator().accountFuture(),
+          apiSimulator.accountFuture(),
           loadingState: loadingState,
         );
       });

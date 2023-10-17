@@ -10,7 +10,7 @@ class ApiSimulator {
       // 5秒待機
       return AccountInfo(
         name: 'Nina',
-        age: globalCounter++,
+        age: 20,
         lengthCounter: ['a', 'b', 'c'],
         counter: globalCounter++,
       );
