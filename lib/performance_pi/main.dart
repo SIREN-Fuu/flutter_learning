@@ -21,10 +21,10 @@ class PiCalculationPage extends StatefulWidget {
   const PiCalculationPage({super.key});
 
   @override
-  _PiCalculationPageState createState() => _PiCalculationPageState();
+  PiCalculationPageState createState() => PiCalculationPageState();
 }
 
-class _PiCalculationPageState extends State<PiCalculationPage> {
+class PiCalculationPageState extends State<PiCalculationPage> {
   double? _piResult;
   String _executionTime = 'Execution time will be displayed here.';
 
