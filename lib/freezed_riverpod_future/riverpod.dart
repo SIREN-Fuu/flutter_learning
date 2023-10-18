@@ -48,10 +48,16 @@ class FutureOrNotifier extends _$FutureOrNotifier {
   }) async {
     state = const AsyncValue.loading();
     state = await AsyncValue.guard(() async {
-      return futureMethod.then((value) {
-        final account = value;
-        return account;
-      });
+      return futureMethod;
     });
+
+    // state = const AsyncValue.data(
+    //   AccountInfo(
+    //     name: 'riverpod',
+    //     age: 100,
+    //     lengthCounter: [],
+    //     counter: 999,
+    //   ),
+    // );
   }
 }
