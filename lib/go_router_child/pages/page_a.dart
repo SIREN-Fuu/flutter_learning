@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/go_router_basic/dialogs/warn.dart';
+import 'package:flutter_learning/go_router_child/dialogs/warn.dart';
 import 'package:go_router/go_router.dart';
 
 //
