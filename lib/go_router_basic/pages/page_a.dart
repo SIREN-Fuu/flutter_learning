@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/go_router/dialogs/warn.dart';
+import 'package:flutter_learning/go_router_basic/dialogs/warn.dart';
 import 'package:go_router/go_router.dart';
 
 //
@@ -20,14 +20,14 @@ class PageA extends StatelessWidget {
     final pushButton = ElevatedButton(
       onPressed: () => context.push('/b'),
       style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-      child: const Text('Push 進む >'),
+      child: const Text('Push B-Page >'),
     );
 
     // Goボタン
     final goButton = ElevatedButton(
-      onPressed: () => context.go('/c'),
+      onPressed: () => context.go('/b'),
       style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
-      child: const Text('Go C-Page >'),
+      child: const Text('Go B-Page >'),
     );
 
     // Warningボタン
@@ -46,8 +46,8 @@ class PageA extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            pushButton,
             warningButton,
+            pushButton,
             goButton,
           ],
         ),

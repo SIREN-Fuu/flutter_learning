@@ -13,6 +13,12 @@ class PageC extends StatelessWidget {
     context.pop();
   }
 
+  // 進むボタンを押したとき
+  void go(BuildContext context) {
+    // 画面 Aページへ進む
+    context.go('/');
+  }
+
   @override
   Widget build(BuildContext context) {
     // 画面の上に表示するバー
@@ -25,8 +31,16 @@ class PageC extends StatelessWidget {
     final backButton = ElevatedButton(
       onPressed: () => pop(context),
       // MEMO: primary は古くなったので backgroundColor へ変更しました
-      style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-      child: const Text('pop < 戻る'),
+      style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+      child: const Text('<= pop 戻る'),
+    );
+
+    // 戻るボタン
+    final goButton = ElevatedButton(
+      onPressed: () => go(context),
+      // MEMO: primary は古くなったので backgroundColor へ変更しました
+      style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+      child: const Text('Go-A-Page >'),
     );
 
     // 画面全体
@@ -37,6 +51,7 @@ class PageC extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             backButton,
+            goButton,
           ],
         ),
       ),
