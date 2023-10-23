@@ -25,6 +25,7 @@ class PageC extends StatelessWidget {
     final appBar = AppBar(
       backgroundColor: Colors.blue,
       title: const Text('画面C'),
+      automaticallyImplyLeading: false,
     );
 
     // 戻るボタン

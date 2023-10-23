@@ -30,6 +30,13 @@ class PageA extends StatelessWidget {
       child: const Text('Go B-Page >'),
     );
 
+    // Goボタン
+    final gogoButton = ElevatedButton(
+      onPressed: () => context.go('/bc'),
+      style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+      child: const Text('Go BC-Page >'),
+    );
+
     // Warningボタン
     final warningButton = ElevatedButton(
       onPressed: () => showWarnDialog(
@@ -43,12 +50,13 @@ class PageA extends StatelessWidget {
     return Scaffold(
       appBar: appBar,
       body: Center(
-        child: Row(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             warningButton,
             pushButton,
             goButton,
+            gogoButton,
           ],
         ),
       ),
