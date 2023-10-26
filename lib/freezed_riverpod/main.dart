@@ -48,7 +48,7 @@ class Home extends ConsumerWidget {
             ),
 
             Text(
-              'Freezed List: ${ref.watch(freezedCounterProvider).lengthCounter.length.toString()}',
+              'Freezed List: ${ref.watch(freezedCounterProvider).lengthCounter.length}',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
 
@@ -61,7 +61,7 @@ class Home extends ConsumerWidget {
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             Text(
-              'Unfreezed List: ${ref.watch(unfreezedCounterProvider).lengthCounter.length.toString()}',
+              'Unfreezed List: ${ref.watch(unfreezedCounterProvider).lengthCounter.length}',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             // Text(
@@ -69,7 +69,7 @@ class Home extends ConsumerWidget {
             //   style: Theme.of(context).textTheme.headlineMedium,
             // ),
             Text(
-              'Normal List: ${ref.watch(normalListCounterProvider).length.toString()}',
+              'Normal List: ${ref.watch(normalListCounterProvider).length}',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
 

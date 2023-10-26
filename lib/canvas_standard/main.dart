@@ -72,7 +72,6 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
               // height: 400,
               child: MyWidget(
                 counterManual: _counterManual,
-                counterAuto: counterAuto,
               ),
             ),
             Text(
@@ -98,12 +97,10 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
 class MyWidget extends ConsumerWidget {
   const MyWidget({
     required this.counterManual,
-    required this.counterAuto,
     super.key,
   });
 
   final int counterManual;
-  final int counterAuto;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -142,7 +139,6 @@ class MyWidget extends ConsumerWidget {
               size: size,
               painter: MyPainter(
                 counterManual,
-                counterAuto,
                 size,
               ),
             ),
@@ -154,9 +150,8 @@ class MyWidget extends ConsumerWidget {
 }
 
 class MyPainter extends CustomPainter {
-  MyPainter(this.counterManual, this.counterAuto, this.mySize);
+  MyPainter(this.counterManual, this.mySize);
   int counterManual;
-  int counterAuto;
   Size mySize;
   int paintCount = 0;
 

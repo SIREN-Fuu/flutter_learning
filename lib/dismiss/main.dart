@@ -64,7 +64,6 @@ class MyAppState extends State<MyApp> {
                   case DismissDirection.down:
                     assert(false);
                   case DismissDirection.none:
-                  // TODO: Handle this case.
                 }
                 return false;
               },

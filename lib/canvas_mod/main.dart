@@ -76,9 +76,9 @@ class PainterParams {
   Offset offSet;
   int counter;
 
-  bool shouldRepaint(PainterParams other) {
-    return true;
-  }
+  // bool shouldRepaint(PainterParams other) {
+  //   return true;
+  // }
 }
 
 class TestPainter extends CustomPainter {

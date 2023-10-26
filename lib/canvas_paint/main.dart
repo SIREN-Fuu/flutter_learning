@@ -34,15 +34,13 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+  const MyHomePage({super.key});
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -357,7 +355,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         moveGestureDetector(details.localPosition);
                       },
                       child: CustomPaint(
-                        painter: PaintCanvas(lines, nowPoints, nowColor, image),
+                        painter: PaintCanvas(nowPoints, nowColor, image),
                       ),
                     ),
                   ),
@@ -441,9 +439,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
 // 実際に描画するキャンバス
 class PaintCanvas extends CustomPainter {
-  PaintCanvas(this.lines, this.nowPoints, this.nowColor, this.image);
+  PaintCanvas(this.nowPoints, this.nowColor, this.image);
 
-  final List<LinePoints> lines;
   final List<Offset> nowPoints;
   final Color nowColor;
   final ui.Image? image;
