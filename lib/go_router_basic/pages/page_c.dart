@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/plugins/logger.dart';
 import 'package:go_router/go_router.dart';
 
 //
 // 画面 C
 //
-class PageC extends StatelessWidget {
-  const PageC({super.key});
+class PageGbC extends StatelessWidget {
+  const PageGbC({super.key});
 
   // 戻るボタンを押したとき
   void pop(BuildContext context) {
@@ -14,32 +15,44 @@ class PageC extends StatelessWidget {
   }
 
   // 進むボタンを押したとき
-  void go(BuildContext context) {
+  void goA(BuildContext context) {
     // 画面 Aページへ進む
     context.go('/');
   }
 
+  // 進むボタンを押したとき
+  void goD(BuildContext context) {
+    // 画面 Aページへ進む
+    context.go('/d');
+  }
+
   @override
   Widget build(BuildContext context) {
+    logger.d('PageC: build()');
     // 画面の上に表示するバー
     final appBar = AppBar(
       backgroundColor: Colors.blue,
       title: const Text('画面C'),
-      automaticallyImplyLeading: false,
+      //automaticallyImplyLeading: false,
     );
 
     // 戻るボタン
     final backButton = ElevatedButton(
       onPressed: () => pop(context),
-      // MEMO: primary は古くなったので backgroundColor へ変更しました
       style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
       child: const Text('<= pop 戻る'),
     );
 
     // 戻るボタン
+    final goDButton = ElevatedButton(
+      onPressed: () => goD(context),
+      style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
+      child: const Text('Go-D-Page >'),
+    );
+
+    // 戻るボタン
     final goButton = ElevatedButton(
-      onPressed: () => go(context),
-      // MEMO: primary は古くなったので backgroundColor へ変更しました
+      onPressed: () => goA(context),
       style: ElevatedButton.styleFrom(backgroundColor: Colors.blue),
       child: const Text('Go-A-Page >'),
     );
@@ -52,6 +65,7 @@ class PageC extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             backButton,
+            goDButton,
             goButton,
           ],
         ),

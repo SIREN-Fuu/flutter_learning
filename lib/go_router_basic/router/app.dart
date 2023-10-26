@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_learning/go_router_basic/pages/page_a.dart';
 import 'package:flutter_learning/go_router_basic/pages/page_b.dart';
 import 'package:flutter_learning/go_router_basic/pages/page_c.dart';
+import 'package:flutter_learning/go_router_child/pages/page_d.dart';
 import 'package:go_router/go_router.dart';
 
 // アプリ全体
@@ -16,7 +17,7 @@ class App extends StatelessWidget {
       GoRoute(
         path: '/',
         name: 'a',
-        builder: (context, state) => const PageA(),
+        builder: (context, state) => const PageGbA(),
         // onExit: (context) {
         //   return false;
         // },
@@ -24,18 +25,23 @@ class App extends StatelessWidget {
       GoRoute(
         path: '/b',
         name: 'b',
-        builder: (context, state) => const PageB(),
+        builder: (context, state) => const PageGbB(),
       ),
       GoRoute(
         path: '/c',
         name: 'c',
-        builder: (context, state) => const PageC(),
+        builder: (context, state) => const PageGbC(),
+      ),
+      GoRoute(
+        path: '/d',
+        name: 'd',
+        builder: (context, state) => const PageGcD(),
       ),
     ],
 
     errorPageBuilder: (context, state) => MaterialPage(
       key: state.pageKey,
-      child: const PageA(),
+      child: const PageGbA(),
     ),
   );
 

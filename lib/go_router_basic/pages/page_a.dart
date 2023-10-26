@@ -1,15 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_learning/go_router_basic/dialogs/warn.dart';
+import 'package:flutter_learning/plugins/logger.dart';
 import 'package:go_router/go_router.dart';
 
 //
 // 画面 A
 //
-class PageA extends StatelessWidget {
-  const PageA({super.key});
+class PageGbA extends StatelessWidget {
+  const PageGbA({super.key});
 
   @override
   Widget build(BuildContext context) {
+    logger.d('PageA: build()');
     // 画面の上に表示するバー
     final appBar = AppBar(
       backgroundColor: Colors.red,

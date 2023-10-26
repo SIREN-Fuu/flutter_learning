@@ -1,48 +1,14 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/go_router_child/pages/page_a.dart';
-import 'package:flutter_learning/go_router_child/pages/page_b.dart';
-import 'package:flutter_learning/go_router_child/pages/page_c.dart';
-import 'package:go_router/go_router.dart';
+import 'package:flutter_learning/go_router_child/router/go_router.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 // アプリ全体
-class App extends StatelessWidget {
-  App({super.key});
-
-  final router = GoRouter(
-    // パス (アプリが起動したとき)
-    initialLocation: '/',
-    // パスと画面の組み合わせ
-    routes: [
-      GoRoute(
-        path: '/',
-        name: 'a',
-        builder: (context, state) => const PageA(),
-        routes: [
-          GoRoute(
-            path: 'b',
-            name: 'b',
-            builder: (context, state) => const PageB(),
-          ),
-          GoRoute(
-            path: 'c',
-            name: 'c',
-            builder: (context, state) => const PageC(),
-          ),
-        ],
-        onExit: (context) {
-          return false;
-        },
-      ),
-    ],
-
-    errorPageBuilder: (context, state) => MaterialPage(
-      key: state.pageKey,
-      child: const PageA(),
-    ),
-  );
+class App extends ConsumerWidget {
+  const App({super.key});
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final router = ref.watch(goRouterProvider);
     return MaterialApp.router(
       routeInformationProvider: router.routeInformationProvider,
       routeInformationParser: router.routeInformationParser,

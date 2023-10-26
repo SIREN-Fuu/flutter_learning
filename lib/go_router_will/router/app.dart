@@ -16,7 +16,7 @@ class App extends StatelessWidget {
       GoRoute(
         path: '/a',
         name: 'a',
-        builder: (context, state) => const PageA(),
+        builder: (context, state) => const PageGbA(),
         onExit: (context) {
           return true;
         },
@@ -24,17 +24,17 @@ class App extends StatelessWidget {
       GoRoute(
         path: '/b',
         name: 'b',
-        builder: (context, state) => const PageB(),
+        builder: (context, state) => const PageGbB(),
       ),
       GoRoute(
         path: '/c',
         name: 'c',
-        builder: (context, state) => const PageC(),
+        builder: (context, state) => const PageGbC(),
       ),
     ],
     errorPageBuilder: (context, state) => MaterialPage(
       key: state.pageKey,
-      child: const PageA(),
+      child: const PageGbA(),
     ),
   );
 
