@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/hooks/page_1.dart';
-import 'package:flutter_learning/hooks/page_2.dart';
-import 'package:flutter_learning/hooks/page_3.dart';
+import 'package:flutter_learning/fl_chart/page_1.dart';
+import 'package:flutter_learning/fl_chart/page_2.dart';
+import 'package:flutter_learning/fl_chart/page_3.dart';
 import 'package:go_router/go_router.dart';
 
 void main() => runApp(const MyApp());
@@ -11,11 +11,7 @@ final _router = GoRouter(
   debugLogDiagnostics: false,
   routes: [
     GoRoute(path: '/home', builder: (context, state) => const HomePage()),
-    GoRoute(
-      path: '/1',
-      builder: (context, state) =>
-          const PageH1(title: 'Flutter Demo Home Page'),
-    ),
+    GoRoute(path: '/1', builder: (context, state) => const PageH1()),
     GoRoute(path: '/2', builder: (context, state) => const PageH2()),
     GoRoute(path: '/3', builder: (context, state) => const PageH3()),
   ],
@@ -52,7 +48,7 @@ class HomePage extends StatelessWidget {
           children: [
             ElevatedButton(
               onPressed: () {
-                context.go('/1');
+                context.push('/1');
               },
               child: const Text('useState()'),
             ),
