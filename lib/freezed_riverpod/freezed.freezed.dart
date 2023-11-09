@@ -67,20 +67,21 @@ class _$FreezedCopyWithImpl<$Res, $Val extends Freezed>
 }
 
 /// @nodoc
-abstract class _$$_FreezedCopyWith<$Res> implements $FreezedCopyWith<$Res> {
-  factory _$$_FreezedCopyWith(
-          _$_Freezed value, $Res Function(_$_Freezed) then) =
-      __$$_FreezedCopyWithImpl<$Res>;
+abstract class _$$FreezedImplCopyWith<$Res> implements $FreezedCopyWith<$Res> {
+  factory _$$FreezedImplCopyWith(
+          _$FreezedImpl value, $Res Function(_$FreezedImpl) then) =
+      __$$FreezedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, int age, List<String> lengthCounter});
 }
 
 /// @nodoc
-class __$$_FreezedCopyWithImpl<$Res>
-    extends _$FreezedCopyWithImpl<$Res, _$_Freezed>
-    implements _$$_FreezedCopyWith<$Res> {
-  __$$_FreezedCopyWithImpl(_$_Freezed _value, $Res Function(_$_Freezed) _then)
+class __$$FreezedImplCopyWithImpl<$Res>
+    extends _$FreezedCopyWithImpl<$Res, _$FreezedImpl>
+    implements _$$FreezedImplCopyWith<$Res> {
+  __$$FreezedImplCopyWithImpl(
+      _$FreezedImpl _value, $Res Function(_$FreezedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -90,7 +91,7 @@ class __$$_FreezedCopyWithImpl<$Res>
     Object? age = null,
     Object? lengthCounter = null,
   }) {
-    return _then(_$_Freezed(
+    return _then(_$FreezedImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -109,8 +110,8 @@ class __$$_FreezedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Freezed extends _Freezed {
-  const _$_Freezed(
+class _$FreezedImpl extends _Freezed {
+  const _$FreezedImpl(
       {required this.name,
       required this.age,
       required final List<String> lengthCounter})
@@ -138,7 +139,7 @@ class _$_Freezed extends _Freezed {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_Freezed &&
+            other is _$FreezedImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.age, age) || other.age == age) &&
             const DeepCollectionEquality()
@@ -152,15 +153,15 @@ class _$_Freezed extends _Freezed {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_FreezedCopyWith<_$_Freezed> get copyWith =>
-      __$$_FreezedCopyWithImpl<_$_Freezed>(this, _$identity);
+  _$$FreezedImplCopyWith<_$FreezedImpl> get copyWith =>
+      __$$FreezedImplCopyWithImpl<_$FreezedImpl>(this, _$identity);
 }
 
 abstract class _Freezed extends Freezed {
   const factory _Freezed(
       {required final String name,
       required final int age,
-      required final List<String> lengthCounter}) = _$_Freezed;
+      required final List<String> lengthCounter}) = _$FreezedImpl;
   const _Freezed._() : super._();
 
   @override
@@ -171,7 +172,7 @@ abstract class _Freezed extends Freezed {
   List<String> get lengthCounter;
   @override
   @JsonKey(ignore: true)
-  _$$_FreezedCopyWith<_$_Freezed> get copyWith =>
+  _$$FreezedImplCopyWith<_$FreezedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
@@ -243,10 +244,11 @@ class _$UnfreezedCopyWithImpl<$Res, $Val extends Unfreezed>
 }
 
 /// @nodoc
-abstract class _$$_UnfreezedCopyWith<$Res> implements $UnfreezedCopyWith<$Res> {
-  factory _$$_UnfreezedCopyWith(
-          _$_Unfreezed value, $Res Function(_$_Unfreezed) then) =
-      __$$_UnfreezedCopyWithImpl<$Res>;
+abstract class _$$UnfreezedImplCopyWith<$Res>
+    implements $UnfreezedCopyWith<$Res> {
+  factory _$$UnfreezedImplCopyWith(
+          _$UnfreezedImpl value, $Res Function(_$UnfreezedImpl) then) =
+      __$$UnfreezedImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call(
@@ -257,11 +259,11 @@ abstract class _$$_UnfreezedCopyWith<$Res> implements $UnfreezedCopyWith<$Res> {
 }
 
 /// @nodoc
-class __$$_UnfreezedCopyWithImpl<$Res>
-    extends _$UnfreezedCopyWithImpl<$Res, _$_Unfreezed>
-    implements _$$_UnfreezedCopyWith<$Res> {
-  __$$_UnfreezedCopyWithImpl(
-      _$_Unfreezed _value, $Res Function(_$_Unfreezed) _then)
+class __$$UnfreezedImplCopyWithImpl<$Res>
+    extends _$UnfreezedCopyWithImpl<$Res, _$UnfreezedImpl>
+    implements _$$UnfreezedImplCopyWith<$Res> {
+  __$$UnfreezedImplCopyWithImpl(
+      _$UnfreezedImpl _value, $Res Function(_$UnfreezedImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -272,7 +274,7 @@ class __$$_UnfreezedCopyWithImpl<$Res>
     Object? lengthCounter = null,
     Object? normalClass = null,
   }) {
-    return _then(_$_Unfreezed(
+    return _then(_$UnfreezedImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -295,8 +297,8 @@ class __$$_UnfreezedCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_Unfreezed implements _Unfreezed {
-  _$_Unfreezed(
+class _$UnfreezedImpl implements _Unfreezed {
+  _$UnfreezedImpl(
       {required this.name,
       required this.age,
       required this.lengthCounter,
@@ -319,8 +321,8 @@ class _$_Unfreezed implements _Unfreezed {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_UnfreezedCopyWith<_$_Unfreezed> get copyWith =>
-      __$$_UnfreezedCopyWithImpl<_$_Unfreezed>(this, _$identity);
+  _$$UnfreezedImplCopyWith<_$UnfreezedImpl> get copyWith =>
+      __$$UnfreezedImplCopyWithImpl<_$UnfreezedImpl>(this, _$identity);
 }
 
 abstract class _Unfreezed implements Unfreezed {
@@ -328,7 +330,7 @@ abstract class _Unfreezed implements Unfreezed {
       {required String name,
       required int age,
       required List<String> lengthCounter,
-      required NormalClass normalClass}) = _$_Unfreezed;
+      required NormalClass normalClass}) = _$UnfreezedImpl;
 
   @override
   String get name;
@@ -344,6 +346,6 @@ abstract class _Unfreezed implements Unfreezed {
   set normalClass(NormalClass value);
   @override
   @JsonKey(ignore: true)
-  _$$_UnfreezedCopyWith<_$_Unfreezed> get copyWith =>
+  _$$UnfreezedImplCopyWith<_$UnfreezedImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

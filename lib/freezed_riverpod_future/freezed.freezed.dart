@@ -75,22 +75,22 @@ class _$AccountInfoCopyWithImpl<$Res, $Val extends AccountInfo>
 }
 
 /// @nodoc
-abstract class _$$_AccountInfoCopyWith<$Res>
+abstract class _$$AccountInfoImplCopyWith<$Res>
     implements $AccountInfoCopyWith<$Res> {
-  factory _$$_AccountInfoCopyWith(
-          _$_AccountInfo value, $Res Function(_$_AccountInfo) then) =
-      __$$_AccountInfoCopyWithImpl<$Res>;
+  factory _$$AccountInfoImplCopyWith(
+          _$AccountInfoImpl value, $Res Function(_$AccountInfoImpl) then) =
+      __$$AccountInfoImplCopyWithImpl<$Res>;
   @override
   @useResult
   $Res call({String name, int age, List<String> lengthCounter, int counter});
 }
 
 /// @nodoc
-class __$$_AccountInfoCopyWithImpl<$Res>
-    extends _$AccountInfoCopyWithImpl<$Res, _$_AccountInfo>
-    implements _$$_AccountInfoCopyWith<$Res> {
-  __$$_AccountInfoCopyWithImpl(
-      _$_AccountInfo _value, $Res Function(_$_AccountInfo) _then)
+class __$$AccountInfoImplCopyWithImpl<$Res>
+    extends _$AccountInfoCopyWithImpl<$Res, _$AccountInfoImpl>
+    implements _$$AccountInfoImplCopyWith<$Res> {
+  __$$AccountInfoImplCopyWithImpl(
+      _$AccountInfoImpl _value, $Res Function(_$AccountInfoImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -101,7 +101,7 @@ class __$$_AccountInfoCopyWithImpl<$Res>
     Object? lengthCounter = null,
     Object? counter = null,
   }) {
-    return _then(_$_AccountInfo(
+    return _then(_$AccountInfoImpl(
       name: null == name
           ? _value.name
           : name // ignore: cast_nullable_to_non_nullable
@@ -124,8 +124,8 @@ class __$$_AccountInfoCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_AccountInfo extends _AccountInfo {
-  const _$_AccountInfo(
+class _$AccountInfoImpl extends _AccountInfo {
+  const _$AccountInfoImpl(
       {required this.name,
       required this.age,
       required final List<String> lengthCounter,
@@ -157,7 +157,7 @@ class _$_AccountInfo extends _AccountInfo {
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$_AccountInfo &&
+            other is _$AccountInfoImpl &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.age, age) || other.age == age) &&
             const DeepCollectionEquality()
@@ -172,8 +172,8 @@ class _$_AccountInfo extends _AccountInfo {
   @JsonKey(ignore: true)
   @override
   @pragma('vm:prefer-inline')
-  _$$_AccountInfoCopyWith<_$_AccountInfo> get copyWith =>
-      __$$_AccountInfoCopyWithImpl<_$_AccountInfo>(this, _$identity);
+  _$$AccountInfoImplCopyWith<_$AccountInfoImpl> get copyWith =>
+      __$$AccountInfoImplCopyWithImpl<_$AccountInfoImpl>(this, _$identity);
 }
 
 abstract class _AccountInfo extends AccountInfo {
@@ -181,7 +181,7 @@ abstract class _AccountInfo extends AccountInfo {
       {required final String name,
       required final int age,
       required final List<String> lengthCounter,
-      required final int counter}) = _$_AccountInfo;
+      required final int counter}) = _$AccountInfoImpl;
   const _AccountInfo._() : super._();
 
   @override
@@ -194,6 +194,6 @@ abstract class _AccountInfo extends AccountInfo {
   int get counter;
   @override
   @JsonKey(ignore: true)
-  _$$_AccountInfoCopyWith<_$_AccountInfo> get copyWith =>
+  _$$AccountInfoImplCopyWith<_$AccountInfoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

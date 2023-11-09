@@ -1,5 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
+// ignore_for_file: type=lint, implicit_dynamic_parameter, implicit_dynamic_type, implicit_dynamic_method, strict_raw_type, duplicate_ignore
+
 part of 'riverpod.dart';
 
 // **************************************************************************
@@ -20,7 +22,7 @@ final counterProvider = AutoDisposeNotifierProvider<Counter, int>.internal(
 );
 
 typedef _$Counter = AutoDisposeNotifier<int>;
-String _$simpleNotifierHash() => r'a5a1321e512cfd41f2b7984c1d5c2c479562bbbe';
+String _$simpleNotifierHash() => r'299fe1642cef568105a7ca9777a98191bc95d75b';
 
 /// See also [SimpleNotifier].
 @ProviderFor(SimpleNotifier)
@@ -36,7 +38,7 @@ final simpleNotifierProvider =
 );
 
 typedef _$SimpleNotifier = AutoDisposeNotifier<AccountInfo>;
-String _$futureOrNotifierHash() => r'24c430d87eff2337e36c16aae5a5611c20411c4a';
+String _$futureOrNotifierHash() => r'7183af234d6b8c4da19deb881d2445f64f307937';
 
 /// See also [FutureOrNotifier].
 @ProviderFor(FutureOrNotifier)
@@ -53,4 +55,4 @@ final futureOrNotifierProvider =
 
 typedef _$FutureOrNotifier = AutoDisposeAsyncNotifier<AccountInfo>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

@@ -1,12 +1,14 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
+// ignore_for_file: type=lint, implicit_dynamic_parameter, implicit_dynamic_type, implicit_dynamic_method, strict_raw_type, duplicate_ignore
+
 part of 'usecase.dart';
 
 // **************************************************************************
 // RiverpodGenerator
 // **************************************************************************
 
-String _$simpleAccountInfoHash() => r'2a54ca6f543ceccdbb6f09752f18ace606262d77';
+String _$simpleAccountInfoHash() => r'01c5a739cacf1039c47580db5adc744215f21433';
 
 /// See also [simpleAccountInfo].
 @ProviderFor(simpleAccountInfo)
@@ -22,7 +24,7 @@ final simpleAccountInfoProvider = AutoDisposeProvider<SimpleUsecase>.internal(
 
 typedef SimpleAccountInfoRef = AutoDisposeProviderRef<SimpleUsecase>;
 String _$futureOrAccountInfoHash() =>
-    r'9c23e907ab51ee1a32429142dea0fc30e453158b';
+    r'2a8d8b07038533a2131504d5ed8e921eb4aa7025';
 
 /// See also [futureOrAccountInfo].
 @ProviderFor(futureOrAccountInfo)
@@ -39,4 +41,4 @@ final futureOrAccountInfoProvider =
 
 typedef FutureOrAccountInfoRef = AutoDisposeProviderRef<FutureOrUsecase>;
 // ignore_for_file: type=lint
-// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member
+// ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
