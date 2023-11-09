@@ -46,13 +46,17 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: const Text('Main Page'),
+      ),
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
             ElevatedButton(
               onPressed: () {
-                context.go('/1');
+                context.push('/1');
               },
               child: const Text('useState()'),
             ),
@@ -66,13 +70,13 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 context.push('/3');
               },
-              child: const Text('3'),
+              child: const Text('useTextEditingController()'),
             ),
             ElevatedButton(
               onPressed: () {
                 context.push('/4');
               },
-              child: const Text('4'),
+              child: const Text('GoRouter Error'),
             ),
           ],
         ),

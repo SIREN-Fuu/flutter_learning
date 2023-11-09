@@ -24,7 +24,7 @@ class PageH3 extends HookWidget {
     // 縦に並べる
     return Scaffold(
       appBar: AppBar(
-        title: const Text('例: useTextEditingController()'),
+        title: const Text('Sample: useTextEditingController()'),
       ),
       body: Center(
         child: Column(

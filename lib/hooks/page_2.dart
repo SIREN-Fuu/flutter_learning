@@ -50,7 +50,7 @@ class PageH2 extends HookWidget {
     // 縦に並べる
     return Scaffold(
       appBar: AppBar(
-        title: const Text('例: useEffect()'),
+        title: const Text('Sample: useEffect()'),
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
       body: Center(

@@ -11,9 +11,9 @@ final _router = GoRouter(
   debugLogDiagnostics: false,
   routes: [
     GoRoute(path: '/home', builder: (context, state) => const HomePage()),
-    GoRoute(path: '/1', builder: (context, state) => const PageH1()),
-    GoRoute(path: '/2', builder: (context, state) => const PageH2()),
-    GoRoute(path: '/3', builder: (context, state) => const PageH3()),
+    GoRoute(path: '/1', builder: (context, state) => const Page1()),
+    GoRoute(path: '/2', builder: (context, state) => const Page2()),
+    GoRoute(path: '/3', builder: (context, state) => const Page3()),
   ],
 );
 
@@ -27,10 +27,9 @@ class MyApp extends StatelessWidget {
       routerConfig: _router,
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
+      theme: ThemeData(useMaterial3: true, brightness: Brightness.light),
+      darkTheme: ThemeData(useMaterial3: true, brightness: Brightness.dark),
+      themeMode: ThemeMode.dark,
     );
   }
 }
@@ -42,6 +41,10 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
+        title: const Text('Main Page'),
+      ),
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -50,25 +53,19 @@ class HomePage extends StatelessWidget {
               onPressed: () {
                 context.push('/1');
               },
-              child: const Text('useState()'),
+              child: const Text('Chart1'),
             ),
             ElevatedButton(
               onPressed: () {
                 context.push('/2');
               },
-              child: const Text('useEffect()'),
+              child: const Text('Chart2'),
             ),
             ElevatedButton(
               onPressed: () {
                 context.push('/3');
               },
-              child: const Text('3'),
-            ),
-            ElevatedButton(
-              onPressed: () {
-                context.push('/4');
-              },
-              child: const Text('4'),
+              child: const Text('Chart3'),
             ),
           ],
         ),
