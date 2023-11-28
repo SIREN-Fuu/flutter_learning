@@ -1,10 +1,19 @@
 # https://pub.dev/packages/pedantic_mono
 include: package:pedantic_mono/analysis_options.yaml
 
+# Dartチーム純正のルール
+# include: package:flutter_lints/flutter.yaml
+
 # analyzer:
 #   exclude:
 #     - "**/*.g.dart" #build.yamlで対応済みのためコメントアウト
 #     - "**/*.freezed.dart" # Freezedは対応済みのためコメントアウト
+
+# analyzer:
+#   errors:
+#     implicit_dynamic_list_literal: ignore
+#     implicit_dynamic_map_literal: ignore
+#     implicit_dynamic_function: ignore
 
 linter:
   rules:
@@ -20,6 +29,9 @@ linter:
     avoid_bool_literals_in_conditional_expressions: false
     # 1行の文字数は80文字まで
     lines_longer_than_80_chars: false
-
+    # プロパティを概念的に変更する操作には、セッターを使用します。
+    # Riverpodの操作で不便の為、falseにしています
+    use_setters_to_change_properties: false
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
+# https://dart.dev/tools/linter-rules
