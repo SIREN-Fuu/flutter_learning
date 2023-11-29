@@ -3,7 +3,7 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/consumer_stateful_counter/riverpod.dart';
+import 'package:flutter_learning/canvas_standard/riverpod.dart';
 import 'package:flutter_learning/plugins/logger.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

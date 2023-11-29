@@ -1,9 +1,5 @@
-// Copyright (c) 2019, the Dart project authors.  Please see the AUTHORS file
-// for details. All rights reserved. Use of this source code is governed by a
-// BSD-style license that can be found in the LICENSE file.
-
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/consumer_stateful_counter/riverpod.dart';
+import 'package:flutter_learning/counter_consumer_stateful/riverpod.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() => runApp(const ProviderScope(child: MyApp()));
@@ -17,7 +13,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
     );
@@ -30,14 +27,12 @@ class MyHomePage extends ConsumerStatefulWidget {
     required this.title,
   });
   final String title;
-
   @override
   ConsumerState<MyHomePage> createState() => _MyHomePageState();
 }
 
 class _MyHomePageState extends ConsumerState<MyHomePage> {
   int _counter = 0;
-  late AsyncValue<int> memberCounter = const AsyncData(0);
   void _incrementCounter() {
     setState(() {
       _counter++;
@@ -47,9 +42,6 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
   @override
   void initState() {
     super.initState();
-
-    // エラーになる
-    // memberCounter = ref.watch(counterProvider);
   }
 
   @override
@@ -58,6 +50,7 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: Text(widget.title),
       ),
       body: Center(
@@ -72,18 +65,17 @@ class _MyHomePageState extends ConsumerState<MyHomePage> {
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             Text(
-              'Error Counter: ${memberCounter.value}',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            Text(
-              'StreamCounter: ${counter.value}',
+              'Riverpod Counter: $counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: () {
+          _incrementCounter();
+          ref.read(counterProvider.notifier).increment();
+        },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ),

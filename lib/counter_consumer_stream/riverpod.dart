@@ -18,3 +18,15 @@ class Counter extends _$Counter {
     return controller.stream;
   }
 }
+
+@Riverpod(keepAlive: true)
+class CounterManual extends _$CounterManual {
+  @override
+  int build() {
+    return 0;
+  }
+
+  void increment() {
+    state++;
+  }
+}
