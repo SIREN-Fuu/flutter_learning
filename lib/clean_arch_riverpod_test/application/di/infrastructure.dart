@@ -25,19 +25,6 @@ FirebaseService firebase(FirebaseRef ref) {
   }
 }
 
-// final firebaseProvider = Provider<FirebaseService>(
-//   (ref) {
-//     switch (flavor) {
-//       case Flavor.dev:
-//         return FakeFirebaseService();
-//       case Flavor.stg:
-//         return FakeFirebaseService();
-//       case Flavor.prd:
-//         return DefaultFirebaseService();
-//     }
-//   },
-// );
-
 /// Logger
 @Riverpod(keepAlive: true)
 Logger logger(LoggerRef ref) {
@@ -50,16 +37,3 @@ Logger logger(LoggerRef ref) {
       return DefaultLogger();
   }
 }
-
-// final loggerProvider = Provider<Logger>(
-//   (ref) {
-//     switch (flavor) {
-//       case Flavor.dev:
-//         return FakeLogger();
-//       case Flavor.stg:
-//         return FakeLogger();
-//       case Flavor.prd:
-//         return DefaultLogger();
-//     }
-//   },
-// );

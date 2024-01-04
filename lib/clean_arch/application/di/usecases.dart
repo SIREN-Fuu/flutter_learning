@@ -12,10 +12,7 @@ part 'usecases.g.dart';
 /// Init App
 @riverpod
 InitAppUsecase initApp(InitAppRef ref) {
-  // Watchにしてみる
-  // final logger = ref.read(loggerProvider);
-  final logger = ref.watch(loggerProvider);
-
+  final logger = ref.read(loggerProvider);
   final firebase = ref.watch(firebaseProvider);
   final listNotifier = ref.watch(memoListProvider.notifier);
   return InitAppUsecase(
