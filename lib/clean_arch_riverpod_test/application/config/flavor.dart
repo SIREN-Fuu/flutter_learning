@@ -1,7 +1,7 @@
-import 'package:flutter_learning/clean_arch/application/types/flavor.dart';
+import 'package:flutter_learning/clean_arch_riverpod_test/application/types/flavor.dart';
 
 /// フレーバー
-final flavor = _readFlavor();
+Flavor flavor = _readFlavor();
 
 /// 設定されたフレーバーを読み取る
 Flavor _readFlavor() {
