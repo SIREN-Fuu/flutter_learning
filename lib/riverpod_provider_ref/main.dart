@@ -54,7 +54,11 @@ int basic10(Basic10Ref ref) {
 
 @riverpod
 int basic10Notifier(Basic10NotifierRef ref) {
-  final counter = ref.watch(counterNotifierProvider.notifier).value;
+  // 呼び出し元がreadまたは他にwatchするものがあればwatchで動作する
+  // 以下のreadとwatchは同じ動作
+  final counter = ref.read(counterNotifierProvider.notifier).value;
+  // final counter = ref.watch(counterNotifierProvider.notifier).value;
+  // final counter2 = ref.watch(counterNotifierProvider);
   logger.d('basic10Notifier: $counter');
   return counter * 10;
 }
@@ -92,7 +96,7 @@ class MyHomePage extends HookConsumerWidget {
 
     // NotifierProviderの場合はwatchなら期待動作
     // readならbuild()が呼ばれたときは値が取得できる
-    counterGen = ref.read(counterNotifierProvider);
+    counterGen = ref.watch(counterNotifierProvider);
 
     // watchでさらにProvider内もwatchの場合のみ動作する
     // どこかがreadであった場合は動作しない
