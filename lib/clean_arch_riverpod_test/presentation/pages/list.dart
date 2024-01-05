@@ -25,7 +25,7 @@ class ListPage extends HookConsumerWidget {
     useEffect(
       () {
         // スプラッシュ画面がないのでここで初期化
-        ref.read(initAppProvider).execute();
+        ref.watch(initAppProvider).execute();
 
         return null;
       },
@@ -34,6 +34,7 @@ class ListPage extends HookConsumerWidget {
 
     /// メモ一覧
     final memoList = ref.watch(memoListProvider);
+    ref.watch(initAppProvider);
 
     /// リスト
     final listView = ListView.builder(

@@ -8,13 +8,13 @@ part of 'usecases.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$initAppHash() => r'd07a92efbd4a0c4bd5c00be393921c9c993718a1';
+String _$initAppHash() => r'50e327aec9566ebf09f0fd02e7619d6d424436a4';
 
 /// Init App
 ///
 /// Copied from [initApp].
 @ProviderFor(initApp)
-final initAppProvider = AutoDisposeProvider<InitAppUsecase>.internal(
+final initAppProvider = Provider<InitAppUsecase>.internal(
   initApp,
   name: r'initAppProvider',
   debugGetCreateSourceHash:
@@ -23,7 +23,7 @@ final initAppProvider = AutoDisposeProvider<InitAppUsecase>.internal(
   allTransitiveDependencies: null,
 );
 
-typedef InitAppRef = AutoDisposeProviderRef<InitAppUsecase>;
+typedef InitAppRef = ProviderRef<InitAppUsecase>;
 String _$addMemoHash() => r'73bfbf71d2518fde1a948bd9ab0b08dc27eb065b';
 
 /// Add Memo

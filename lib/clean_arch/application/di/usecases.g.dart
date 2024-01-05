@@ -8,7 +8,7 @@ part of 'usecases.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$initAppHash() => r'd07a92efbd4a0c4bd5c00be393921c9c993718a1';
+String _$initAppHash() => r'39e283dfb7c7a34688e7f6fe9999c8a59e41df3c';
 
 /// Init App
 ///

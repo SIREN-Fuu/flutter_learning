@@ -10,12 +10,19 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'usecases.g.dart';
 
 /// Init App
-@riverpod
+// @riverpod
+@Riverpod(keepAlive: true)
 InitAppUsecase initApp(InitAppRef ref) {
   final logger = ref.read(loggerProvider);
   final firebase = ref.watch(firebaseProvider);
   final listNotifier = ref.watch(memoListProvider.notifier);
+  final listNotifier2 = ref.watch(memoListProvider);
   logger.debug('Riverpod: InitAppUsecase');
+
+  ref.onDispose(() {
+    logger.debug('Riverpod: InitAppUsecase: onDispose');
+  });
+
   return InitAppUsecase(
     logger: logger,
     firebase: firebase,
