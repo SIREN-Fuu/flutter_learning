@@ -110,6 +110,7 @@ class MyHomePage extends HookConsumerWidget {
     // counterGen10G = ref.watch(basic10NotifierProvider);
 
     // notifierのインスタンスだからreadもwatchも同じ挙動
+    // build()が呼ばれたときは値が取得できる
     counterGen10H = ref.watch(counterNotifierProvider.notifier).value;
 
     logger.d('MyHomePage.build()');
