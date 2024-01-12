@@ -8,35 +8,36 @@ part of 'main.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$basic10Hash() => r'63439011c1a129c756613e88e0d48c3af3927a78';
+String _$counter10Hash() => r'231a8cd7f683fdcf6fe0bb57ba8311b8a76cf4ab';
 
-/// See also [basic10].
-@ProviderFor(basic10)
-final basic10Provider = AutoDisposeProvider<int>.internal(
-  basic10,
-  name: r'basic10Provider',
+/// See also [counter10].
+@ProviderFor(counter10)
+final counter10Provider = AutoDisposeProvider<int>.internal(
+  counter10,
+  name: r'counter10Provider',
   debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$basic10Hash,
+      const bool.fromEnvironment('dart.vm.product') ? null : _$counter10Hash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef Basic10Ref = AutoDisposeProviderRef<int>;
-String _$basic10NotifierHash() => r'b4c8e4cdaa2f9fed2be8ac883d521fe3ad9d78b1';
+typedef Counter10Ref = AutoDisposeProviderRef<int>;
+String _$counter10UseNotifierHash() =>
+    r'd0222d1932e788eac1678d230ec8a9d63d37fbc1';
 
-/// See also [basic10Notifier].
-@ProviderFor(basic10Notifier)
-final basic10NotifierProvider = AutoDisposeProvider<int>.internal(
-  basic10Notifier,
-  name: r'basic10NotifierProvider',
+/// See also [counter10UseNotifier].
+@ProviderFor(counter10UseNotifier)
+final counter10UseNotifierProvider = AutoDisposeProvider<int>.internal(
+  counter10UseNotifier,
+  name: r'counter10UseNotifierProvider',
   debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
       ? null
-      : _$basic10NotifierHash,
+      : _$counter10UseNotifierHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef Basic10NotifierRef = AutoDisposeProviderRef<int>;
+typedef Counter10UseNotifierRef = AutoDisposeProviderRef<int>;
 String _$counterNotifierHash() => r'3744c6eab0463fb915642bede62e553849c8564a';
 
 /// See also [CounterNotifier].

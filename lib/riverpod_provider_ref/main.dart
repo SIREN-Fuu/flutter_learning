@@ -11,25 +11,13 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 
 part 'main.g.dart';
 
-// // カウントアップ用のChangeNotifierの定義。
-// class Counter extends ChangeNotifier {
-//   // カウントを初期化。
-//   int count = 0;
-//   // カウントアップ。
-//   void increment() {
-//     count = count + 1;
-//     notifyListeners();
-//   }
-// }
-
-// // プロバイダーの定義。
-// final counterProvider = ChangeNotifierProvider((ref) => Counter());
-
-// final counterProvider10 = Provider((ref) {
-//   // counterProviderの更新通知を受け取り、更新時にこのプロバイダーも更新する。
-//   final counter = ref.watch(counterProvider);
-//   return counter.count * 10;
-// });
+class Logging {
+  Logging(this._message);
+  final String _message;
+  void print() {
+    logger.d('Logging: $_message');
+  }
+}
 
 @riverpod
 class CounterNotifier extends _$CounterNotifier {
@@ -46,21 +34,25 @@ class CounterNotifier extends _$CounterNotifier {
 }
 
 @riverpod
-int basic10(Basic10Ref ref) {
-  final counter = ref.watch(counterNotifierProvider);
-  logger.d('basic10: $counter');
-  return counter * 10;
+int counter10(Counter10Ref ref) {
+  final counter = ref.read(counterNotifierProvider);
+  final multi = counter * 10;
+  final message = 'basic10: $multi';
+  logger.d(message);
+  Logging(message).print();
+  return multi;
 }
 
 @riverpod
-int basic10Notifier(Basic10NotifierRef ref) {
+int counter10UseNotifier(Counter10UseNotifierRef ref) {
   // 呼び出し元がreadまたは他にwatchするものがあればwatchで動作する
   // 以下のreadとwatchは同じ動作
   final counter = ref.read(counterNotifierProvider.notifier).value;
-  // final counter = ref.watch(counterNotifierProvider.notifier).value;
-  // final counter2 = ref.watch(counterNotifierProvider);
-  logger.d('basic10Notifier: $counter');
-  return counter * 10;
+  final multi = counter * 10;
+  final message = 'basic10UseNotifier: $multi';
+  logger.d(message);
+  Logging(message).print();
+  return multi;
 }
 
 void main() => runApp(const ProviderScope(child: MyApp()));
@@ -86,34 +78,33 @@ class MyHomePage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    // final counter = ref.watch(counterProvider);
-    // final counter10 = ref.watch(counterProvider10);
+    logger.d('MyHomePage.build()');
 
-    var counterGen = 0;
-    var counterGen10 = 0;
-    var counterGen10G = 0;
-    var counterGen10H = 0;
+    var counter = 0;
+    var counter10 = 0;
+    var counterNotifier = 0;
+    var counterNotifierValue = 0;
 
     // NotifierProviderの場合はwatchなら期待動作
     // readならbuild()が呼ばれたときは値が取得できる
-    counterGen = ref.watch(counterNotifierProvider);
+    counter = ref.watch(counterNotifierProvider);
 
     // watchでさらにProvider内もwatchの場合のみ動作する
     // どこかがreadであった場合は動作しない
     // readの場合はインスタンスを取得しようとしてくれるので、providerが無反応な場合は何も起こらない動作となる
-    counterGen10 = ref.watch(basic10Provider);
+    counter10 = ref.read(counter10Provider);
 
     // notifierのインスタンスをProviderで取得している
     // notifierのインスタンスを取得しているのでwatchでは起動時の1回のみ動作する
     // readはインスタンスを取得しようとしてくれるので、.notifierなら動作する
-    counterGen10G = ref.read(basic10NotifierProvider);
-    // counterGen10G = ref.watch(basic10NotifierProvider);
+    counterNotifier = ref.read(counter10UseNotifierProvider);
+    //counterNotifier = ref.watch(counter10UseNotifierProvider);
 
     // notifierのインスタンスだからreadもwatchも同じ挙動
     // build()が呼ばれたときは値が取得できる
-    counterGen10H = ref.watch(counterNotifierProvider.notifier).value;
+    counterNotifierValue = ref.read(counterNotifierProvider.notifier).value;
 
-    logger.d('MyHomePage.build()');
+    //-----------------------------------------------------------------------
 
     return Scaffold(
       appBar: AppBar(
@@ -126,28 +117,20 @@ class MyHomePage extends HookConsumerWidget {
             const Text(
               'You have pushed the button this many times:',
             ),
-            // Text(
-            //   'counterProviderの値は: ${counter.count}',
-            //   style: Theme.of(context).textTheme.headlineMedium,
-            // ),
-            // Text(
-            //   'Providerで10倍にしたときの値は: $counter10',
-            //   style: Theme.of(context).textTheme.headlineMedium,
-            // ),
             Text(
-              'counterNotifierProviderの値は: $counterGen',
+              'counterNotifierProviderの値は: $counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             Text(
-              'counterNotifierProviderを10倍した値は: $counterGen10',
+              'counterNotifierProviderを10倍した値は: $counter10',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             Text(
-              'Riverpod10GGenの値は: $counterGen10G',
+              'Riverpod10GGenの値は: $counterNotifier',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
             Text(
-              'Riverpod10HGenの値は: $counterGen10H',
+              'Riverpod10HGenの値は: $counterNotifierValue',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
           ],
@@ -155,7 +138,7 @@ class MyHomePage extends HookConsumerWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          // counter.increment();
+          logger.i('Button Pressed');
           ref.read(counterNotifierProvider.notifier).increment();
         },
         tooltip: 'Increment',
