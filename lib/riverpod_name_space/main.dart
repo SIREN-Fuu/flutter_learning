@@ -31,7 +31,6 @@ class _LivingPlace extends _$LivingPlace {
 // ignore: avoid_classes_with_only_static_members
 class Registration {
   static final nicknameProvider = _nicknameProvider;
-  static final nicknameProviderN = _nicknameProvider.notifier;
   static final birthdayProvider = _birthdayProvider;
   static final livingPlaceProvider = _livingPlaceProvider;
 }

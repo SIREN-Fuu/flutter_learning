@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/freezed_riverpod/riverpod.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'riverpod.dart';
 
 void main() {
   runApp(

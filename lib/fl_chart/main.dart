@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/fl_chart/page_1.dart';
-import 'package:flutter_learning/fl_chart/page_2.dart';
-import 'package:flutter_learning/fl_chart/page_3.dart';
 import 'package:go_router/go_router.dart';
+
+import 'page_1.dart';
+import 'page_2.dart';
+import 'page_3.dart';
 
 void main() => runApp(const MyApp());
 

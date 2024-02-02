@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/freezed_riverpod_future/riverpod.dart';
-import 'package:flutter_learning/freezed_riverpod_future/usecase.dart';
 import 'package:flutter_learning/plugins/logger.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import 'riverpod.dart';
+import 'usecase.dart';
 
 void main() {
   runApp(

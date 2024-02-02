@@ -1,7 +1,8 @@
 // ignore_for_file: omit_local_variable_types
 
-import 'package:flutter_learning/num_test/class_num.dart';
 import 'package:flutter_learning/plugins/logger.dart';
+
+import 'class_num.dart';
 
 void main() {
   // NOTE: intとdoubleの代入確認

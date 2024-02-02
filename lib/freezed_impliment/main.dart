@@ -26,8 +26,9 @@ void main() {
       freezed.copyWith(name: 'Mina', age: 30, list: ['a', 'b', 'c']);
   logger.d(freezed2);
   final freezed3 = freezed2.copyWith(list: ['z', 'z', 'z']);
-  logger.d(freezed3);
-  logger.d(freezed2);
+  logger
+    ..d(freezed3)
+    ..d(freezed2);
 
   final unfreezed = Unfreezed(name: 'Mina', age: 30, list: ['a', 'b', 'c']);
   logger.d(unfreezed);
@@ -35,6 +36,7 @@ void main() {
       unfreezed.copyWith(name: 'Mina', age: 30, list: ['a', 'b', 'c']);
   logger.d(unfreezed2);
   final unfreezed3 = unfreezed2.list = ['z', 'z', 'z'];
-  logger.d(unfreezed3);
-  logger.d(unfreezed2);
+  logger
+    ..d(unfreezed3)
+    ..d(unfreezed2);
 }
