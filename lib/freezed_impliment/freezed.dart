@@ -11,7 +11,8 @@ part 'freezed.g.dart';
 class Freezed with _$Freezed {
   const factory Freezed({
     required String name,
-    required String age,
+    required int age,
+    required List<String> list,
   }) = _Freezed;
   const Freezed._();
 }
@@ -20,7 +21,8 @@ class Freezed with _$Freezed {
 class Unfreezed with _$Unfreezed {
   factory Unfreezed({
     required String name,
-    required String age,
+    required int age,
+    required List<String> list,
   }) = _Unfreezed;
 }
 

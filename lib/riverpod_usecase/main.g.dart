@@ -22,7 +22,7 @@ final testProvider = AutoDisposeProvider<TestUsecase>.internal(
 );
 
 typedef TestRef = AutoDisposeProviderRef<TestUsecase>;
-String _$counterNotifierHash() => r'450bcf9c7fb72aade9b73af2aec29232bc766273';
+String _$counterNotifierHash() => r'aa06071923bfd85bc77c1eda9e22981d1f235ab6';
 
 /// See also [CounterNotifier].
 @ProviderFor(CounterNotifier)

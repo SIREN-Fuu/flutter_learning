@@ -17,7 +17,8 @@ final _privateConstructorUsedError = UnsupportedError(
 /// @nodoc
 mixin _$Freezed {
   String get name => throw _privateConstructorUsedError;
-  String get age => throw _privateConstructorUsedError;
+  int get age => throw _privateConstructorUsedError;
+  List<String> get list => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $FreezedCopyWith<Freezed> get copyWith => throw _privateConstructorUsedError;
@@ -28,7 +29,7 @@ abstract class $FreezedCopyWith<$Res> {
   factory $FreezedCopyWith(Freezed value, $Res Function(Freezed) then) =
       _$FreezedCopyWithImpl<$Res, Freezed>;
   @useResult
-  $Res call({String name, String age});
+  $Res call({String name, int age, List<String> list});
 }
 
 /// @nodoc
@@ -46,6 +47,7 @@ class _$FreezedCopyWithImpl<$Res, $Val extends Freezed>
   $Res call({
     Object? name = null,
     Object? age = null,
+    Object? list = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -55,7 +57,11 @@ class _$FreezedCopyWithImpl<$Res, $Val extends Freezed>
       age: null == age
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
+      list: null == list
+          ? _value.list
+          : list // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ) as $Val);
   }
 }
@@ -67,7 +73,7 @@ abstract class _$$FreezedImplCopyWith<$Res> implements $FreezedCopyWith<$Res> {
       __$$FreezedImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String age});
+  $Res call({String name, int age, List<String> list});
 }
 
 /// @nodoc
@@ -83,6 +89,7 @@ class __$$FreezedImplCopyWithImpl<$Res>
   $Res call({
     Object? name = null,
     Object? age = null,
+    Object? list = null,
   }) {
     return _then(_$FreezedImpl(
       name: null == name
@@ -92,7 +99,11 @@ class __$$FreezedImplCopyWithImpl<$Res>
       age: null == age
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
+      list: null == list
+          ? _value._list
+          : list // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -100,16 +111,26 @@ class __$$FreezedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$FreezedImpl extends _Freezed {
-  const _$FreezedImpl({required this.name, required this.age}) : super._();
+  const _$FreezedImpl(
+      {required this.name, required this.age, required final List<String> list})
+      : _list = list,
+        super._();
 
   @override
   final String name;
   @override
-  final String age;
+  final int age;
+  final List<String> _list;
+  @override
+  List<String> get list {
+    if (_list is EqualUnmodifiableListView) return _list;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_list);
+  }
 
   @override
   String toString() {
-    return 'Freezed(name: $name, age: $age)';
+    return 'Freezed(name: $name, age: $age, list: $list)';
   }
 
   @override
@@ -118,11 +139,13 @@ class _$FreezedImpl extends _Freezed {
         (other.runtimeType == runtimeType &&
             other is _$FreezedImpl &&
             (identical(other.name, name) || other.name == name) &&
-            (identical(other.age, age) || other.age == age));
+            (identical(other.age, age) || other.age == age) &&
+            const DeepCollectionEquality().equals(other._list, _list));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, name, age);
+  int get hashCode => Object.hash(
+      runtimeType, name, age, const DeepCollectionEquality().hash(_list));
 
   @JsonKey(ignore: true)
   @override
@@ -133,13 +156,17 @@ class _$FreezedImpl extends _Freezed {
 
 abstract class _Freezed extends Freezed {
   const factory _Freezed(
-      {required final String name, required final String age}) = _$FreezedImpl;
+      {required final String name,
+      required final int age,
+      required final List<String> list}) = _$FreezedImpl;
   const _Freezed._() : super._();
 
   @override
   String get name;
   @override
-  String get age;
+  int get age;
+  @override
+  List<String> get list;
   @override
   @JsonKey(ignore: true)
   _$$FreezedImplCopyWith<_$FreezedImpl> get copyWith =>
@@ -150,8 +177,10 @@ abstract class _Freezed extends Freezed {
 mixin _$Unfreezed {
   String get name => throw _privateConstructorUsedError;
   set name(String value) => throw _privateConstructorUsedError;
-  String get age => throw _privateConstructorUsedError;
-  set age(String value) => throw _privateConstructorUsedError;
+  int get age => throw _privateConstructorUsedError;
+  set age(int value) => throw _privateConstructorUsedError;
+  List<String> get list => throw _privateConstructorUsedError;
+  set list(List<String> value) => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $UnfreezedCopyWith<Unfreezed> get copyWith =>
@@ -163,7 +192,7 @@ abstract class $UnfreezedCopyWith<$Res> {
   factory $UnfreezedCopyWith(Unfreezed value, $Res Function(Unfreezed) then) =
       _$UnfreezedCopyWithImpl<$Res, Unfreezed>;
   @useResult
-  $Res call({String name, String age});
+  $Res call({String name, int age, List<String> list});
 }
 
 /// @nodoc
@@ -181,6 +210,7 @@ class _$UnfreezedCopyWithImpl<$Res, $Val extends Unfreezed>
   $Res call({
     Object? name = null,
     Object? age = null,
+    Object? list = null,
   }) {
     return _then(_value.copyWith(
       name: null == name
@@ -190,7 +220,11 @@ class _$UnfreezedCopyWithImpl<$Res, $Val extends Unfreezed>
       age: null == age
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
+      list: null == list
+          ? _value.list
+          : list // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ) as $Val);
   }
 }
@@ -203,7 +237,7 @@ abstract class _$$UnfreezedImplCopyWith<$Res>
       __$$UnfreezedImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({String name, String age});
+  $Res call({String name, int age, List<String> list});
 }
 
 /// @nodoc
@@ -219,6 +253,7 @@ class __$$UnfreezedImplCopyWithImpl<$Res>
   $Res call({
     Object? name = null,
     Object? age = null,
+    Object? list = null,
   }) {
     return _then(_$UnfreezedImpl(
       name: null == name
@@ -228,7 +263,11 @@ class __$$UnfreezedImplCopyWithImpl<$Res>
       age: null == age
           ? _value.age
           : age // ignore: cast_nullable_to_non_nullable
-              as String,
+              as int,
+      list: null == list
+          ? _value.list
+          : list // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -236,16 +275,18 @@ class __$$UnfreezedImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$UnfreezedImpl implements _Unfreezed {
-  _$UnfreezedImpl({required this.name, required this.age});
+  _$UnfreezedImpl({required this.name, required this.age, required this.list});
 
   @override
   String name;
   @override
-  String age;
+  int age;
+  @override
+  List<String> list;
 
   @override
   String toString() {
-    return 'Unfreezed(name: $name, age: $age)';
+    return 'Unfreezed(name: $name, age: $age, list: $list)';
   }
 
   @JsonKey(ignore: true)
@@ -256,15 +297,20 @@ class _$UnfreezedImpl implements _Unfreezed {
 }
 
 abstract class _Unfreezed implements Unfreezed {
-  factory _Unfreezed({required String name, required String age}) =
-      _$UnfreezedImpl;
+  factory _Unfreezed(
+      {required String name,
+      required int age,
+      required List<String> list}) = _$UnfreezedImpl;
 
   @override
   String get name;
   set name(String value);
   @override
-  String get age;
-  set age(String value);
+  int get age;
+  set age(int value);
+  @override
+  List<String> get list;
+  set list(List<String> value);
   @override
   @JsonKey(ignore: true)
   _$$UnfreezedImplCopyWith<_$UnfreezedImpl> get copyWith =>
