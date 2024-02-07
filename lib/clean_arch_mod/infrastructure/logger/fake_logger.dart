@@ -1,7 +1,8 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter_learning/clean_arch_mod/application/interfaces/logger.dart';
-import 'package:flutter_learning/clean_arch_mod/infrastructure/logger/log.dart';
-import 'package:flutter_learning/clean_arch_mod/infrastructure/logger/log_level.dart';
+
+import '../../../clean_arch_mod/application/interfaces/logger.dart';
+import '../../../clean_arch_mod/infrastructure/logger/log.dart';
+import '../../../clean_arch_mod/infrastructure/logger/log_level.dart';
 
 /// 保存機能を持たず出力するだけのシンプルなロガー
 class FakeLogger implements Logger {

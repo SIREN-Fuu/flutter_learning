@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/clean_arch_mod/application/di/infrastructure.dart';
-import 'package:flutter_learning/clean_arch_mod/application/di/usecases.dart';
-import 'package:flutter_learning/clean_arch_mod/application/state/editing_memo_provider.dart';
-import 'package:flutter_learning/clean_arch_mod/presentation/dialogs/warn.dart';
-import 'package:flutter_learning/clean_arch_mod/presentation/router/go_router.dart';
-import 'package:flutter_learning/clean_arch_mod/presentation/theme/colors.dart';
-import 'package:flutter_learning/clean_arch_mod/presentation/theme/l10n.dart';
-import 'package:flutter_learning/clean_arch_mod/presentation/theme/sizes.dart';
-import 'package:flutter_learning/clean_arch_mod/presentation/widgets/gap.dart';
-import 'package:flutter_learning/clean_arch_mod/presentation/widgets/save_button.dart';
-import 'package:flutter_learning/clean_arch_mod/presentation/widgets/status_button.dart';
-import 'package:flutter_learning/clean_arch_mod/presentation/widgets/status_text.dart';
-import 'package:flutter_learning/clean_arch_mod/presentation/widgets/text_edit_form.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import '../../../clean_arch_mod/application/di/infrastructure.dart';
+import '../../../clean_arch_mod/application/di/usecases.dart';
+import '../../../clean_arch_mod/application/state/editing_memo_provider.dart';
+import '../../../clean_arch_mod/presentation/dialogs/warn.dart';
+import '../../../clean_arch_mod/presentation/router/go_router.dart';
+import '../../../clean_arch_mod/presentation/theme/colors.dart';
+import '../../../clean_arch_mod/presentation/theme/l10n.dart';
+import '../../../clean_arch_mod/presentation/theme/sizes.dart';
+import '../../../clean_arch_mod/presentation/widgets/gap.dart';
+import '../../../clean_arch_mod/presentation/widgets/save_button.dart';
+import '../../../clean_arch_mod/presentation/widgets/status_button.dart';
+import '../../../clean_arch_mod/presentation/widgets/status_text.dart';
+import '../../../clean_arch_mod/presentation/widgets/text_edit_form.dart';
 
 /// 編集画面
 class EditPage extends ConsumerWidget {

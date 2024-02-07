@@ -1,4 +1,4 @@
-import 'package:flutter_learning/plugins/logger.dart';
+import '../../../plugins/logger.dart';
 
 void main() {
   final Person person1 = Mario();

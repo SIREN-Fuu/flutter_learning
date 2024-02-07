@@ -1,8 +1,9 @@
 import 'dart:convert';
 import 'dart:core';
 
-import 'package:flutter_learning/plugins/logger.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+
+import '../../../plugins/logger.dart';
 
 part 'freezed.freezed.dart';
 part 'freezed.g.dart';

@@ -1,5 +1,5 @@
-import 'package:flutter_learning/clean_arch_mod/domain/types/memo.dart';
-import 'package:flutter_learning/clean_arch_mod/domain/types/status.dart';
+import '../../../clean_arch_mod/domain/types/memo.dart';
+import '../../../clean_arch_mod/domain/types/status.dart';
 
 /// メモの更新ルールを担当するクラス
 class MemoUpdater {

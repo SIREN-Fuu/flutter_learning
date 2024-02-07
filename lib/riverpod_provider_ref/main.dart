@@ -5,9 +5,10 @@
 // ignore_for_file: prefer_final_locals
 
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/plugins/logger.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '../../../plugins/logger.dart';
 
 part 'main.g.dart';
 

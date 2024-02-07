@@ -1,5 +1,5 @@
-import 'package:flutter_learning/clean_arch_mod/application/interfaces/firebase.dart';
-import 'package:flutter_learning/clean_arch_mod/application/types/analytics_event.dart';
+import '../../../clean_arch_mod/application/interfaces/firebase.dart';
+import '../../../clean_arch_mod/application/types/analytics_event.dart';
 
 /// 本番環境用のFirebaseサービス
 class DefaultFirebaseService implements FirebaseService {

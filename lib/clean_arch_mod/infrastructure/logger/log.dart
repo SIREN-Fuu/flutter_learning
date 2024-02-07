@@ -1,4 +1,4 @@
-import 'package:flutter_learning/clean_arch_mod/infrastructure/logger/log_level.dart';
+import '../../../clean_arch_mod/infrastructure/logger/log_level.dart';
 
 /// Log
 class Log {

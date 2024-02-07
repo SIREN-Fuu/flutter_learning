@@ -1,6 +1,7 @@
-import 'package:flutter_learning/clean_arch_mod/domain/types/memo.dart';
-import 'package:flutter_learning/clean_arch_mod/domain/types/status.dart';
 import 'package:uuid/uuid.dart';
+
+import '../../../clean_arch_mod/domain/types/memo.dart';
+import '../../../clean_arch_mod/domain/types/status.dart';
 
 /// メモの作成ルールを担当するクラス
 class MemoCreator {

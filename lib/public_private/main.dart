@@ -1,5 +1,5 @@
-import 'package:flutter_learning/public_private/class_pp1.dart';
-import 'package:flutter_learning/public_private/class_pp2.dart';
+import '../../../public_private/class_pp1.dart';
+import '../../../public_private/class_pp2.dart';
 
 void main() {
   final class1 = ClassPP1()..printName();

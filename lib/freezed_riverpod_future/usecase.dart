@@ -1,9 +1,10 @@
 import 'dart:async';
 
-import 'package:flutter_learning/freezed_riverpod_future/delay.dart';
-import 'package:flutter_learning/freezed_riverpod_future/riverpod.dart';
-import 'package:flutter_learning/plugins/logger.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '../../../freezed_riverpod_future/delay.dart';
+import '../../../freezed_riverpod_future/riverpod.dart';
+import '../../../plugins/logger.dart';
 
 part 'usecase.g.dart';
 

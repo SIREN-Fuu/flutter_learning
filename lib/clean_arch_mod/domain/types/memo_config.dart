@@ -1,4 +1,4 @@
-import 'package:flutter_learning/clean_arch_mod/domain/types/memo.dart';
+import '../../../clean_arch_mod/domain/types/memo.dart';
 
 /// メモに関する設定値
 class MemoConfig {

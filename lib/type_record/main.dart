@@ -1,4 +1,4 @@
-import 'package:flutter_learning/plugins/logger.dart';
+import '../../../plugins/logger.dart';
 
 void main() {
   // 名前なしのRecord型

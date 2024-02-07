@@ -1,7 +1,7 @@
 // ignore_for_file: unnecessary_getters_setters
 
-import 'package:flutter_learning/plugins/logger.dart';
-import 'package:flutter_learning/public_private/class_pp2.dart';
+import '../../../plugins/logger.dart';
+import '../../../public_private/class_pp2.dart';
 
 class ClassPP1 {
   ClassPP1();

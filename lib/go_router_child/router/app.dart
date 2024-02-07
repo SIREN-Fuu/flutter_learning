@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/go_router_child/router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../../../go_router_child/router/go_router.dart';
 
 // アプリ全体
 class App extends ConsumerWidget {

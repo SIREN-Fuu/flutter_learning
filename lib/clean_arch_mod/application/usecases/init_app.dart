@@ -1,7 +1,7 @@
-import 'package:flutter_learning/clean_arch_mod/application/config/memo.dart';
-import 'package:flutter_learning/clean_arch_mod/application/interfaces/firebase.dart';
-import 'package:flutter_learning/clean_arch_mod/application/interfaces/logger.dart';
-import 'package:flutter_learning/clean_arch_mod/application/state/memo_list_notifier.dart';
+import '../../../clean_arch_mod/application/config/memo.dart';
+import '../../../clean_arch_mod/application/interfaces/firebase.dart';
+import '../../../clean_arch_mod/application/interfaces/logger.dart';
+import '../../../clean_arch_mod/application/state/memo_list_notifier.dart';
 
 /// アプリの初期準備をする
 class InitAppUsecase {

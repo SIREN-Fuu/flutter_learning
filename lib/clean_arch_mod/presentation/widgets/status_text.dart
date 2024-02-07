@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/clean_arch_mod/domain/types/status.dart';
-import 'package:flutter_learning/clean_arch_mod/presentation/theme/fonts.dart';
-import 'package:flutter_learning/clean_arch_mod/presentation/theme/l10n.dart';
+
+import '../../../clean_arch_mod/domain/types/status.dart';
+import '../../../clean_arch_mod/presentation/theme/fonts.dart';
+import '../../../clean_arch_mod/presentation/theme/l10n.dart';
 
 /// ステータス文字
 class StatusText extends StatelessWidget {

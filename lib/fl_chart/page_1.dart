@@ -1,6 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/fl_chart/resources/app_colors.dart';
+
+import '../../../fl_chart/resources/app_colors.dart';
 
 class Page1 extends StatefulWidget {
   const Page1({super.key});

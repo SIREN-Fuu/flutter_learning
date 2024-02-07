@@ -1,7 +1,8 @@
-import 'package:flutter_learning/clean_arch_mod/application/state/editing_memo_notifier.dart';
-import 'package:flutter_learning/clean_arch_mod/application/state/memo_list_provider.dart';
-import 'package:flutter_learning/clean_arch_mod/domain/types/memo.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import '../../../clean_arch_mod/application/state/editing_memo_notifier.dart';
+import '../../../clean_arch_mod/application/state/memo_list_provider.dart';
+import '../../../clean_arch_mod/domain/types/memo.dart';
 
 /// 編集中メモのプロバイダー
 final editingMemoProvider =

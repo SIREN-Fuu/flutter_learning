@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/plugins/logger.dart';
+
+import '../../../plugins/logger.dart';
 
 class PageGcD extends StatefulWidget {
   const PageGcD({super.key});

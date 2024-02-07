@@ -5,10 +5,11 @@
 // ignore_for_file: prefer_final_locals, unreachable_from_main
 
 import 'package:flutter/material.dart';
-import 'package:flutter_learning/plugins/logger.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '../../../plugins/logger.dart';
 
 part 'main.freezed.dart';
 part 'main.g.dart';

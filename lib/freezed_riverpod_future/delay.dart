@@ -1,4 +1,4 @@
-import 'package:flutter_learning/freezed_riverpod_future/freezed.dart';
+import '../../../freezed_riverpod_future/freezed.dart';
 
 class ApiSimulator {
   int globalCounter = 1;

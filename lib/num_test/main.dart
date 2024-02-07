@@ -1,7 +1,6 @@
 // ignore_for_file: omit_local_variable_types
 
-import 'package:flutter_learning/plugins/logger.dart';
-
+import '../../../plugins/logger.dart';
 import 'class_num.dart';
 
 void main() {

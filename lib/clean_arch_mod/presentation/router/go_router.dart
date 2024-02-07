@@ -1,8 +1,9 @@
-import 'package:flutter_learning/clean_arch_mod/presentation/pages/edit.dart';
-import 'package:flutter_learning/clean_arch_mod/presentation/pages/list.dart';
-import 'package:flutter_learning/clean_arch_mod/presentation/router/page_path.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import '../../../clean_arch_mod/presentation/pages/edit.dart';
+import '../../../clean_arch_mod/presentation/pages/list.dart';
+import '../../../clean_arch_mod/presentation/router/page_path.dart';
 
 /// Provide GoRouter
 final goRouterProvider = Provider(

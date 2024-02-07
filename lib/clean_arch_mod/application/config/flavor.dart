@@ -1,4 +1,4 @@
-import 'package:flutter_learning/clean_arch_mod/application/types/flavor.dart';
+import '../../../clean_arch_mod/application/types/flavor.dart';
 
 /// フレーバー
 Flavor flavor = _readFlavor();

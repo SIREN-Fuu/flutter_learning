@@ -1,7 +1,8 @@
 import 'package:flutter/foundation.dart';
-import 'package:flutter_learning/clean_arch_mod/application/interfaces/logger.dart';
-import 'package:flutter_learning/clean_arch_mod/infrastructure/logger/log.dart';
-import 'package:flutter_learning/clean_arch_mod/infrastructure/logger/log_level.dart';
+
+import '../../../clean_arch_mod/application/interfaces/logger.dart';
+import '../../../clean_arch_mod/infrastructure/logger/log.dart';
+import '../../../clean_arch_mod/infrastructure/logger/log_level.dart';
 
 /// 一定数のログを管理できる設定変更可能なロガー
 class DefaultLogger implements Logger {

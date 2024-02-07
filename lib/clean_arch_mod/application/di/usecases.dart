@@ -1,11 +1,12 @@
-import 'package:flutter_learning/clean_arch_mod/application/di/infrastructure.dart';
-import 'package:flutter_learning/clean_arch_mod/application/state/editing_memo_provider.dart';
-import 'package:flutter_learning/clean_arch_mod/application/state/memo_list_provider.dart';
-import 'package:flutter_learning/clean_arch_mod/application/usecases/add_memo.dart';
-import 'package:flutter_learning/clean_arch_mod/application/usecases/delete_memo.dart';
-import 'package:flutter_learning/clean_arch_mod/application/usecases/init_app.dart';
-import 'package:flutter_learning/clean_arch_mod/application/usecases/update_memo.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
+
+import '../../../clean_arch_mod/application/di/infrastructure.dart';
+import '../../../clean_arch_mod/application/state/editing_memo_provider.dart';
+import '../../../clean_arch_mod/application/state/memo_list_provider.dart';
+import '../../../clean_arch_mod/application/usecases/add_memo.dart';
+import '../../../clean_arch_mod/application/usecases/delete_memo.dart';
+import '../../../clean_arch_mod/application/usecases/init_app.dart';
+import '../../../clean_arch_mod/application/usecases/update_memo.dart';
 
 part 'usecases.g.dart';
 

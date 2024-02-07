@@ -1,6 +1,6 @@
-import 'package:flutter_learning/clean_arch_mod/domain/types/memo.dart';
-import 'package:flutter_learning/clean_arch_mod/domain/types/memo_config.dart';
-import 'package:flutter_learning/clean_arch_mod/domain/types/status.dart';
+import '../../../clean_arch_mod/domain/types/memo.dart';
+import '../../../clean_arch_mod/domain/types/memo_config.dart';
+import '../../../clean_arch_mod/domain/types/status.dart';
 
 /// メモに関する設定値
 final memoConfig = MemoConfig(

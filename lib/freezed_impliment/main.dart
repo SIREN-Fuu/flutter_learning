@@ -1,5 +1,4 @@
-import 'package:flutter_learning/plugins/logger.dart';
-
+import '../../../plugins/logger.dart';
 import 'freezed.dart';
 
 void main() {
