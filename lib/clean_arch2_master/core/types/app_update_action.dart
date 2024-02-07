@@ -4,7 +4,7 @@ enum AppUpdateAction {
   none,
 
   /// 強制アップデート画面を見せる
-  showImmidiateUpdate,
+  showImmediateUpdate,
 
   /// 任意アップデートダイアログを見せる
   showFrexibleUpdate,

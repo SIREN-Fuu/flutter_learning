@@ -8,5 +8,7 @@ typedef _State = User?;
 
 /// User
 final userProvider = StreamNotifierProvider<_Notifier, _State>(
-  _Notifier as _Notifier Function(),
+  () {
+    return _Notifier();
+  },
 );

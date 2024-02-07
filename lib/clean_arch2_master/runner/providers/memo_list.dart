@@ -6,5 +6,6 @@ import '../../runner/notifiers/memo_list.dart';
 typedef _N = MemoListNotifier;
 
 /// メモ一覧のプロバイダー
-final memoListProvider =
-    AsyncNotifierProvider<_N, List<Memo>>(_N as _N Function());
+final memoListProvider = AsyncNotifierProvider<_N, List<Memo>>(() {
+  return _N();
+});

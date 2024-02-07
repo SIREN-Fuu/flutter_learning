@@ -6,7 +6,7 @@ import '../../domain/types/memo.dart';
 class EditingMemoNotifier extends StateNotifier<Memo> {
   EditingMemoNotifier(
     /// 初期値
-    super.initialMemo,
+    super._state,
   );
 
   /// 現在の状態

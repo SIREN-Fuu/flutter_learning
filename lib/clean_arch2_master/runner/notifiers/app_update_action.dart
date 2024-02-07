@@ -1,4 +1,5 @@
 import 'package:flutter_riverpod/flutter_riverpod.dart';
+
 import '../../core/features/app_updater.dart';
 import '../../core/types/app_update_action.dart';
 import '../../runner/providers/api.dart';

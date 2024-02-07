@@ -17,7 +17,7 @@ class AppUpdater {
     final shouldImmidiatly = _compareVersions(appVersion, immidiate);
     if (shouldImmidiatly > 0) {
       // 強制アップデートが必要
-      return AppUpdateAction.showImmidiateUpdate;
+      return AppUpdateAction.showImmediateUpdate;
     }
 
     /// 任意アップデートするべきバージョン

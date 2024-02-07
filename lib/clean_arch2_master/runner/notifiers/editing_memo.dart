@@ -61,6 +61,7 @@ class EditingMemoNotifier extends FamilyNotifier<Memo, String> {
     }
     // リスト一覧のメモを上書きして状態を変更
     ref.read(memoListProvider.notifier).replace(state);
+
     // 成功を知らせる
     onSuccess();
   }

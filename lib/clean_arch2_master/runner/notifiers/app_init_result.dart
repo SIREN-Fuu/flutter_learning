@@ -37,7 +37,7 @@ class AppInitResultNotifier extends AsyncNotifier<AppInitResult> {
     /// 2つのバージョンを比較
     const updater = AppUpdater();
     final action = updater.makeAction(available, appVersion);
-    if (action == AppUpdateAction.showImmidiateUpdate) {
+    if (action == AppUpdateAction.showImmediateUpdate) {
       logger.info('強制アップデートを発見したため 初期化を中断します');
       return AppInitResult.immediateUpdate;
     }

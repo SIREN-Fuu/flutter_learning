@@ -6,7 +6,7 @@ import '../../domain/types/memo.dart';
 class MemoListNotifier extends StateNotifier<List<Memo>> {
   MemoListNotifier(
     /// 初期値
-    super.initialList,
+    super._state,
   );
 
   /// 新しい一覧をセットする

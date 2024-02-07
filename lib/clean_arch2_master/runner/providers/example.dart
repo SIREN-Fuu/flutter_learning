@@ -7,5 +7,7 @@ typedef _State = String;
 
 /// Example
 final exampleStateProvider = NotifierProvider<_Notifier, _State>(
-  _Notifier as _Notifier Function(),
+  () {
+    return _Notifier();
+  },
 );

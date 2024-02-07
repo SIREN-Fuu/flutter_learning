@@ -28,9 +28,9 @@ class VersionUpdaterView extends ConsumerWidget {
             case AppUpdateAction.none:
               // DO NOTHING
               break;
-            case AppUpdateAction.showImmidiateUpdate:
+            case AppUpdateAction.showImmediateUpdate:
               logger.info('強制アップデートを検知しました');
-              showImmidiateUpdateDialog(context);
+              showImmediateUpdateDialog(context);
             case AppUpdateAction.showFrexibleUpdate:
               logger.info('任意アップデートを検知しました');
               showFrexibleUpdateDialog(context);

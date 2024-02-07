@@ -75,7 +75,7 @@ class ImmidiateUpdateDialog extends StatelessWidget {
   }
 }
 
-void showImmidiateUpdateDialog(BuildContext context) {
+void showImmediateUpdateDialog(BuildContext context) {
   showDialog<void>(
     context: context,
     builder: (context) {

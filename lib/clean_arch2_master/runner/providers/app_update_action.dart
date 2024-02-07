@@ -8,5 +8,7 @@ typedef _State = AppUpdateAction;
 
 /// アプリアップデート
 final appUpdateActionProvider = AsyncNotifierProvider<_Notifier, _State>(
-  _Notifier as _Notifier Function(),
+  () {
+    return _Notifier();
+  },
 );

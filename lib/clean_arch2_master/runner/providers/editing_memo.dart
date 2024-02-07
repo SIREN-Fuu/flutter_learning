@@ -7,5 +7,7 @@ typedef _Notifier = EditingMemoNotifier;
 
 /// 編集中メモのプロバイダー
 final editingMemoProvider = NotifierProvider.family<_Notifier, Memo, String>(
-  EditingMemoNotifier as _Notifier Function(),
+  () {
+    return EditingMemoNotifier();
+  },
 );

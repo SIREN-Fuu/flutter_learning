@@ -7,5 +7,7 @@ typedef _State = void;
 
 /// デバッグ用
 final debugEventProvider = NotifierProvider<_Notifier, _State>(
-  _Notifier as _Notifier Function(),
+  () {
+    return _Notifier();
+  },
 );
