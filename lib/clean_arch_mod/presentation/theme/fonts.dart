@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../clean_arch_mod/presentation/theme/sizes.dart';
+import '../../presentation/theme/sizes.dart';
 
 /// フォント
 class BrandFont {

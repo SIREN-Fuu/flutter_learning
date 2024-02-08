@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../clean_arch_mod/presentation/theme/colors.dart';
-import '../../../clean_arch_mod/presentation/theme/fonts.dart';
-import '../../../clean_arch_mod/presentation/theme/l10n.dart';
-import '../../../clean_arch_mod/presentation/theme/sizes.dart';
+import '../../presentation/theme/colors.dart';
+import '../../presentation/theme/fonts.dart';
+import '../../presentation/theme/l10n.dart';
+import '../../presentation/theme/sizes.dart';
 
 /// カスタムダイアログ 警告用
 class WarnDialog extends StatelessWidget {

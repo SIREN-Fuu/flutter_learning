@@ -1,6 +1,6 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../clean_arch_mod/domain/types/memo.dart';
+import '../../domain/types/memo.dart';
 
 /// 編集中メモを管理するノティファイヤ
 class EditingMemoNotifier extends StateNotifier<Memo> {

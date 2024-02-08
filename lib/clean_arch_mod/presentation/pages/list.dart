@@ -2,14 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../clean_arch_mod/application/di/infrastructure.dart';
-import '../../../clean_arch_mod/application/di/usecases.dart';
-import '../../../clean_arch_mod/application/state/memo_list_provider.dart';
-import '../../../clean_arch_mod/presentation/router/go_router.dart';
-import '../../../clean_arch_mod/presentation/router/page_path.dart';
-import '../../../clean_arch_mod/presentation/theme/sizes.dart';
-import '../../../clean_arch_mod/presentation/widgets/add_button.dart';
-import '../../../clean_arch_mod/presentation/widgets/memo_card.dart';
+import '../../application/di/infrastructure.dart';
+import '../../application/di/usecases.dart';
+import '../../application/state/memo_list_provider.dart';
+import '../../presentation/router/go_router.dart';
+import '../../presentation/router/page_path.dart';
+import '../../presentation/theme/sizes.dart';
+import '../../presentation/widgets/add_button.dart';
+import '../../presentation/widgets/memo_card.dart';
 
 /// 一覧画面
 class ListPage extends HookConsumerWidget {

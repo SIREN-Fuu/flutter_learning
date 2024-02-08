@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../clean_arch_mod/application/di/infrastructure.dart';
-import '../../../clean_arch_mod/application/di/usecases.dart';
-import '../../../clean_arch_mod/application/state/editing_memo_provider.dart';
-import '../../../clean_arch_mod/presentation/dialogs/warn.dart';
-import '../../../clean_arch_mod/presentation/router/go_router.dart';
-import '../../../clean_arch_mod/presentation/theme/colors.dart';
-import '../../../clean_arch_mod/presentation/theme/l10n.dart';
-import '../../../clean_arch_mod/presentation/theme/sizes.dart';
-import '../../../clean_arch_mod/presentation/widgets/gap.dart';
-import '../../../clean_arch_mod/presentation/widgets/save_button.dart';
-import '../../../clean_arch_mod/presentation/widgets/status_button.dart';
-import '../../../clean_arch_mod/presentation/widgets/status_text.dart';
-import '../../../clean_arch_mod/presentation/widgets/text_edit_form.dart';
+import '../../application/di/infrastructure.dart';
+import '../../application/di/usecases.dart';
+import '../../application/state/editing_memo_provider.dart';
+import '../../presentation/dialogs/warn.dart';
+import '../../presentation/router/go_router.dart';
+import '../../presentation/theme/colors.dart';
+import '../../presentation/theme/l10n.dart';
+import '../../presentation/theme/sizes.dart';
+import '../../presentation/widgets/gap.dart';
+import '../../presentation/widgets/save_button.dart';
+import '../../presentation/widgets/status_button.dart';
+import '../../presentation/widgets/status_text.dart';
+import '../../presentation/widgets/text_edit_form.dart';
 
 /// 編集画面
 class EditPage extends ConsumerWidget {

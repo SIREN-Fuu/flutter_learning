@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-import '../../../clean_arch_mod/domain/types/memo.dart';
-import '../../../clean_arch_mod/presentation/theme/colors.dart';
-import '../../../clean_arch_mod/presentation/theme/fonts.dart';
-import '../../../clean_arch_mod/presentation/theme/sizes.dart';
-import '../../../clean_arch_mod/presentation/widgets/delete_button.dart';
-import '../../../clean_arch_mod/presentation/widgets/status_image.dart';
+import '../../domain/types/memo.dart';
+import '../../presentation/theme/colors.dart';
+import '../../presentation/theme/fonts.dart';
+import '../../presentation/theme/sizes.dart';
+import '../../presentation/widgets/delete_button.dart';
+import '../../presentation/widgets/status_image.dart';
 
 /// メモカード
 class MemoCard extends StatelessWidget {

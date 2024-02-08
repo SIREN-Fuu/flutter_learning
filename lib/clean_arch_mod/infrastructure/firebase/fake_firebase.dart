@@ -1,5 +1,5 @@
-import '../../../clean_arch_mod/application/interfaces/firebase.dart';
-import '../../../clean_arch_mod/application/types/analytics_event.dart';
+import '../../application/interfaces/firebase.dart';
+import '../../application/types/analytics_event.dart';
 
 /// 開発環境用のFirebaseサービス
 class FakeFirebaseService implements FirebaseService {

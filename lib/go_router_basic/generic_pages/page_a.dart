@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../go_router_basic/dialogs/warn.dart';
 import '../../../plugins/logger.dart';
+import '../dialogs/warn.dart';
 
 //
 // 画面 A

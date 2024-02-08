@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../clean_arch_mod/presentation/router/app.dart';
+import 'presentation/router/app.dart';
 
 void main() {
   const app = App();

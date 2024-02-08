@@ -2,9 +2,9 @@ import 'dart:async';
 
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../freezed_riverpod_future/delay.dart';
-import '../../../freezed_riverpod_future/riverpod.dart';
 import '../../../plugins/logger.dart';
+import 'delay.dart';
+import 'riverpod.dart';
 
 part 'usecase.g.dart';
 

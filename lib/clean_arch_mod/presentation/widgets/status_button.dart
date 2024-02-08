@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-import '../../../clean_arch_mod/domain/types/status.dart';
-import '../../../clean_arch_mod/presentation/theme/colors.dart';
-import '../../../clean_arch_mod/presentation/theme/sizes.dart';
-import '../../../clean_arch_mod/presentation/widgets/status_image.dart';
+import '../../domain/types/status.dart';
+import '../../presentation/theme/colors.dart';
+import '../../presentation/theme/sizes.dart';
+import '../../presentation/widgets/status_image.dart';
 
 /// ステータス切り替えボタン
 class StatusButton extends StatelessWidget {

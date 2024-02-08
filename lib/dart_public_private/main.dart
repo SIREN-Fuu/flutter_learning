@@ -1,5 +1,5 @@
-import '../../../public_private/class_pp1.dart';
-import '../../../public_private/class_pp2.dart';
+import 'class_pp1.dart';
+import 'class_pp2.dart';
 
 void main() {
   final class1 = ClassPP1()..printName();

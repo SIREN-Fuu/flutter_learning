@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../go_router_basic/pages/page_a.dart';
-import '../../../go_router_basic/pages/page_b.dart';
-import '../../../go_router_basic/pages/page_c.dart';
+import 'pages/page_a.dart';
+import 'pages/page_b.dart';
+import 'pages/page_c.dart';
 
 // アプリ全体
 class App extends StatelessWidget {

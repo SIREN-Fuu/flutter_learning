@@ -1,6 +1,6 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../clean_arch_mod/domain/types/memo.dart';
+import '../../domain/types/memo.dart';
 
 /// メモ一覧を管理するノティファイヤ
 class MemoListNotifier extends StateNotifier<List<Memo>> {

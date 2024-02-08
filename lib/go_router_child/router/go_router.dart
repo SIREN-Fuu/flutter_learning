@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../go_router_child/pages/page_a.dart';
-import '../../../go_router_child/pages/page_b.dart';
-import '../../../go_router_child/pages/page_c.dart';
-import '../../../go_router_child/pages/page_d.dart';
+import '../pages/page_a.dart';
+import '../pages/page_b.dart';
+import '../pages/page_c.dart';
+import '../pages/page_d.dart';
 
 /// Provide GoRouter
 final goRouterProvider = Provider(

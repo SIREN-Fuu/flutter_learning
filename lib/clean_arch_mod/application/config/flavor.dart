@@ -1,4 +1,4 @@
-import '../../../clean_arch_mod/application/types/flavor.dart';
+import '../../application/types/flavor.dart';
 
 /// フレーバー
 Flavor flavor = _readFlavor();

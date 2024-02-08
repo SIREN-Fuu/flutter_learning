@@ -1,12 +1,12 @@
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 
-import '../../../clean_arch_mod/application/di/infrastructure.dart';
-import '../../../clean_arch_mod/application/state/editing_memo_provider.dart';
-import '../../../clean_arch_mod/application/state/memo_list_provider.dart';
-import '../../../clean_arch_mod/application/usecases/add_memo.dart';
-import '../../../clean_arch_mod/application/usecases/delete_memo.dart';
-import '../../../clean_arch_mod/application/usecases/init_app.dart';
-import '../../../clean_arch_mod/application/usecases/update_memo.dart';
+import '../../application/di/infrastructure.dart';
+import '../../application/state/editing_memo_provider.dart';
+import '../../application/state/memo_list_provider.dart';
+import '../../application/usecases/add_memo.dart';
+import '../../application/usecases/delete_memo.dart';
+import '../../application/usecases/init_app.dart';
+import '../../application/usecases/update_memo.dart';
 
 part 'usecases.g.dart';
 

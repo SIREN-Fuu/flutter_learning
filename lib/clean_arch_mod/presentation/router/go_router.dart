@@ -1,9 +1,9 @@
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../clean_arch_mod/presentation/pages/edit.dart';
-import '../../../clean_arch_mod/presentation/pages/list.dart';
-import '../../../clean_arch_mod/presentation/router/page_path.dart';
+import '../../presentation/pages/edit.dart';
+import '../../presentation/pages/list.dart';
+import '../../presentation/router/page_path.dart';
 
 /// Provide GoRouter
 final goRouterProvider = Provider(

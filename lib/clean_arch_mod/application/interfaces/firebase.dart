@@ -1,4 +1,4 @@
-import '../../../clean_arch_mod/application/types/analytics_event.dart';
+import '../../application/types/analytics_event.dart';
 
 abstract class FirebaseService {
   Future<void> init();

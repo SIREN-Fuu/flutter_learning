@@ -1,9 +1,9 @@
-import '../../../clean_arch_mod/application/config/memo.dart';
-import '../../../clean_arch_mod/application/interfaces/firebase.dart';
-import '../../../clean_arch_mod/application/interfaces/logger.dart';
-import '../../../clean_arch_mod/application/state/memo_list_notifier.dart';
-import '../../../clean_arch_mod/application/types/analytics_event.dart';
-import '../../../clean_arch_mod/domain/features/memo_creator.dart';
+import '../../application/config/memo.dart';
+import '../../application/interfaces/firebase.dart';
+import '../../application/interfaces/logger.dart';
+import '../../application/state/memo_list_notifier.dart';
+import '../../application/types/analytics_event.dart';
+import '../../domain/features/memo_creator.dart';
 
 /// メモを追加する
 class AddMemoUsecase {

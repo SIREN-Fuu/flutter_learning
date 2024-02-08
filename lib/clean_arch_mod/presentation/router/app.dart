@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-import '../../../clean_arch_mod/presentation/router/go_router.dart';
-import '../../../clean_arch_mod/presentation/theme/fonts.dart';
+import '../../presentation/router/go_router.dart';
+import '../../presentation/theme/fonts.dart';
 
 /// アプリ本体
 class App extends ConsumerWidget {

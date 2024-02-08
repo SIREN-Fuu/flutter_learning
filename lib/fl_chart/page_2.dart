@@ -1,7 +1,7 @@
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
 
-import '../../../fl_chart/resources/app_colors.dart';
+import 'resources/app_colors.dart';
 
 ///
 /// useEffect の例

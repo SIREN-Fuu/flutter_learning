@@ -1,4 +1,4 @@
-import '../../../clean_arch_mod/infrastructure/logger/log_level.dart';
+import '../../infrastructure/logger/log_level.dart';
 
 /// Log
 class Log {

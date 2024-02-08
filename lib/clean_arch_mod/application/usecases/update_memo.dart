@@ -1,10 +1,10 @@
-import 'package:flutter_learning/clean_arch_mod/application/config/memo.dart';
-import 'package:flutter_learning/clean_arch_mod/application/interfaces/firebase.dart';
-import 'package:flutter_learning/clean_arch_mod/application/interfaces/logger.dart';
-import 'package:flutter_learning/clean_arch_mod/application/state/editing_memo_notifier.dart';
-import 'package:flutter_learning/clean_arch_mod/application/state/memo_list_notifier.dart';
-import 'package:flutter_learning/clean_arch_mod/domain/features/memo_updater.dart';
-import 'package:flutter_learning/clean_arch_mod/domain/features/memo_validator.dart';
+import '../../application/config/memo.dart';
+import '../../application/interfaces/firebase.dart';
+import '../../application/interfaces/logger.dart';
+import '../../application/state/editing_memo_notifier.dart';
+import '../../application/state/memo_list_notifier.dart';
+import '../../domain/features/memo_updater.dart';
+import '../../domain/features/memo_validator.dart';
 
 /// メモを変更する
 class UpdateMemoUsecase {

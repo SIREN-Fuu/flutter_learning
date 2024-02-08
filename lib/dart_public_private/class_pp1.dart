@@ -1,7 +1,7 @@
 // ignore_for_file: unnecessary_getters_setters
 
 import '../../../plugins/logger.dart';
-import '../../../public_private/class_pp2.dart';
+import 'class_pp2.dart';
 
 class ClassPP1 {
   ClassPP1();

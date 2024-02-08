@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import '../../../clean_arch_mod/domain/types/status.dart';
+import '../../domain/types/status.dart';
 
 part 'memo.freezed.dart';
 

@@ -1,6 +1,6 @@
-import '../../../clean_arch_mod/domain/types/memo.dart';
-import '../../../clean_arch_mod/domain/types/memo_config.dart';
-import '../../../clean_arch_mod/domain/types/status.dart';
+import '../../domain/types/memo.dart';
+import '../../domain/types/memo_config.dart';
+import '../../domain/types/status.dart';
 
 /// メモに関する設定値
 final memoConfig = MemoConfig(

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../../../clean_arch_mod/domain/types/status.dart';
-import '../../../clean_arch_mod/presentation/theme/images.dart';
+import '../../domain/types/status.dart';
+import '../../presentation/theme/images.dart';
 
 /// ステータス画像
 class StatusImage extends StatelessWidget {

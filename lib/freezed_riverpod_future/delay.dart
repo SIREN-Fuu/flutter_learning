@@ -1,4 +1,4 @@
-import '../../../freezed_riverpod_future/freezed.dart';
+import 'freezed.dart';
 
 class ApiSimulator {
   int globalCounter = 1;
