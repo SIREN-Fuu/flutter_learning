@@ -38,35 +38,65 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: GridView.builder(
-          itemCount: 7, // 6つのボタン + 設定ボタン
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-            crossAxisCount: 3, // 3列
-          ),
-          itemBuilder: (BuildContext context, int index) {
-            // 6つ目のインデックス（つまり7番目の要素）で設定ボタンを配置
-            if (index == 6) {
-              return Align(
-                alignment: Alignment.bottomRight,
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: const Text('設定'),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            // 最初の3つのボタン
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: List.generate(3, (index) {
+                return Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text('ボタン ${index + 1}'),
+                    ),
+                  ),
+                );
+              }),
+            ),
+            // 次の3つのボタン
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: List.generate(3, (index) {
+                return Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text('ボタン ${index + 4}'),
+                    ),
+                  ),
+                );
+              }),
+            ),
+            // 設定ボタン（ボタン6の下）
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                const Spacer(flex: 2), // 2つ分のスペースを空ける
+                Expanded(
+                  // 設定ボタン
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: const Text('設定'),
+                    ),
+                  ),
                 ),
-              );
-            }
-            // それ以外の場合は通常のボタンを配置
-            return ElevatedButton(
-              onPressed: () {},
-              child: Text('ボタン ${index + 1}'),
-            );
-          },
+                // const Spacer(), // 1つ分のスペースを空ける（右側のスペース）
+              ],
+            ),
+          ],
         ),
-        // floatingActionButton: FloatingActionButton(
-        //   onPressed: _incrementCounter,
-        //   tooltip: 'Increment',
-        //   child: const Icon(Icons.add),
-        // ),
       ),
+      // floatingActionButton: FloatingActionButton(
+      //   onPressed: _incrementCounter,
+      //   tooltip: 'Increment',
+      //   child: const Icon(Icons.add),
+      // ),
     );
   }
 }

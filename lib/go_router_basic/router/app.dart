@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/go_router_basic/generic_pages/page_a.dart';
+import 'package:flutter_learning/go_router_basic/generic_pages/page_b.dart';
+import 'package:flutter_learning/go_router_basic/generic_pages/page_c.dart';
 import 'package:go_router/go_router.dart';
-
-import '../generic_pages/page_a.dart';
-import '../generic_pages/page_b.dart';
-import '../generic_pages/page_c.dart';
 
 // アプリ全体
 class App extends StatelessWidget {
@@ -31,11 +30,6 @@ class App extends StatelessWidget {
         path: '/c',
         name: 'c',
         builder: (context, state) => const PageGbC(),
-      ),
-      GoRoute(
-        path: '/d',
-        name: 'd',
-        builder: (context, state) => const PageGcD(),
       ),
     ],
 

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_learning/go_router_basic/generic_pages/page_GcA.dart';
+import 'package:flutter_learning/go_router_basic/generic_pages/page_GcB.dart';
+import 'package:flutter_learning/go_router_basic/generic_pages/page_GcC.dart';
+import 'package:flutter_learning/go_router_basic/generic_pages/page_GcD.dart';
 import 'package:go_router/go_router.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-
-import '../pages/page_a.dart';
-import '../pages/page_b.dart';
-import '../pages/page_c.dart';
-import '../pages/page_d.dart';
 
 /// Provide GoRouter
 final goRouterProvider = Provider(
