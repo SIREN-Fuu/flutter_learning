@@ -1,12 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'router/app.dart';
-
-/*
-  最新のFlutterに対応するため、動画と少しコードが変わりました
-*/
+import 'presentation/router/app.dart';
 
 void main() {
-  final app = App();
-  runApp(app);
+  runApp(const MyApp());
 }

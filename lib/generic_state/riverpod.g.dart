@@ -8,19 +8,22 @@ part of 'riverpod.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$counterHash() => r'e8c012fa7a233f58fe861b0bc4a6face5ab01910';
+String _$riverpodAutoCounterHash() =>
+    r'86eedd2ea7d692866d787b4e3f3d1e30156e390d';
 
-/// See also [Counter].
-@ProviderFor(Counter)
-final counterProvider = StreamNotifierProvider<Counter, int>.internal(
-  Counter.new,
-  name: r'counterProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$counterHash,
+/// See also [RiverpodAutoCounter].
+@ProviderFor(RiverpodAutoCounter)
+final riverpodAutoCounterProvider =
+    StreamNotifierProvider<RiverpodAutoCounter, int>.internal(
+  RiverpodAutoCounter.new,
+  name: r'riverpodAutoCounterProvider',
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product')
+      ? null
+      : _$riverpodAutoCounterHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );
 
-typedef _$Counter = StreamNotifier<int>;
+typedef _$RiverpodAutoCounter = StreamNotifier<int>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

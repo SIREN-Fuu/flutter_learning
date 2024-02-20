@@ -29,7 +29,7 @@ class MyHomePage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final counterManual = ref.watch(counterManualProvider);
-    final counter = ref.watch(counterProvider);
+    final counter = ref.watch(riverpodAutoCounterProvider);
     int? counterGet = 99;
 
     final init = useState(false);

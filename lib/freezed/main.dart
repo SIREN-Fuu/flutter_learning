@@ -1,52 +1,53 @@
-import 'package:flutter/material.dart';
-
-import 'freezed.dart';
+import 'package:flutter_learning/generic_state/freezed.dart';
+import 'package:flutter_learning/plugins/logger.dart';
 
 void main() {
-  const freezed = Freezed(name: 'Mina', age: '30');
-  final freezed2 = freezed.copyWith(age: '31');
-  debugPrint('${freezed2.name} ${freezed2.age}');
-
-  final unfreezed = Unfreezed(name: 'Rina', age: '30');
-  final unfreezed2 = unfreezed.copyWith(age: '29');
-  debugPrint('${unfreezed2.name} ${unfreezed2.age}');
-
-  final array1 = ['A', 'B', 'C'];
-  final array2 = [...array1];
-  final array3 = List.of(array1);
-  array1[0] = 'X';
-  array2[1] = 'Y';
-  array3[2] = 'Z';
-  debugPrint(array1[0] + array1[1] + array1[2]);
-  debugPrint(array2[0] + array2[1] + array2[2]);
-  debugPrint(array3[0] + array3[1] + array3[2]);
-
-  // Shallow Copy Bad Case
-  final array4 = [Sample('I', 1), Sample('J', 2), Sample('K', 3)];
-  final array5 = [...array4];
-  final array6 = List.of(array4);
-  array4[0].text = 'X';
-  array4[0].num = 9;
-  array5[1].text = 'Y';
-  array5[1].num = 8;
-  array6[2].text = 'Z';
-  array6[2].num = 7;
-  debugPrint(array4[0].text + array4[1].text + array4[2].text);
-  debugPrint(array5[0].text + array5[1].text + array5[2].text);
-  debugPrint(array6[0].text + array6[1].text + array6[2].text);
-  debugPrint(
-    array4[0].num.toString() +
-        array4[1].num.toString() +
-        array4[2].num.toString(),
+  const freezed =
+      AccountInfoFreezed(name: 'Mina', age: 30, favoriteFoods: ['coffee']);
+  logger.d(
+    'Freezed Equality: ${(freezed.copyWith() == freezed) ? 'true' : 'false'}',
   );
-  debugPrint(
-    array5[0].num.toString() +
-        array5[1].num.toString() +
-        array5[2].num.toString(),
+
+  final freezed2 = freezed.copyWith(age: 31, favoriteFoods: ['starbucks']);
+  logger.d(
+    'Freezed Normal Usecase ${freezed2.name} ${freezed2.age} ${freezed2.favoriteFoods}',
   );
-  debugPrint(
-    array6[0].num.toString() +
-        array6[1].num.toString() +
-        array6[2].num.toString(),
+
+  final unfreezed =
+      AccountInfoUnfreezed(name: 'Nina', age: 30, favoriteFoods: ['coffee']);
+  logger.d(
+    'Unfreezed Equality: ${(unfreezed.copyWith() == unfreezed) ? 'true' : 'false'}',
+  );
+
+  final unfreezed2 = unfreezed.copyWith(age: 29, favoriteFoods: ['starbucks']);
+  logger.d(
+    'Unfreezed Normal Usecase: ${unfreezed2.name} ${unfreezed2.age} ${unfreezed2.favoriteFoods}',
+  );
+  unfreezed2
+    ..name = 'Rina'
+    ..favoriteFoods.last = 'Mos Burger';
+  logger.d(
+    'Unfreezed Normal Usecase: ${unfreezed2.name} ${unfreezed2.age} ${unfreezed2.favoriteFoods}',
+  );
+
+  final unfreezed3 = unfreezed2.copyWith();
+  // ignore: cascade_invocations
+  unfreezed3.name = 'Moa';
+  unfreezed3.favoriteFoods.last = 'KFC';
+  logger.d(
+    'Unfreezed ListItem Shallow Copy!!: before:${unfreezed2.name} after:${unfreezed3.name} before:${unfreezed2.favoriteFoods} after:${unfreezed3.favoriteFoods}',
+  );
+
+  final unfreezed4 =
+      unfreezed2.copyWith(name: 'nana', favoriteFoods: ['Excelsior']);
+  logger.d(
+    'Unfreezed ListItem Shallow Copy Resolved!!: before:${unfreezed2.name} after:${unfreezed4.name} before:${unfreezed2.favoriteFoods} after:${unfreezed4.favoriteFoods}',
+  );
+
+  final unfreezed5 = unfreezed2.copyWith()
+    ..name = 'Mana'
+    ..favoriteFoods.last = 'Subway';
+  logger.d(
+    'Unfreezed Cascade Shallow Copy?: before:${unfreezed2.name} after:${unfreezed5.name} before:${unfreezed2.favoriteFoods} after:${unfreezed5.favoriteFoods}',
   );
 }

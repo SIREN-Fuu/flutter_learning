@@ -5,7 +5,7 @@ import 'package:riverpod_annotation/riverpod_annotation.dart';
 part 'riverpod.g.dart';
 
 @Riverpod(keepAlive: true)
-class Counter extends _$Counter {
+class RiverpodAutoCounter extends _$RiverpodAutoCounter {
   @override
   Stream<int> build() {
     // 1秒ごとに通知を受け取る stream
