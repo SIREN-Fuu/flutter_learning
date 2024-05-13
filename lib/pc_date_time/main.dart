@@ -1,5 +1,7 @@
 import 'dart:core';
 
+import 'package:flutter_learning/plugins/logger.dart';
+
 void main() {
   final dateTimes = List<DateTime>.generate(
     10000,
@@ -25,7 +27,7 @@ void main() {
   }
   stopwatch.stop();
 
-  print(
+  logger.d(
     'Time taken to find DateTime: ${stopwatch.elapsedMicroseconds} microseconds  $foundDateTime',
   );
 
@@ -48,7 +50,7 @@ void main() {
   }
   stopwatchNumber.stop();
 
-  print(
+  logger.d(
     'Time taken to find DateTime: ${stopwatchNumber.elapsedMicroseconds} microseconds  $foundNumber',
   );
 }

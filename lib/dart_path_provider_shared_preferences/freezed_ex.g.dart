@@ -12,7 +12,7 @@ _$FreezedExImpl _$$FreezedExImplFromJson(Map<String, dynamic> json) =>
     _$FreezedExImpl(
       text: json['text'] as String? ?? '',
       name: json['name'] as String? ?? '',
-      age: json['age'] as int? ?? 0,
+      age: (json['age'] as num?)?.toInt() ?? 0,
     );
 
 Map<String, dynamic> _$$FreezedExImplToJson(_$FreezedExImpl instance) =>
@@ -26,7 +26,7 @@ _$UnfreezedExImpl _$$UnfreezedExImplFromJson(Map<String, dynamic> json) =>
     _$UnfreezedExImpl(
       text: json['text'] as String? ?? '',
       name: json['name'] as String? ?? '',
-      age: json['age'] as int? ?? 0,
+      age: (json['age'] as num?)?.toInt() ?? 0,
     );
 
 Map<String, dynamic> _$$UnfreezedExImplToJson(_$UnfreezedExImpl instance) =>

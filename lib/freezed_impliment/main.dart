@@ -7,6 +7,9 @@ void main() {
 
   final profileEx = ExampleFactoryEx.cityEx('Mina', 30);
   logger.d(profileEx.runtimeType);
+  if (profileEx is CityEx) {
+    logger.d('CityEx');
+  }
 
   final profileEx2 = ExampleFactoryEx.cityEx2('Nina', 29);
   logger.d(profileEx2.runtimeType);

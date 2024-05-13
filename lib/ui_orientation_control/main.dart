@@ -108,7 +108,7 @@ class _OrientationListenerState extends State<OrientationListener>
   }
 
   void _showDialog() {
-    showDialog(
+    showDialog<AlertDialog>(
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(

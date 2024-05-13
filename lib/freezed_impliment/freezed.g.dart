@@ -10,7 +10,7 @@ part of 'freezed.dart';
 
 _$CityExImpl _$$CityExImplFromJson(Map<String, dynamic> json) => _$CityExImpl(
       json['name'] as String,
-      json['age'] as int,
+      (json['age'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
@@ -24,7 +24,7 @@ Map<String, dynamic> _$$CityExImplToJson(_$CityExImpl instance) =>
 _$CityEx2Impl _$$CityEx2ImplFromJson(Map<String, dynamic> json) =>
     _$CityEx2Impl(
       json['name'] as String,
-      json['age'] as int,
+      (json['age'] as num).toInt(),
       $type: json['runtimeType'] as String?,
     );
 
