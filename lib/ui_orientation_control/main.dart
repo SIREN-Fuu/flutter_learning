@@ -77,10 +77,10 @@ class OrientationListener extends StatefulWidget {
   const OrientationListener({super.key});
 
   @override
-  _OrientationListenerState createState() => _OrientationListenerState();
+  OrientationListenerState createState() => OrientationListenerState();
 }
 
-class _OrientationListenerState extends State<OrientationListener>
+class OrientationListenerState extends State<OrientationListener>
     with WidgetsBindingObserver {
   @override
   void initState() {

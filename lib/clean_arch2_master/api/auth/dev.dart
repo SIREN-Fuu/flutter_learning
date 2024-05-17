@@ -6,6 +6,7 @@ import '../../core/types/user.dart';
 
 /// devフレーバー用の Firebase Auth
 class DevAuth implements Auth {
+  // ignore: close_sinks
   final streamController = StreamController<User?>();
 
   @override
