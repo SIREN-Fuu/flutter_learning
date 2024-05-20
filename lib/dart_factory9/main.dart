@@ -1,6 +1,10 @@
+/// TechnicalChildEx.resultsがList<dynamic>型になるので問題である！
+library;
 // ignore_for_file: unreachable_from_main
 
-import 'dart:ui'; // Path クラスを使用するために必要
+import 'dart:ui';
+
+import '../plugins/logger.dart'; // Path クラスを使用するために必要
 
 class TechnicalSetting {}
 
@@ -33,7 +37,8 @@ abstract class TechnicalChildEx {
   }
 
   final TechnicalSetting technicalSetting;
-  final List<TechnicalChild> results;
+  //TechnicalChildEx.resultsがList<dynamic>型になるので問題である！
+  final List<dynamic> results;
 }
 
 class Line extends TechnicalChildEx {
@@ -54,8 +59,6 @@ class Cloud extends TechnicalChildEx {
 
   // List<Path> 型の result 変数
   final List<Path> _result = [];
-
-  @override
   List<Path> get result => _result;
 }
 
@@ -66,14 +69,14 @@ void main() {
   // Line インスタンス
   final line = TechnicalChildEx.line(
     technicalSetting: technicalSetting,
-    results: results,
+    results: <double>[1.0],
   );
-  print(line.result); // [1.0]
+  logger.d(line.results[0]); // [1.0]
 
   // Cloud インスタンス
   final cloud = TechnicalChildEx.cloud(
     technicalSetting: technicalSetting,
-    results: results,
+    results: <Path>[Path()],
   );
-  print(cloud.results); // [Instance of 'Path']
+  logger.d(cloud.results); // [Instance of 'Path']
 }
