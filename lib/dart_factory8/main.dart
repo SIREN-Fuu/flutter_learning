@@ -1,5 +1,7 @@
 //ジェネリクス+Factoryコンストラクタは書けない
 
+// ignore_for_file: unreachable_from_main
+
 import 'dart:ui';
 
 import '../plugins/logger.dart'; // Path クラスを使用するために必要

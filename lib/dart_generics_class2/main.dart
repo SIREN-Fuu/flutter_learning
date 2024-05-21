@@ -1,3 +1,5 @@
+// ignore_for_file: unreachable_from_main
+
 import 'dart:ui'; // Path クラスを使用するために必要
 
 import '../plugins/logger.dart';
