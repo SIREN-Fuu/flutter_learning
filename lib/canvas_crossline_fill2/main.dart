@@ -56,10 +56,6 @@ class MyPainter extends CustomPainter {
       ..color = Colors.blue
       ..style = PaintingStyle.stroke;
 
-    final paintRed = Paint()
-      ..color = Colors.red
-      ..style = PaintingStyle.stroke;
-
     final paintFillBlue = Paint()
       ..color = Colors.blue.withOpacity(0.5)
       ..style = PaintingStyle.fill;
@@ -183,10 +179,6 @@ class MyPainter extends CustomPainter {
       canvas.drawPath(path, paintFillBlue);
     }
 
-    // for (var i = 0; i < fillPathsBlue.length - 9; i++) {
-    //   canvas.drawPath(fillPathsBlue[i], paintFillBlue);
-    // }
-
     for (final path in fillPathsRed) {
       canvas.drawPath(path, paintFillRed);
     }
@@ -212,7 +204,6 @@ class MyPainter extends CustomPainter {
     }
 
     canvas.drawPath(path1, paintBlue);
-    canvas.drawPath(path2, paintRed);
   }
 
   @override

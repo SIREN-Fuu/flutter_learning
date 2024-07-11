@@ -46,9 +46,6 @@ class Line extends TechnicalChildEx {
     required super.technicalSetting,
     required super.results,
   }) : super._();
-
-  // List<double> 型の result 変数
-  final List<double> _result = [];
 }
 
 class Cloud extends TechnicalChildEx {
@@ -64,7 +61,6 @@ class Cloud extends TechnicalChildEx {
 
 void main() {
   final technicalSetting = TechnicalSetting();
-  final children = <TechnicalChild>[];
 
   // Line インスタンス
   final line = TechnicalChildEx.line(

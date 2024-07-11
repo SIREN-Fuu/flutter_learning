@@ -78,7 +78,7 @@ class _GreenButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: const ButtonStyle(
-        backgroundColor: MaterialStatePropertyAll(Colors.greenAccent),
+        backgroundColor: WidgetStatePropertyAll(Colors.greenAccent),
       ),
       onPressed: onTapped,
       child: const Text('大きな緑ボタン'),

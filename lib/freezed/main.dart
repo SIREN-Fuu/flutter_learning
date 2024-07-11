@@ -4,6 +4,7 @@ import 'package:flutter_learning/plugins/logger.dart';
 void main() {
   const freezedMina =
       AccountInfoFreezed(name: 'Mina', age: 30, favoriteFoods: ['coffee']);
+
   logger.d(
     'Freezed Equality: ${(freezedMina.copyWith() == freezedMina) ? 'true' : 'false'}',
   );

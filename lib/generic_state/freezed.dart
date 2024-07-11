@@ -14,6 +14,16 @@ class AccountInfoFreezed with _$AccountInfoFreezed {
   const AccountInfoFreezed._();
 }
 
+@freezed
+class AccountInfo with _$AccountInfo {
+  const factory AccountInfo({
+    required String name,
+    required int age,
+    required List<String> favoriteFoods,
+  }) = _AccountInfo;
+  const AccountInfo._();
+}
+
 @unfreezed
 class AccountInfoUnfreezed with _$AccountInfoUnfreezed {
   factory AccountInfoUnfreezed({

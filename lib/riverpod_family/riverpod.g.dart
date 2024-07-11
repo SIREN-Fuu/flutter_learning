@@ -8,7 +8,7 @@ part of 'riverpod.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$familyTestHash() => r'76d30d8147332007e7d602c0ac9fc4ff517e9bd4';
+String _$riverpodFamilyHash() => r'5a06b6061cae416b9179638aa3f00894beb8be5a';
 
 /// Copied from Dart SDK
 class _SystemHash {
@@ -31,7 +31,7 @@ class _SystemHash {
   }
 }
 
-abstract class _$FamilyTest extends BuildlessAutoDisposeNotifier<String> {
+abstract class _$RiverpodFamily extends BuildlessAutoDisposeNotifier<String> {
   late final bool arg;
 
   String build(
@@ -39,27 +39,27 @@ abstract class _$FamilyTest extends BuildlessAutoDisposeNotifier<String> {
   );
 }
 
-/// See also [FamilyTest].
-@ProviderFor(FamilyTest)
-const familyTestProvider = FamilyTestFamily();
+/// See also [RiverpodFamily].
+@ProviderFor(RiverpodFamily)
+const riverpodFamilyProvider = RiverpodFamilyFamily();
 
-/// See also [FamilyTest].
-class FamilyTestFamily extends Family<String> {
-  /// See also [FamilyTest].
-  const FamilyTestFamily();
+/// See also [RiverpodFamily].
+class RiverpodFamilyFamily extends Family<String> {
+  /// See also [RiverpodFamily].
+  const RiverpodFamilyFamily();
 
-  /// See also [FamilyTest].
-  FamilyTestProvider call(
+  /// See also [RiverpodFamily].
+  RiverpodFamilyProvider call(
     bool arg,
   ) {
-    return FamilyTestProvider(
+    return RiverpodFamilyProvider(
       arg,
     );
   }
 
   @override
-  FamilyTestProvider getProviderOverride(
-    covariant FamilyTestProvider provider,
+  RiverpodFamilyProvider getProviderOverride(
+    covariant RiverpodFamilyProvider provider,
   ) {
     return call(
       provider.arg,
@@ -78,30 +78,30 @@ class FamilyTestFamily extends Family<String> {
       _allTransitiveDependencies;
 
   @override
-  String? get name => r'familyTestProvider';
+  String? get name => r'riverpodFamilyProvider';
 }
 
-/// See also [FamilyTest].
-class FamilyTestProvider
-    extends AutoDisposeNotifierProviderImpl<FamilyTest, String> {
-  /// See also [FamilyTest].
-  FamilyTestProvider(
+/// See also [RiverpodFamily].
+class RiverpodFamilyProvider
+    extends AutoDisposeNotifierProviderImpl<RiverpodFamily, String> {
+  /// See also [RiverpodFamily].
+  RiverpodFamilyProvider(
     bool arg,
   ) : this._internal(
-          () => FamilyTest()..arg = arg,
-          from: familyTestProvider,
-          name: r'familyTestProvider',
+          () => RiverpodFamily()..arg = arg,
+          from: riverpodFamilyProvider,
+          name: r'riverpodFamilyProvider',
           debugGetCreateSourceHash:
               const bool.fromEnvironment('dart.vm.product')
                   ? null
-                  : _$familyTestHash,
-          dependencies: FamilyTestFamily._dependencies,
+                  : _$riverpodFamilyHash,
+          dependencies: RiverpodFamilyFamily._dependencies,
           allTransitiveDependencies:
-              FamilyTestFamily._allTransitiveDependencies,
+              RiverpodFamilyFamily._allTransitiveDependencies,
           arg: arg,
         );
 
-  FamilyTestProvider._internal(
+  RiverpodFamilyProvider._internal(
     super._createNotifier, {
     required super.name,
     required super.dependencies,
@@ -115,7 +115,7 @@ class FamilyTestProvider
 
   @override
   String runNotifierBuild(
-    covariant FamilyTest notifier,
+    covariant RiverpodFamily notifier,
   ) {
     return notifier.build(
       arg,
@@ -123,10 +123,10 @@ class FamilyTestProvider
   }
 
   @override
-  Override overrideWith(FamilyTest Function() create) {
+  Override overrideWith(RiverpodFamily Function() create) {
     return ProviderOverride(
       origin: this,
-      override: FamilyTestProvider._internal(
+      override: RiverpodFamilyProvider._internal(
         () => create()..arg = arg,
         from: from,
         name: null,
@@ -139,13 +139,13 @@ class FamilyTestProvider
   }
 
   @override
-  AutoDisposeNotifierProviderElement<FamilyTest, String> createElement() {
-    return _FamilyTestProviderElement(this);
+  AutoDisposeNotifierProviderElement<RiverpodFamily, String> createElement() {
+    return _RiverpodFamilyProviderElement(this);
   }
 
   @override
   bool operator ==(Object other) {
-    return other is FamilyTestProvider && other.arg == arg;
+    return other is RiverpodFamilyProvider && other.arg == arg;
   }
 
   @override
@@ -157,18 +157,18 @@ class FamilyTestProvider
   }
 }
 
-mixin FamilyTestRef on AutoDisposeNotifierProviderRef<String> {
+mixin RiverpodFamilyRef on AutoDisposeNotifierProviderRef<String> {
   /// The parameter `arg` of this provider.
   bool get arg;
 }
 
-class _FamilyTestProviderElement
-    extends AutoDisposeNotifierProviderElement<FamilyTest, String>
-    with FamilyTestRef {
-  _FamilyTestProviderElement(super.provider);
+class _RiverpodFamilyProviderElement
+    extends AutoDisposeNotifierProviderElement<RiverpodFamily, String>
+    with RiverpodFamilyRef {
+  _RiverpodFamilyProviderElement(super.provider);
 
   @override
-  bool get arg => (origin as FamilyTestProvider).arg;
+  bool get arg => (origin as RiverpodFamilyProvider).arg;
 }
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member

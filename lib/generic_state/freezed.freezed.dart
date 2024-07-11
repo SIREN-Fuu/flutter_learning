@@ -181,6 +181,171 @@ abstract class _AccountInfoFreezed extends AccountInfoFreezed {
 }
 
 /// @nodoc
+mixin _$AccountInfo {
+  String get name => throw _privateConstructorUsedError;
+  int get age => throw _privateConstructorUsedError;
+  List<String> get favoriteFoods => throw _privateConstructorUsedError;
+
+  @JsonKey(ignore: true)
+  $AccountInfoCopyWith<AccountInfo> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $AccountInfoCopyWith<$Res> {
+  factory $AccountInfoCopyWith(
+          AccountInfo value, $Res Function(AccountInfo) then) =
+      _$AccountInfoCopyWithImpl<$Res, AccountInfo>;
+  @useResult
+  $Res call({String name, int age, List<String> favoriteFoods});
+}
+
+/// @nodoc
+class _$AccountInfoCopyWithImpl<$Res, $Val extends AccountInfo>
+    implements $AccountInfoCopyWith<$Res> {
+  _$AccountInfoCopyWithImpl(this._value, this._then);
+
+  // ignore: unused_field
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? age = null,
+    Object? favoriteFoods = null,
+  }) {
+    return _then(_value.copyWith(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      age: null == age
+          ? _value.age
+          : age // ignore: cast_nullable_to_non_nullable
+              as int,
+      favoriteFoods: null == favoriteFoods
+          ? _value.favoriteFoods
+          : favoriteFoods // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ) as $Val);
+  }
+}
+
+/// @nodoc
+abstract class _$$AccountInfoImplCopyWith<$Res>
+    implements $AccountInfoCopyWith<$Res> {
+  factory _$$AccountInfoImplCopyWith(
+          _$AccountInfoImpl value, $Res Function(_$AccountInfoImpl) then) =
+      __$$AccountInfoImplCopyWithImpl<$Res>;
+  @override
+  @useResult
+  $Res call({String name, int age, List<String> favoriteFoods});
+}
+
+/// @nodoc
+class __$$AccountInfoImplCopyWithImpl<$Res>
+    extends _$AccountInfoCopyWithImpl<$Res, _$AccountInfoImpl>
+    implements _$$AccountInfoImplCopyWith<$Res> {
+  __$$AccountInfoImplCopyWithImpl(
+      _$AccountInfoImpl _value, $Res Function(_$AccountInfoImpl) _then)
+      : super(_value, _then);
+
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? name = null,
+    Object? age = null,
+    Object? favoriteFoods = null,
+  }) {
+    return _then(_$AccountInfoImpl(
+      name: null == name
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      age: null == age
+          ? _value.age
+          : age // ignore: cast_nullable_to_non_nullable
+              as int,
+      favoriteFoods: null == favoriteFoods
+          ? _value._favoriteFoods
+          : favoriteFoods // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AccountInfoImpl extends _AccountInfo {
+  const _$AccountInfoImpl(
+      {required this.name,
+      required this.age,
+      required final List<String> favoriteFoods})
+      : _favoriteFoods = favoriteFoods,
+        super._();
+
+  @override
+  final String name;
+  @override
+  final int age;
+  final List<String> _favoriteFoods;
+  @override
+  List<String> get favoriteFoods {
+    if (_favoriteFoods is EqualUnmodifiableListView) return _favoriteFoods;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_favoriteFoods);
+  }
+
+  @override
+  String toString() {
+    return 'AccountInfo(name: $name, age: $age, favoriteFoods: $favoriteFoods)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AccountInfoImpl &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.age, age) || other.age == age) &&
+            const DeepCollectionEquality()
+                .equals(other._favoriteFoods, _favoriteFoods));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, name, age,
+      const DeepCollectionEquality().hash(_favoriteFoods));
+
+  @JsonKey(ignore: true)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AccountInfoImplCopyWith<_$AccountInfoImpl> get copyWith =>
+      __$$AccountInfoImplCopyWithImpl<_$AccountInfoImpl>(this, _$identity);
+}
+
+abstract class _AccountInfo extends AccountInfo {
+  const factory _AccountInfo(
+      {required final String name,
+      required final int age,
+      required final List<String> favoriteFoods}) = _$AccountInfoImpl;
+  const _AccountInfo._() : super._();
+
+  @override
+  String get name;
+  @override
+  int get age;
+  @override
+  List<String> get favoriteFoods;
+  @override
+  @JsonKey(ignore: true)
+  _$$AccountInfoImplCopyWith<_$AccountInfoImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
 mixin _$AccountInfoUnfreezed {
   String get name => throw _privateConstructorUsedError;
   set name(String value) => throw _privateConstructorUsedError;

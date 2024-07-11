@@ -18,6 +18,9 @@ class FreezedEx with _$FreezedEx {
   factory FreezedEx.fromJson(Map<String, dynamic> json) =>
       _$FreezedExFromJson(json);
 
+  factory FreezedEx.fromJsonEx(String jsonString) =>
+      _$FreezedExFromJson(jsonDecode(jsonString) as Map<String, dynamic>);
+
   String toStringEx() => json.encode(toJson());
 }
 
@@ -33,6 +36,9 @@ class UnfreezedEx with _$UnfreezedEx {
   // json形式で受け取るためのコードを生成するために記述
   factory UnfreezedEx.fromJson(Map<String, dynamic> json) =>
       _$UnfreezedExFromJson(json);
+
+  factory UnfreezedEx.fromJsonEx(String jsonString) =>
+      _$UnfreezedExFromJson(jsonDecode(jsonString) as Map<String, dynamic>);
 
   String toStringEx() => json.encode(toJson());
 }

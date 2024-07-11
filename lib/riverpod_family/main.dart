@@ -28,12 +28,12 @@ class MyHomePage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final flag = useState(true);
-    final counterManual = ref.watch(familyTestProvider(flag.value));
+    final counterManual = ref.watch(riverpodFamilyProvider(flag.value));
 
     // 初期値
     WidgetsBinding.instance.addPostFrameCallback((_) {
-      ref.read(familyTestProvider(true).notifier).textChange('Trueです');
-      ref.read(familyTestProvider(false).notifier).textChange('Falseです');
+      ref.read(riverpodFamilyProvider(true).notifier).textChange('Trueです');
+      ref.read(riverpodFamilyProvider(false).notifier).textChange('Falseです');
     });
 
     return Scaffold(
