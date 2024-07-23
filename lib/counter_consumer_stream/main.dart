@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_learning/generic_state/riverpod.dart';
+import 'package:flutter_learning/counter_consumer_stream/riverpod_stream.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import 'riverpod.dart';
 
 void main() => runApp(const ProviderScope(child: MyApp()));
 
@@ -29,16 +26,8 @@ class MyHomePage extends ConsumerWidget {
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final counterManual = ref.watch(counterManualProvider);
     final counter = ref.watch(riverpodAutoCounterProvider);
-    int? counterGet = 99;
 
-    final init = useState(false);
-
-    if (!init.value) {
-      init.value = true;
-      counterGet = counter.value;
-    }
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
@@ -52,14 +41,6 @@ class MyHomePage extends ConsumerWidget {
               'You have pushed the button this many times:',
             ),
             Text(
-              'Get Counter: $counterGet',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            Text(
-              'Sample Counter: $counterManual',
-              style: Theme.of(context).textTheme.headlineMedium,
-            ),
-            Text(
               'StreamCounter: ${counter.value}',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
@@ -68,7 +49,7 @@ class MyHomePage extends ConsumerWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          ref.read(counterManualProvider.notifier).increment();
+          ref.read(riverpodAutoCounterProvider.notifier).reset();
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),

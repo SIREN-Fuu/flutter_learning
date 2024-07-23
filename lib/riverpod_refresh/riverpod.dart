@@ -40,7 +40,6 @@ class FutureSample extends _$FutureSample {
     return Future.delayed(
       const Duration(seconds: 3),
       () => 'Hello World',
-      // () => throw Exception('Error'),
     );
   }
 }

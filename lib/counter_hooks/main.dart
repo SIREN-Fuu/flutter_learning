@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_learning/plugins/logger.dart';
 
 void main() => runApp(const MyApp());
 
@@ -27,9 +28,9 @@ class MyHomePage extends HookWidget {
   Widget build(BuildContext context) {
     useEffect(
       () {
-        debugPrint('起動時処理');
+        logger.d('UseEffect Sample: 起動時処理');
         return () {
-          debugPrint('終了時処理');
+          debugPrint('UseEffect Sample: 終了時処理');
         };
       },
       const [],
@@ -58,7 +59,7 @@ class MyHomePage extends HookWidget {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          counter.value = counter.value + 1;
+          counter.value += 1;
         },
         tooltip: 'Increment',
         child: const Icon(Icons.add),

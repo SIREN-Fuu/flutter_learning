@@ -1,7 +1,4 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:intl/intl.dart';
-
-part 'date_time_string.freezed.dart';
 
 /// 日付をカンマ区切り文字列として扱うモデルクラス
 /// Freezedを使用しているため、イミュータブルなクラスとなっている
@@ -14,13 +11,10 @@ part 'date_time_string.freezed.dart';
 /// * DateTimeString.fromString('2000.01.01.01.01.01');
 /// * DateTimeString.fromDateTime(DateTime.now());;
 
-@freezed
-class DateTimeString with _$DateTimeString {
-  const factory DateTimeString({
-    @Default('2000.01.01.01.01.01') String value,
-  }) = _DateTimeString;
-
-  const DateTimeString._();
+class DateTimeString {
+  DateTimeString({
+    required this.value,
+  });
 
   factory DateTimeString.fromString(String dateString) {
     final parts = dateString.split('.');
@@ -65,6 +59,8 @@ class DateTimeString with _$DateTimeString {
 
   factory DateTimeString.fromDateTime(DateTime dateTime) =>
       DateTimeString(value: DateFormat('yyyy.MM.dd.HH.mm.ss').format(dateTime));
+
+  final String value;
 
   DateTime toDateTime() {
     final split = value.split('.');
