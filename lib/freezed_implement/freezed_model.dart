@@ -6,8 +6,9 @@ abstract class Status {
 }
 
 mixin Utility {
+  String version = 'Version: 1.0.1';
   int getVersion() {
-    logger.d('Version: 1.0.0');
+    logger.d(version);
     return 1;
   }
 }

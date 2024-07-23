@@ -2,6 +2,7 @@
 
 import 'package:flutter_learning/freezed_implement/freezed_implements.dart';
 import 'package:flutter_learning/freezed_implement/freezed_mixin.dart';
+import 'package:flutter_learning/plugins/logger.dart';
 
 void main() {
   final ubuntu = OsLinux.ubuntu();
@@ -13,7 +14,10 @@ void main() {
   final iOS = OsApple.iOS();
 
   // windows.getVersion(); //Mixinしていない
+
   windowsEx.getVersion();
+  logger.d('windowsEx: ${windowsEx.toStringEx()}');
 
   macOS.getVersion();
+  logger.d('macOS: ${macOS.toStringEx()}');
 }
