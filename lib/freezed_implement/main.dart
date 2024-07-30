@@ -15,9 +15,14 @@ void main() {
 
   // windows.getVersion(); //Mixinしていない
 
-  windowsEx.getVersion();
+  // FreezedだがMixinのメンバーは代入が可能になっている
+  windowsEx
+    ..version = 'Version: 1.0.2'
+    ..getVersion();
   logger.d('windowsEx: ${windowsEx.toStringEx()}');
 
-  macOS.getVersion();
+  macOS
+    ..version = 'Version: 1.0.3'
+    ..getVersion();
   logger.d('macOS: ${macOS.toStringEx()}');
 }
