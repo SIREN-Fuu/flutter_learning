@@ -20,7 +20,9 @@ mixin _$Counters {
   String get testString => throw _privateConstructorUsedError;
   List<int>? get testListInt => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Counters
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $CountersCopyWith<Counters> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -43,6 +45,8 @@ class _$CountersCopyWithImpl<$Res, $Val extends Counters>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Counters
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -86,6 +90,8 @@ class __$$CountersImplCopyWithImpl<$Res>
       _$CountersImpl _value, $Res Function(_$CountersImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Counters
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -155,7 +161,9 @@ class _$CountersImpl extends _Counters {
   int get hashCode => Object.hash(runtimeType, testInt, testString,
       const DeepCollectionEquality().hash(_testListInt));
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Counters
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$CountersImplCopyWith<_$CountersImpl> get copyWith =>
@@ -175,8 +183,11 @@ abstract class _Counters extends Counters {
   String get testString;
   @override
   List<int>? get testListInt;
+
+  /// Create a copy of Counters
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$CountersImplCopyWith<_$CountersImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -113,7 +113,7 @@ class MyHomePage extends HookConsumerWidget {
               'counterNotifierProviderの値は: $counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-            ButtonBar(
+            OverflowBar(
               alignment: MainAxisAlignment.center,
               children: <Widget>[
                 ElevatedButton(

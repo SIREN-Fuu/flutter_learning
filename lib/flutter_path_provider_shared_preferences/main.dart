@@ -103,7 +103,7 @@ class HomePage extends StatelessWidget {
               maxLines: 1,
             ),
           ),
-          ButtonBar(
+          OverflowBar(
             alignment: MainAxisAlignment.center,
             children: <Widget>[
               ElevatedButton(
@@ -127,7 +127,7 @@ class HomePage extends StatelessWidget {
               ),
             ],
           ),
-          ButtonBar(
+          OverflowBar(
             alignment: MainAxisAlignment.center,
             children: <Widget>[
               ElevatedButton(

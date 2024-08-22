@@ -32,8 +32,12 @@ mixin _$OsWindows {
   String get key => throw _privateConstructorUsedError;
   String get displayName => throw _privateConstructorUsedError;
 
+  /// Serializes this OsWindows to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of OsWindows
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $OsWindowsCopyWith<OsWindows> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -56,6 +60,8 @@ class _$OsWindowsCopyWithImpl<$Res, $Val extends OsWindows>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of OsWindows
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -94,6 +100,8 @@ class __$$WindowsImplCopyWithImpl<$Res>
       _$WindowsImpl _value, $Res Function(_$WindowsImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of OsWindows
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -151,11 +159,13 @@ class _$WindowsImpl extends Windows with Utility {
                 other.displayName == displayName));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, key, displayName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of OsWindows
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WindowsImplCopyWith<_$WindowsImpl> get copyWith =>
@@ -179,8 +189,11 @@ abstract class Windows extends OsWindows implements Utility {
   String get key;
   @override
   String get displayName;
+
+  /// Create a copy of OsWindows
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WindowsImplCopyWith<_$WindowsImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -204,6 +217,8 @@ class __$$WindowsNTImplCopyWithImpl<$Res>
       _$WindowsNTImpl _value, $Res Function(_$WindowsNTImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of OsWindows
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -261,11 +276,13 @@ class _$WindowsNTImpl extends WindowsNT with Utility {
                 other.displayName == displayName));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, key, displayName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of OsWindows
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$WindowsNTImplCopyWith<_$WindowsNTImpl> get copyWith =>
@@ -291,8 +308,11 @@ abstract class WindowsNT extends OsWindows implements Utility {
   String get key;
   @override
   String get displayName;
+
+  /// Create a copy of OsWindows
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$WindowsNTImplCopyWith<_$WindowsNTImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -315,8 +335,12 @@ mixin _$OsApple {
   String get key => throw _privateConstructorUsedError;
   String get displayName => throw _privateConstructorUsedError;
 
+  /// Serializes this OsApple to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of OsApple
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $OsAppleCopyWith<OsApple> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -338,6 +362,8 @@ class _$OsAppleCopyWithImpl<$Res, $Val extends OsApple>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of OsApple
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -375,6 +401,8 @@ class __$$MacOSImplCopyWithImpl<$Res>
       _$MacOSImpl _value, $Res Function(_$MacOSImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of OsApple
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -430,11 +458,13 @@ class _$MacOSImpl extends MacOS {
                 other.displayName == displayName));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, key, displayName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of OsApple
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MacOSImplCopyWith<_$MacOSImpl> get copyWith =>
@@ -458,8 +488,11 @@ abstract class MacOS extends OsApple {
   String get key;
   @override
   String get displayName;
+
+  /// Create a copy of OsApple
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MacOSImplCopyWith<_$MacOSImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -480,6 +513,8 @@ class __$$IOSImplCopyWithImpl<$Res>
   __$$IOSImplCopyWithImpl(_$IOSImpl _value, $Res Function(_$IOSImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of OsApple
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -535,11 +570,13 @@ class _$IOSImpl extends IOS {
                 other.displayName == displayName));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, key, displayName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of OsApple
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$IOSImplCopyWith<_$IOSImpl> get copyWith =>
@@ -563,8 +600,11 @@ abstract class IOS extends OsApple {
   String get key;
   @override
   String get displayName;
+
+  /// Create a copy of OsApple
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$IOSImplCopyWith<_$IOSImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

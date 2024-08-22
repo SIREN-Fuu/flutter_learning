@@ -24,8 +24,12 @@ mixin _$FreezedEx {
   String get name => throw _privateConstructorUsedError;
   int get age => throw _privateConstructorUsedError;
 
+  /// Serializes this FreezedEx to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of FreezedEx
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $FreezedExCopyWith<FreezedEx> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -48,6 +52,8 @@ class _$FreezedExCopyWithImpl<$Res, $Val extends FreezedEx>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of FreezedEx
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -91,6 +97,8 @@ class __$$FreezedExImplCopyWithImpl<$Res>
       _$FreezedExImpl _value, $Res Function(_$FreezedExImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of FreezedEx
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,11 +157,13 @@ class _$FreezedExImpl extends _FreezedEx {
             (identical(other.age, age) || other.age == age));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, text, name, age);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of FreezedEx
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$FreezedExImplCopyWith<_$FreezedExImpl> get copyWith =>
@@ -181,8 +191,11 @@ abstract class _FreezedEx extends FreezedEx {
   String get name;
   @override
   int get age;
+
+  /// Create a copy of FreezedEx
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FreezedExImplCopyWith<_$FreezedExImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -200,8 +213,12 @@ mixin _$UnfreezedEx {
   int get age => throw _privateConstructorUsedError;
   set age(int value) => throw _privateConstructorUsedError;
 
+  /// Serializes this UnfreezedEx to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of UnfreezedEx
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $UnfreezedExCopyWith<UnfreezedEx> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -225,6 +242,8 @@ class _$UnfreezedExCopyWithImpl<$Res, $Val extends UnfreezedEx>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of UnfreezedEx
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -268,6 +287,8 @@ class __$$UnfreezedExImplCopyWithImpl<$Res>
       _$UnfreezedExImpl _value, $Res Function(_$UnfreezedExImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of UnfreezedEx
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -315,7 +336,9 @@ class _$UnfreezedExImpl extends _UnfreezedEx {
     return 'UnfreezedEx(text: $text, name: $name, age: $age)';
   }
 
-  @JsonKey(ignore: true)
+  /// Create a copy of UnfreezedEx
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UnfreezedExImplCopyWith<_$UnfreezedExImpl> get copyWith =>
@@ -345,8 +368,11 @@ abstract class _UnfreezedEx extends UnfreezedEx {
   @override
   int get age;
   set age(int value);
+
+  /// Create a copy of UnfreezedEx
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UnfreezedExImplCopyWith<_$UnfreezedExImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

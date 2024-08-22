@@ -32,8 +32,12 @@ mixin _$OsLinux {
   String get key => throw _privateConstructorUsedError;
   String get displayName => throw _privateConstructorUsedError;
 
+  /// Serializes this OsLinux to a JSON map.
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
-  @JsonKey(ignore: true)
+
+  /// Create a copy of OsLinux
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $OsLinuxCopyWith<OsLinux> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -55,6 +59,8 @@ class _$OsLinuxCopyWithImpl<$Res, $Val extends OsLinux>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of OsLinux
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -92,6 +98,8 @@ class __$$UbuntuImplCopyWithImpl<$Res>
       _$UbuntuImpl _value, $Res Function(_$UbuntuImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of OsLinux
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -149,11 +157,13 @@ class _$UbuntuImpl extends Ubuntu {
                 other.displayName == displayName));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, key, displayName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of OsLinux
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$UbuntuImplCopyWith<_$UbuntuImpl> get copyWith =>
@@ -177,8 +187,11 @@ abstract class Ubuntu extends OsLinux {
   String get key;
   @override
   String get displayName;
+
+  /// Create a copy of OsLinux
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UbuntuImplCopyWith<_$UbuntuImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -201,6 +214,8 @@ class __$$RedHatImplCopyWithImpl<$Res>
       _$RedHatImpl _value, $Res Function(_$RedHatImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of OsLinux
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -258,11 +273,13 @@ class _$RedHatImpl extends RedHat {
                 other.displayName == displayName));
   }
 
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   int get hashCode => Object.hash(runtimeType, key, displayName);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of OsLinux
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$RedHatImplCopyWith<_$RedHatImpl> get copyWith =>
@@ -286,8 +303,11 @@ abstract class RedHat extends OsLinux {
   String get key;
   @override
   String get displayName;
+
+  /// Create a copy of OsLinux
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RedHatImplCopyWith<_$RedHatImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

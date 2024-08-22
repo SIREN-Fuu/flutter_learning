@@ -25,7 +25,9 @@ mixin _$Memo {
   /// 書かれた文字
   String get text => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Memo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $MemoCopyWith<Memo> get copyWith => throw _privateConstructorUsedError;
 }
 
@@ -47,6 +49,8 @@ class _$MemoCopyWithImpl<$Res, $Val extends Memo>
   // ignore: unused_field
   final $Res Function($Val) _then;
 
+  /// Create a copy of Memo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -88,6 +92,8 @@ class __$$MemoImplCopyWithImpl<$Res>
   __$$MemoImplCopyWithImpl(_$MemoImpl _value, $Res Function(_$MemoImpl) _then)
       : super(_value, _then);
 
+  /// Create a copy of Memo
+  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
   @override
   $Res call({
@@ -148,7 +154,9 @@ class _$MemoImpl implements _Memo {
   @override
   int get hashCode => Object.hash(runtimeType, id, status, text);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of Memo
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
   _$$MemoImplCopyWith<_$MemoImpl> get copyWith =>
@@ -161,20 +169,22 @@ abstract class _Memo implements Memo {
       required final Status status,
       required final String text}) = _$MemoImpl;
 
-  @override
-
   /// ID
-  String get id;
   @override
+  String get id;
 
   /// ステータス
-  Status get status;
   @override
+  Status get status;
 
   /// 書かれた文字
-  String get text;
   @override
-  @JsonKey(ignore: true)
+  String get text;
+
+  /// Create a copy of Memo
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
   _$$MemoImplCopyWith<_$MemoImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
