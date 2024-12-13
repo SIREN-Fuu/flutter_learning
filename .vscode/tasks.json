@@ -1,0 +1,282 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "FVM Use",
+      "detail": "FVMを利用してFlutterバージョンをプロジェクトに合わせます",
+      "type": "shell",
+      "command": "fvm use",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "echo": true,
+        "reveal": "always",
+        "focus": false,
+        "panel": "shared"
+      },
+      "runOptions": {
+        // "runOn": "folderOpen"
+      }
+    },
+    {
+      "label": "FVM Update",
+      "detail": "FVMをアップグレードします",
+      "type": "shell",
+      "command": "fvm dart pub global activate fvm",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "fvm flutter: build_runner_one_time",
+      "detail": "ビルドランナーを一度だけ実行します",
+      "type": "shell",
+      "command": "fvm dart run build_runner build --delete-conflicting-outputs",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "fvm flutter: build_runner_watch",
+      "detail": "ビルドランナーをWatchモードで起動します",
+      "type": "shell",
+      "command": "fvm dart run build_runner watch --delete-conflicting-outputs",
+      "group": "build",
+      "problemMatcher": []
+    },
+    {
+      "label": "flutter Windows: Delete SharedPreference",
+      "detail": "SharedPreferenceを削除します",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-Command",
+        "Remove-Item -Recurse -Force \"$env:USERPROFILE\\AppData\\Roaming\\com.example\\works_studio\""
+      ],
+      "group": "none",
+      "problemMatcher": []
+    },
+    {
+      "label": "flutter: pub cache repair",
+      "detail": "Pubグレートクリーン",
+      "type": "shell",
+      "command": "flutter",
+      "args": [
+        "pub",
+        "cache",
+        "repair",
+      ],
+      "group": "none",
+      "problemMatcher": []
+    },
+    {
+      "label": "fvm flutter Staging: build_Web",
+      "detail": "Webビルドを実行します",
+      "type": "shell",
+      "command": "fvm flutter build web --dart-define=env=development --no-tree-shake-icons",
+      "group": "none",
+      "problemMatcher": []
+    },
+    {
+      "label": "fvm flutter Staging: build_ipa",
+      "detail": "iOSビルドを実行します",
+      "type": "shell",
+      "command": "fvm flutter build ipa --dart-define=env=release-stg",
+      "group": "none",
+      "problemMatcher": []
+    },
+    {
+      "label": "fvm flutter Staging: build_ipa (AdHock)",
+      "detail": "iOSビルド(AdHock)を実行します",
+      "type": "shell",
+      "command": "fvm flutter build ipa --dart-define=env=release-stg --export-method ad-hoc",
+      "group": "none",
+      "problemMatcher": []
+    },
+    {
+      "label": "fvm flutter Staging: build_apk",
+      "detail": "Androidビルドを実行します",
+      "type": "shell",
+      "command": "fvm flutter build apk --dart-define=env=release-stg",
+      "group": "none",
+      "problemMatcher": []
+    },
+    {
+      "label": "fvm flutter: dart_fix",
+      "detail": "dart fixを実行します",
+      "type": "shell",
+      "command": "fvm dart fix --apply",
+      "group": "none",
+      "problemMatcher": []
+    },
+    {
+      "label": "fvm flutter: native_splash:create",
+      "detail": "起動時スプラッシュを作成します",
+      "type": "shell",
+      "command": "fvm dart pub run flutter_native_splash:create",
+      "group": "none",
+      "problemMatcher": []
+    },
+    {
+      "label": "fvm flutter: native_splash:remove",
+      "detail": "起動時スプラッシュを削除します",
+      "type": "shell",
+      "command": "fvm dart pub run flutter_native_splash:remove",
+      "group": "none",
+      "problemMatcher": []
+    },
+    {
+      "label": "fvm flutter: Launch Web-Server",
+      "detail": "Web Debug resolve CORS",
+      "type": "shell",
+      "command": "fvm flutter run -d web-server --web-hostname=0.0.0.0 --web-port=16502 --dart-define-from-file=scripts/flavors/stg.json",
+      "group": "none",
+      "problemMatcher": []
+    },
+    {
+      "label": "fvm flutter: run this file",
+      "detail": "fvm flutter: run this file",
+      "type": "shell",
+      "command": "fvm flutter",
+      "args": [
+        "run",
+        "-t",
+        "${relativeFile}",
+        "--dart-define-from-file=scripts/flavors/dev.json",
+        "--observatory-port",
+        "49000",
+        "--disable-service-auth-codes"
+      ],
+      "group": "none",
+      "problemMatcher": []
+    },
+    {
+      "label": "fvm flutter: dart doc internal",
+      "detail": "dart docを実行します",
+      "type": "shell",
+      "command": "fvm dart",
+      "args": [
+        "doc"
+      ],
+      "problemMatcher": [],
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "close": false
+      },
+      "isBackground": false,
+      "hide": true
+    },
+    {
+      "label": "flutter: dart doc internal sort main",
+      "detail": "MainページのLibrariesをソートします",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/doc/api_customize/update_library_sort_main_page.ps1"
+      ],
+      "problemMatcher": [],
+      "dependsOn": [
+        "flutter: dart doc internal",
+      ],
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "close": false
+      },
+      "isBackground": false,
+      "hide": true
+    },
+    {
+      "label": "flutter: dart doc internal sort sidebar",
+      "detail": "SidebarのLibrariesをソートします",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/doc/api_customize/update_library_sort_sidebar.ps1"
+      ],
+      "problemMatcher": [],
+      "dependsOn": [
+        "flutter: dart doc internal sort main",
+      ],
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "close": false
+      },
+      "isBackground": false,
+      "hide": true
+    },
+    {
+      "label": "flutter: dart doc",
+      "detail": "dart docを実行しCSSをカスタマイズします",
+      "type": "shell",
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "${workspaceFolder}/doc/api_customize/update_style_css.ps1"
+      ],
+      "problemMatcher": [],
+      "dependsOn": [
+        "flutter: dart doc internal sort sidebar",
+      ],
+      "group": "none",
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "close": false
+      },
+      "isBackground": false,
+    },
+    // {
+    //   "label": "WindowsSubsystemForAndroid ADB",
+    //   "detail": "adb connect Windows11 Subsystem Android",
+    //   "type": "shell",
+    //   "command": "adb connect 127.0.0.1:58526",
+    //   "group": "none",
+    //   "problemMatcher": []
+    // },
+    // {
+    //   "label": "chrome_driver",
+    //   "detail": "boot chromedriver",
+    //   "type": "shell",
+    //   "command": "${workspaceFolder}\\integration_test\\chromedriver --port=4444",
+    //   "group": "none",
+    //   "problemMatcher": []
+    // },
+    // {
+    //   "label": "integration_test",
+    //   "detail": "Integration Test for Web",
+    //   "type": "shell",
+    //   "command": "fvm flutter drive --driver=test_driver\\integration_test.dart --target=integration_test\\app_test.dart -d chrome",
+    //   "group": "none",
+    //   "problemMatcher": []
+    // },
+    // {
+    //   "label": "integration_test_headless",
+    //   "detail": "Integration Test for Web Headless",
+    //   "type": "shell",
+    //   "command": "fvm flutter drive --driver=test_driver\\integration_test.dart --target=integration_test\\app_test.dart -d web-server",
+    //   "group": "none",
+    //   "problemMatcher": []
+    // }
+  ]
+}

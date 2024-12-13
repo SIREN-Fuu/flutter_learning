@@ -1,0 +1,43 @@
+// cSpell Settings
+{
+  "version": "0.2",
+  "language": "en",
+  "dictionaries": [
+    "typescript",
+    "node",
+    "html",
+    "css",
+    "php",
+    "csharp",
+    "python",
+    "java"
+  ],
+  "enabledLanguageIds": [
+    "csharp",
+    "css",
+    "go",
+    "html",
+    "java",
+    "javascript",
+    "javascriptreact",
+    "json",
+    "markdown",
+    "php",
+    "plaintext",
+    "python",
+    "typescript",
+    "typescriptreact",
+    "xml",
+    "yaml"
+  ],
+  "words": [
+    "cupertino",
+    "frexible",
+    "LTWH",
+    "Noto",
+    "Riverpod",
+    "Usecase",
+    "usecases"
+  ],
+  "ignoreWords": []
+}

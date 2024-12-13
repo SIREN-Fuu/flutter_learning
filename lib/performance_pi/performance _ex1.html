@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript π Calculation</title>
+    <style>
+        /* スタイルの追加 */
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /* 垂直方向に要素を並べる */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Estimated π:</h3>
+    <p id="result"></p>
+    <h3>Execution time:</h3>
+    <p id="execution-time"></p>
+
+    <button onclick="calculatePi()">Start π Calculation</button>
+
+    <script>
+        function arctanMachin(x, terms) {
+            let sum = 0;
+            let sign = 1;
+            for (let k = 0; k < terms; k++) {
+                let term = sign / (2 * k + 1) * Math.pow(x, 2 * k + 1);
+                sum += term;
+                sign = -sign;
+            }
+            return sum;
+        }
+
+        function machinFormula(terms) {
+            return 4 * (4 * arctanMachin(1.0 / 5, terms) - arctanMachin(1.0 / 239, terms));
+        }
+
+        function calculatePi() {
+            const startTime = performance.now();
+            // 10億項まで計算 50億項までの計算なら凡そ1分程度
+            const pi = machinFormula(100000000);
+            const endTime = performance.now();
+
+            document.getElementById('result').textContent = pi;
+            document.getElementById('execution-time').textContent = (endTime - startTime) + 'ms';
+        }
+    </script>
+
+</body>
+
+</html>

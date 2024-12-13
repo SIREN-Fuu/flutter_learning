@@ -1,0 +1,24 @@
+# https://medium.com/flutter-jp/json-60c86552fbeb
+targets:
+  $default:
+    builders:
+      source_gen|combining_builder:
+        options:
+          ignore_for_file:
+            - type=lint
+            - implicit_dynamic_parameter
+            - implicit_dynamic_type
+            - implicit_dynamic_method
+            - strict_raw_type
+            - duplicate_ignore
+      #https://pub.dev/packages/freezed#using-pattern-matching-to-read-non-shared-properties
+      freezed:
+        options:
+          format: true
+          copy_with: true
+          equal: true
+          map: false
+          when:
+            when: false
+            maybe_when: false
+            when_or_null: false

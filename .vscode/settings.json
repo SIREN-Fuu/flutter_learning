@@ -1,0 +1,108 @@
+{
+  "[dart]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.fixAll.eslint": "never",
+      "source.organizeImports": "explicit"
+    },
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [
+      80
+    ],
+    "editor.selectionHighlight": false,
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": "off"
+  },
+  "[json]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "never"
+    },
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true
+  },
+  "[jsonc]": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "never"
+    },
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true
+  },
+  "cSpell.autoFormatConfigFile": true,
+  "cSpell.ignorePaths": [
+    "**/logs/**",
+    ".idea/**",
+    ".vscode/**",
+    "**/.dart_tool/**",
+    "**/.fvm/**",
+    "**/fvm/**",
+    "**/android/**",
+    "**/build/**",
+    "**/ios/**",
+    "**/linux/**",
+    "**/macos/**",
+    "**/web/**",
+    "**/windows/**",
+    "vscode-extension",
+    ".git",
+    "**/pub.dev/**",
+    "doc/"
+  ],
+  "cSpell.dictionaries": [
+    "typescript",
+    "node",
+    "html",
+    "css",
+    "php",
+    "csharp",
+    "python",
+    "java",
+  ],
+  "commentTranslate.hover.enabled": true,
+  "commentTranslate.multiLineMerge": true,
+  "dart.debugExternalPackageLibraries": true,
+  "dart.debugSdkLibraries": true,
+  // "dart.analysisExcludedFolders": [
+  //   "ios/",
+  //   "android/",
+  //   "doc/"
+  // ],
+  "dart.flutterSdkPath": ".fvm/versions/3.27.0",
+  "dart.flutterSelectDeviceWhenConnected": false,
+  "debug.console.acceptSuggestionOnEnter": "on",
+  "debug.internalConsoleOptions": "openOnSessionStart",
+  "debug.openDebug": "openOnDebugBreak",
+  "debug.showBreakpointsInOverviewRuler": false,
+  "editor.bracketPairColorization.enabled": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "never"
+  },
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "editor.formatOnType": false,
+  "editor.guides.bracketPairs": true,
+  "files.watcherExclude": {
+    "**/*.freezed.dart": true,
+    "**/*.g.dart": true,
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/dist/**": true,
+    "**/node_modules/**": true
+  },
+  "github.copilot.chat.runCommand.enabled": false,
+  "github.copilot.chat.useProjectTemplates": false,
+  "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.editor.enableCodeActions": false,
+  "github.copilot.renameSuggestions.triggerAutomatically": false,
+  "java.compile.nullAnalysis.mode": "automatic",
+  "liveServer.settings.CustomBrowser": "chrome:PrivateMode",
+  "liveServer.settings.port": 15500,
+  "liveServer.settings.root": "./doc/api",
+  "search.exclude": {
+    "**/.DS_Store": true,
+    "**/.git": true,
+    "**/dist/**": true,
+    "**/node_modules/**": true
+  }
+}

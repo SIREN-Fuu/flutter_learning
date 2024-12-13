@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Calculation in JavaScript</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Number of primes found:</h3>
+    <p id="result"></p>
+    <h3>Execution time:</h3>
+    <p id="execution-time"></p>
+
+    <button onclick="startCalculation()">Start Prime Calculation</button>
+
+    <script>
+        function isPrime(n) {
+            if (n <= 1) return false;
+            for (let i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) return false;
+            }
+            return true;
+        }
+
+        function calculatePrimes(limit) {
+            const primes = [];
+            for (let i = 2; i <= limit; i++) {
+                if (isPrime(i)) {
+                    primes.push(i);
+                }
+            }
+            return primes;
+        }
+
+        function startCalculation() {
+            const startTime = performance.now();
+            // 20万までの素数を計算
+            const primes = calculatePrimes(200000);
+            const endTime = performance.now();
+
+            document.getElementById('result').textContent = primes.length;
+            document.getElementById('execution-time').textContent = (endTime - startTime) + 'ms';
+        }
+    </script>
+
+</body>
+
+</html>
