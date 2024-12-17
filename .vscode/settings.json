@@ -57,18 +57,13 @@
     "php",
     "csharp",
     "python",
-    "java",
+    "java"
   ],
   "commentTranslate.hover.enabled": true,
   "commentTranslate.multiLineMerge": true,
   "dart.debugExternalPackageLibraries": true,
   "dart.debugSdkLibraries": true,
-  // "dart.analysisExcludedFolders": [
-  //   "ios/",
-  //   "android/",
-  //   "doc/"
-  // ],
-  "dart.flutterSdkPath": ".fvm/versions/3.27.0",
+  "dart.flutterSdkPath": ".fvm/versions/3.27.1",
   "dart.flutterSelectDeviceWhenConnected": false,
   "debug.console.acceptSuggestionOnEnter": "on",
   "debug.internalConsoleOptions": "openOnSessionStart",
