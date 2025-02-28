@@ -26,7 +26,7 @@ final firebaseProvider = Provider<FirebaseService>.internal(
 @Deprecated('Will be removed in 3.0. Use Ref instead')
 // ignore: unused_element
 typedef FirebaseRef = ProviderRef<FirebaseService>;
-String _$loggerHash() => r'cc023d1dcaf3b8348a95f1aee8196ea01f8f1d00';
+String _$loggerHash() => r'77e7f9c7c10ca9908dfcbe08a38850695356d06b';
 
 /// Logger
 ///

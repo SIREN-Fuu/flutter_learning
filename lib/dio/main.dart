@@ -6,28 +6,42 @@ class DioGoogleTest {
   DioGoogleTest() {
     dio = Dio(
       BaseOptions(
-        baseUrl: 'https://www.google.com',
+        baseUrl: 'http://127.0.0.1:3001',
         connectTimeout: const Duration(seconds: 5),
         receiveTimeout: const Duration(seconds: 3),
       ),
     );
 
     // インターセプターを追加
-    dio.interceptors.add(LogInterceptor(request: true, responseBody: true));
+    dio.interceptors.add(
+      InterceptorsWrapper(
+        onRequest: (options, handler) {
+          logger.d('[Req] ${options.path}');
+          handler.next(options);
+        },
+        onResponse: (response, handler) {
+          logger.d(
+            '[Res] ${response.requestOptions.path} Status:${response.statusCode}',
+          );
+          handler.next(response);
+        },
+        onError: (DioException error, handler) {
+          logger.e(
+            '[Error] Status: ${error.response?.statusCode ?? 'Unknown'}: ${error.message}',
+          );
+          handler.next(error);
+        },
+      ),
+    );
+
     dio.interceptors.add(
       RetryInterceptor(
         dio: dio,
-        // specify log function (optional)
-        logPrint: print,
-        // retry count (optional)
+        logPrint: (log) => logger.w('[Retry] $log'),
         retries: 3,
         retryDelays: const [
-          // set delays between retries (optional)
-          // wait 1 sec before first retry
           Duration(seconds: 1),
-          // wait 2 sec before second retry
           Duration(seconds: 2),
-          // wait 3 sec before third retry
           Duration(seconds: 3),
         ],
       ),
@@ -36,9 +50,12 @@ class DioGoogleTest {
   late Dio dio;
 }
 
-void main() {
+void main() async {
   final dioGoogleTest = DioGoogleTest();
-  dioGoogleTest.dio.get<dynamic>('/').then((response) {
-    logger.d(response.data);
-  });
+  try {
+    await dioGoogleTest.dio.get<dynamic>('/test_retry');
+  } catch (e) {
+    logger.e('[Exception] $e');
+  }
+  logger.i('End');
 }

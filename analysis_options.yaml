@@ -36,6 +36,10 @@ linter:
     # 1つのメンバーのみを持つ抽象クラスを避ける
     one_member_abstracts: false
 
+    # try-catch文でon句を必ず使用しなければならない
+    # 厳密すぎるので、falseにしています
+    avoid_catches_without_on_clauses: false
+
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options
 # https://dart.dev/tools/linter-rules
