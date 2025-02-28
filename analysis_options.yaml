@@ -2,9 +2,6 @@ include: package:pedantic_mono/analysis_options.yaml
 
 linter:
   rules:
-    # メソッドの引数にbool引数を禁止
-    avoid_positional_boolean_parameters: false
-
     # 対応するパラメータのデフォルトと一致する引数を渡すことを禁止
     avoid_redundant_argument_values: false
 
@@ -33,12 +30,22 @@ linter:
     # Intellisenseが膨大になってしまうため、falseにしています
     avoid_classes_with_only_static_members: false
 
-    # 1つのメンバーのみを持つ抽象クラスを避ける
-    one_member_abstracts: false
-
     # try-catch文でon句を必ず使用しなければならない
     # 厳密すぎるので、falseにしています
     avoid_catches_without_on_clauses: false
+
+    # 最上位変数と静的変数の明らかな型注釈は省略します
+    # このプロジェクトでは、型注釈を明示的に書くことで可読性を向上させるため、falseにしています
+    omit_obvious_property_types: false
+
+    # すべてのパラメーター・リストと引数リストには、末尾のコンマを使用します。
+    require_trailing_commas: true
+
+analyzer:
+  errors:
+    # Freezedを使用する際に発生するアノテーションエラーを無視
+    # https://t.co/EhoXMGIunb
+    invalid_annotation_target: ignore
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options

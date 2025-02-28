@@ -1,3 +1,5 @@
+// ignore_for_file: invalid_use_of_internal_member, library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
@@ -30,9 +32,12 @@ class _LivingPlace extends _$LivingPlace {
 
 // ignore: avoid_classes_with_only_static_members
 class Registration {
-  static final nicknameProvider = _nicknameProvider;
-  static final birthdayProvider = _birthdayProvider;
-  static final livingPlaceProvider = _livingPlaceProvider;
+  static final AutoDisposeNotifierProviderImpl<_Nickname, String>
+      nicknameProvider = _nicknameProvider;
+  static final AutoDisposeNotifierProviderImpl<_Birthday, String>
+      birthdayProvider = _birthdayProvider;
+  static final AutoDisposeNotifierProviderImpl<_LivingPlace, String>
+      livingPlaceProvider = _livingPlaceProvider;
 }
 
 // -----------------------------------------------------------------------------
@@ -42,9 +47,10 @@ class Registration {
 
 // ignore: avoid_classes_with_only_static_members
 class Inquiry {
-  static final nameProvider = StateProvider((ref) => '');
-  static final emailProvider = StateProvider((ref) => '');
-  static final contentProvider = StateProvider((ref) => '');
+  static final StateProvider<String> nameProvider = StateProvider((ref) => '');
+  static final StateProvider<String> emailProvider = StateProvider((ref) => '');
+  static final StateProvider<String> contentProvider =
+      StateProvider((ref) => '');
 }
 
 // -----------------------------------------------------------------------------

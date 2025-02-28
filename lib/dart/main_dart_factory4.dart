@@ -2,6 +2,7 @@
 
 import '../plugins/logger.dart';
 
+// ignore: one_member_abstracts
 abstract class Animal {
   factory Animal.dog() {
     return Dog();

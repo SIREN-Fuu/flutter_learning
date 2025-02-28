@@ -6,7 +6,7 @@ import '../../presentation/pages/list.dart';
 import '../../presentation/router/page_path.dart';
 
 /// Provide GoRouter
-final goRouterProvider = Provider(
+final Provider<GoRouter> goRouterProvider = Provider(
   (ref) {
     final routes = [
       GoRoute(

@@ -20,7 +20,9 @@ class FamilyTest extends _$FamilyTest {
 @Riverpod(keepAlive: true)
 class FutureOrSample extends _$FutureOrSample {
   @override
-  FutureOr<void> build() {}
+  Future<void>? build() {
+    return null;
+  }
 
   Future<void> sendString() async {
     state = const AsyncLoading();

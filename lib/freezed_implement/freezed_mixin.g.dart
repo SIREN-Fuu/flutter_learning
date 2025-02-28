@@ -8,57 +8,52 @@ part of 'freezed_mixin.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$WindowsImpl _$$WindowsImplFromJson(Map<String, dynamic> json) =>
-    _$WindowsImpl(
+Windows _$WindowsFromJson(Map<String, dynamic> json) => Windows(
       key: json['key'] as String? ?? 'Windows-Key',
       displayName: json['displayName'] as String? ?? 'Windows',
       $type: json['runtimeType'] as String?,
     )..version = json['version'] as String;
 
-Map<String, dynamic> _$$WindowsImplToJson(_$WindowsImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$WindowsToJson(Windows instance) => <String, dynamic>{
       'version': instance.version,
       'key': instance.key,
       'displayName': instance.displayName,
       'runtimeType': instance.$type,
     };
 
-_$WindowsNTImpl _$$WindowsNTImplFromJson(Map<String, dynamic> json) =>
-    _$WindowsNTImpl(
+WindowsNT _$WindowsNTFromJson(Map<String, dynamic> json) => WindowsNT(
       key: json['key'] as String? ?? 'WindowsNT-Key',
       displayName: json['displayName'] as String? ?? 'WindowsNT',
       $type: json['runtimeType'] as String?,
     )..version = json['version'] as String;
 
-Map<String, dynamic> _$$WindowsNTImplToJson(_$WindowsNTImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$WindowsNTToJson(WindowsNT instance) => <String, dynamic>{
       'version': instance.version,
       'key': instance.key,
       'displayName': instance.displayName,
       'runtimeType': instance.$type,
     };
 
-_$MacOSImpl _$$MacOSImplFromJson(Map<String, dynamic> json) => _$MacOSImpl(
+MacOS _$MacOSFromJson(Map<String, dynamic> json) => MacOS(
       key: json['key'] as String? ?? 'macOS-Key',
       displayName: json['displayName'] as String? ?? 'macOS',
       $type: json['runtimeType'] as String?,
     )..version = json['version'] as String;
 
-Map<String, dynamic> _$$MacOSImplToJson(_$MacOSImpl instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$MacOSToJson(MacOS instance) => <String, dynamic>{
       'version': instance.version,
       'key': instance.key,
       'displayName': instance.displayName,
       'runtimeType': instance.$type,
     };
 
-_$IOSImpl _$$IOSImplFromJson(Map<String, dynamic> json) => _$IOSImpl(
+IOS _$IOSFromJson(Map<String, dynamic> json) => IOS(
       key: json['key'] as String? ?? 'iOS-Key',
       displayName: json['displayName'] as String? ?? 'iOS',
       $type: json['runtimeType'] as String?,
     )..version = json['version'] as String;
 
-Map<String, dynamic> _$$IOSImplToJson(_$IOSImpl instance) => <String, dynamic>{
+Map<String, dynamic> _$IOSToJson(IOS instance) => <String, dynamic>{
       'version': instance.version,
       'key': instance.key,
       'displayName': instance.displayName,

@@ -10,7 +10,7 @@ part 'freezed_implements.freezed.dart';
 part 'freezed_implements.g.dart';
 
 @freezed
-class OsLinux with _$OsLinux implements Status {
+sealed class OsLinux with _$OsLinux implements Status {
   factory OsLinux.ubuntu({
     @Default('Ubuntu-Key') String key,
     @Default('Ubuntu') String displayName,

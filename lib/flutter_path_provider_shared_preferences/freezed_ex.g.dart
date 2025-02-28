@@ -8,28 +8,26 @@ part of 'freezed_ex.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$FreezedExImpl _$$FreezedExImplFromJson(Map<String, dynamic> json) =>
-    _$FreezedExImpl(
+_FreezedEx _$FreezedExFromJson(Map<String, dynamic> json) => _FreezedEx(
       text: json['text'] as String? ?? '',
       name: json['name'] as String? ?? '',
       age: (json['age'] as num?)?.toInt() ?? 0,
     );
 
-Map<String, dynamic> _$$FreezedExImplToJson(_$FreezedExImpl instance) =>
+Map<String, dynamic> _$FreezedExToJson(_FreezedEx instance) =>
     <String, dynamic>{
       'text': instance.text,
       'name': instance.name,
       'age': instance.age,
     };
 
-_$UnfreezedExImpl _$$UnfreezedExImplFromJson(Map<String, dynamic> json) =>
-    _$UnfreezedExImpl(
+_UnfreezedEx _$UnfreezedExFromJson(Map<String, dynamic> json) => _UnfreezedEx(
       text: json['text'] as String? ?? '',
       name: json['name'] as String? ?? '',
       age: (json['age'] as num?)?.toInt() ?? 0,
     );
 
-Map<String, dynamic> _$$UnfreezedExImplToJson(_$UnfreezedExImpl instance) =>
+Map<String, dynamic> _$UnfreezedExToJson(_UnfreezedEx instance) =>
     <String, dynamic>{
       'text': instance.text,
       'name': instance.name,

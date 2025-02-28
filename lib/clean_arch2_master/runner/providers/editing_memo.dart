@@ -6,7 +6,9 @@ import '../../runner/notifiers/editing_memo.dart';
 typedef _Notifier = EditingMemoNotifier;
 
 /// 編集中メモのプロバイダー
-final editingMemoProvider = NotifierProvider.family<_Notifier, Memo, String>(
+// ignore: library_private_types_in_public_api
+final NotifierProviderFamily<_Notifier, Memo, String> editingMemoProvider =
+    NotifierProvider.family<_Notifier, Memo, String>(
   () {
     return EditingMemoNotifier();
   },

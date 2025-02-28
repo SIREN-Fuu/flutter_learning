@@ -7,7 +7,7 @@ import '../../runner/providers/api.dart';
 /// アプリアップデート対応
 class AppUpdateActionNotifier extends AsyncNotifier<AppUpdateAction> {
   @override
-  Future<AppUpdateAction> build() async {
+  Future<AppUpdateAction> build() {
     return _getLatestAction();
   }
 

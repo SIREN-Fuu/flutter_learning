@@ -173,7 +173,7 @@ class _FamilyTestProviderElement
   bool get arg => (origin as FamilyTestProvider).arg;
 }
 
-String _$futureOrSampleHash() => r'73340f58b9cbecf6ad7ce8e8c2c4d6151f06db97';
+String _$futureOrSampleHash() => r'5a1e1e92b771470e87a03623ddec4f3deab2b7fc';
 
 /// See also [FutureOrSample].
 @ProviderFor(FutureOrSample)

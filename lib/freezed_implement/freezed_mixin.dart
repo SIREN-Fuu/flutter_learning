@@ -10,7 +10,7 @@ part 'freezed_mixin.freezed.dart';
 part 'freezed_mixin.g.dart';
 
 @freezed
-class OsWindows with _$OsWindows implements Status {
+sealed class OsWindows with _$OsWindows implements Status {
   @With<Utility>()
   factory OsWindows.windows({
     @Default('Windows-Key') String key,
@@ -32,7 +32,7 @@ class OsWindows with _$OsWindows implements Status {
 }
 
 @freezed
-class OsApple with _$OsApple, Utility implements Status {
+sealed class OsApple with _$OsApple, Utility implements Status {
   factory OsApple.macOS({
     @Default('macOS-Key') String key,
     @Default('macOS') String displayName,

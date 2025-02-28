@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -11,91 +12,56 @@ part of 'freezed_ex.dart';
 
 T _$identity<T>(T value) => value;
 
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
-FreezedEx _$FreezedExFromJson(Map<String, dynamic> json) {
-  return _FreezedEx.fromJson(json);
-}
-
 /// @nodoc
 mixin _$FreezedEx {
-  String get text => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  int get age => throw _privateConstructorUsedError;
-
-  /// Serializes this FreezedEx to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  String get text;
+  String get name;
+  int get age;
 
   /// Create a copy of FreezedEx
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $FreezedExCopyWith<FreezedEx> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $FreezedExCopyWith<$Res> {
-  factory $FreezedExCopyWith(FreezedEx value, $Res Function(FreezedEx) then) =
-      _$FreezedExCopyWithImpl<$Res, FreezedEx>;
-  @useResult
-  $Res call({String text, String name, int age});
-}
-
-/// @nodoc
-class _$FreezedExCopyWithImpl<$Res, $Val extends FreezedEx>
-    implements $FreezedExCopyWith<$Res> {
-  _$FreezedExCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of FreezedEx
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
+  $FreezedExCopyWith<FreezedEx> get copyWith =>
+      _$FreezedExCopyWithImpl<FreezedEx>(this as FreezedEx, _$identity);
+
+  /// Serializes this FreezedEx to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? text = null,
-    Object? name = null,
-    Object? age = null,
-  }) {
-    return _then(_value.copyWith(
-      text: null == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      age: null == age
-          ? _value.age
-          : age // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is FreezedEx &&
+            (identical(other.text, text) || other.text == text) &&
+            (identical(other.name, name) || other.name == name) &&
+            (identical(other.age, age) || other.age == age));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, text, name, age);
+
+  @override
+  String toString() {
+    return 'FreezedEx(text: $text, name: $name, age: $age)';
   }
 }
 
 /// @nodoc
-abstract class _$$FreezedExImplCopyWith<$Res>
-    implements $FreezedExCopyWith<$Res> {
-  factory _$$FreezedExImplCopyWith(
-          _$FreezedExImpl value, $Res Function(_$FreezedExImpl) then) =
-      __$$FreezedExImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $FreezedExCopyWith<$Res> {
+  factory $FreezedExCopyWith(FreezedEx value, $Res Function(FreezedEx) _then) =
+      _$FreezedExCopyWithImpl;
   @useResult
   $Res call({String text, String name, int age});
 }
 
 /// @nodoc
-class __$$FreezedExImplCopyWithImpl<$Res>
-    extends _$FreezedExCopyWithImpl<$Res, _$FreezedExImpl>
-    implements _$$FreezedExImplCopyWith<$Res> {
-  __$$FreezedExImplCopyWithImpl(
-      _$FreezedExImpl _value, $Res Function(_$FreezedExImpl) _then)
-      : super(_value, _then);
+class _$FreezedExCopyWithImpl<$Res> implements $FreezedExCopyWith<$Res> {
+  _$FreezedExCopyWithImpl(this._self, this._then);
+
+  final FreezedEx _self;
+  final $Res Function(FreezedEx) _then;
 
   /// Create a copy of FreezedEx
   /// with the given fields replaced by the non-null parameter values.
@@ -106,17 +72,17 @@ class __$$FreezedExImplCopyWithImpl<$Res>
     Object? name = null,
     Object? age = null,
   }) {
-    return _then(_$FreezedExImpl(
+    return _then(_self.copyWith(
       text: null == text
-          ? _value.text
+          ? _self.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
       name: null == name
-          ? _value.name
+          ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
       age: null == age
-          ? _value.age
+          ? _self.age
           : age // ignore: cast_nullable_to_non_nullable
               as int,
     ));
@@ -125,12 +91,10 @@ class __$$FreezedExImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$FreezedExImpl extends _FreezedEx {
-  const _$FreezedExImpl({this.text = '', this.name = '', this.age = 0})
-      : super._();
-
-  factory _$FreezedExImpl.fromJson(Map<String, dynamic> json) =>
-      _$$FreezedExImplFromJson(json);
+class _FreezedEx extends FreezedEx {
+  const _FreezedEx({this.text = '', this.name = '', this.age = 0}) : super._();
+  factory _FreezedEx.fromJson(Map<String, dynamic> json) =>
+      _$FreezedExFromJson(json);
 
   @override
   @JsonKey()
@@ -142,16 +106,26 @@ class _$FreezedExImpl extends _FreezedEx {
   @JsonKey()
   final int age;
 
+  /// Create a copy of FreezedEx
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'FreezedEx(text: $text, name: $name, age: $age)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$FreezedExCopyWith<_FreezedEx> get copyWith =>
+      __$FreezedExCopyWithImpl<_FreezedEx>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$FreezedExToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$FreezedExImpl &&
+            other is _FreezedEx &&
             (identical(other.text, text) || other.text == text) &&
             (identical(other.name, name) || other.name == name) &&
             (identical(other.age, age) || other.age == age));
@@ -161,131 +135,96 @@ class _$FreezedExImpl extends _FreezedEx {
   @override
   int get hashCode => Object.hash(runtimeType, text, name, age);
 
-  /// Create a copy of FreezedEx
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @pragma('vm:prefer-inline')
-  _$$FreezedExImplCopyWith<_$FreezedExImpl> get copyWith =>
-      __$$FreezedExImplCopyWithImpl<_$FreezedExImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$FreezedExImplToJson(
-      this,
-    );
+  String toString() {
+    return 'FreezedEx(text: $text, name: $name, age: $age)';
   }
 }
 
-abstract class _FreezedEx extends FreezedEx {
-  const factory _FreezedEx(
-      {final String text, final String name, final int age}) = _$FreezedExImpl;
-  const _FreezedEx._() : super._();
+/// @nodoc
+abstract mixin class _$FreezedExCopyWith<$Res>
+    implements $FreezedExCopyWith<$Res> {
+  factory _$FreezedExCopyWith(
+          _FreezedEx value, $Res Function(_FreezedEx) _then) =
+      __$FreezedExCopyWithImpl;
+  @override
+  @useResult
+  $Res call({String text, String name, int age});
+}
 
-  factory _FreezedEx.fromJson(Map<String, dynamic> json) =
-      _$FreezedExImpl.fromJson;
+/// @nodoc
+class __$FreezedExCopyWithImpl<$Res> implements _$FreezedExCopyWith<$Res> {
+  __$FreezedExCopyWithImpl(this._self, this._then);
 
-  @override
-  String get text;
-  @override
-  String get name;
-  @override
-  int get age;
+  final _FreezedEx _self;
+  final $Res Function(_FreezedEx) _then;
 
   /// Create a copy of FreezedEx
   /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$FreezedExImplCopyWith<_$FreezedExImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-UnfreezedEx _$UnfreezedExFromJson(Map<String, dynamic> json) {
-  return _UnfreezedEx.fromJson(json);
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? text = null,
+    Object? name = null,
+    Object? age = null,
+  }) {
+    return _then(_FreezedEx(
+      text: null == text
+          ? _self.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      age: null == age
+          ? _self.age
+          : age // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
 }
 
 /// @nodoc
 mixin _$UnfreezedEx {
-  String get text => throw _privateConstructorUsedError;
-  set text(String value) => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  set name(String value) => throw _privateConstructorUsedError;
-  int get age => throw _privateConstructorUsedError;
-  set age(int value) => throw _privateConstructorUsedError;
-
-  /// Serializes this UnfreezedEx to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  String get text;
+  set text(String value);
+  String get name;
+  set name(String value);
+  int get age;
+  set age(int value);
 
   /// Create a copy of UnfreezedEx
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $UnfreezedExCopyWith<UnfreezedEx> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $UnfreezedExCopyWith<$Res> {
-  factory $UnfreezedExCopyWith(
-          UnfreezedEx value, $Res Function(UnfreezedEx) then) =
-      _$UnfreezedExCopyWithImpl<$Res, UnfreezedEx>;
-  @useResult
-  $Res call({String text, String name, int age});
-}
-
-/// @nodoc
-class _$UnfreezedExCopyWithImpl<$Res, $Val extends UnfreezedEx>
-    implements $UnfreezedExCopyWith<$Res> {
-  _$UnfreezedExCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of UnfreezedEx
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
+  $UnfreezedExCopyWith<UnfreezedEx> get copyWith =>
+      _$UnfreezedExCopyWithImpl<UnfreezedEx>(this as UnfreezedEx, _$identity);
+
+  /// Serializes this UnfreezedEx to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? text = null,
-    Object? name = null,
-    Object? age = null,
-  }) {
-    return _then(_value.copyWith(
-      text: null == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: null == name
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      age: null == age
-          ? _value.age
-          : age // ignore: cast_nullable_to_non_nullable
-              as int,
-    ) as $Val);
+  String toString() {
+    return 'UnfreezedEx(text: $text, name: $name, age: $age)';
   }
 }
 
 /// @nodoc
-abstract class _$$UnfreezedExImplCopyWith<$Res>
-    implements $UnfreezedExCopyWith<$Res> {
-  factory _$$UnfreezedExImplCopyWith(
-          _$UnfreezedExImpl value, $Res Function(_$UnfreezedExImpl) then) =
-      __$$UnfreezedExImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $UnfreezedExCopyWith<$Res> {
+  factory $UnfreezedExCopyWith(
+          UnfreezedEx value, $Res Function(UnfreezedEx) _then) =
+      _$UnfreezedExCopyWithImpl;
   @useResult
   $Res call({String text, String name, int age});
 }
 
 /// @nodoc
-class __$$UnfreezedExImplCopyWithImpl<$Res>
-    extends _$UnfreezedExCopyWithImpl<$Res, _$UnfreezedExImpl>
-    implements _$$UnfreezedExImplCopyWith<$Res> {
-  __$$UnfreezedExImplCopyWithImpl(
-      _$UnfreezedExImpl _value, $Res Function(_$UnfreezedExImpl) _then)
-      : super(_value, _then);
+class _$UnfreezedExCopyWithImpl<$Res> implements $UnfreezedExCopyWith<$Res> {
+  _$UnfreezedExCopyWithImpl(this._self, this._then);
+
+  final UnfreezedEx _self;
+  final $Res Function(UnfreezedEx) _then;
 
   /// Create a copy of UnfreezedEx
   /// with the given fields replaced by the non-null parameter values.
@@ -296,17 +235,17 @@ class __$$UnfreezedExImplCopyWithImpl<$Res>
     Object? name = null,
     Object? age = null,
   }) {
-    return _then(_$UnfreezedExImpl(
+    return _then(_self.copyWith(
       text: null == text
-          ? _value.text
+          ? _self.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
       name: null == name
-          ? _value.name
+          ? _self.name
           : name // ignore: cast_nullable_to_non_nullable
               as String,
       age: null == age
-          ? _value.age
+          ? _self.age
           : age // ignore: cast_nullable_to_non_nullable
               as int,
     ));
@@ -315,11 +254,10 @@ class __$$UnfreezedExImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$UnfreezedExImpl extends _UnfreezedEx {
-  _$UnfreezedExImpl({this.text = '', this.name = '', this.age = 0}) : super._();
-
-  factory _$UnfreezedExImpl.fromJson(Map<String, dynamic> json) =>
-      _$$UnfreezedExImplFromJson(json);
+class _UnfreezedEx extends UnfreezedEx {
+  _UnfreezedEx({this.text = '', this.name = '', this.age = 0}) : super._();
+  factory _UnfreezedEx.fromJson(Map<String, dynamic> json) =>
+      _$UnfreezedExFromJson(json);
 
   @override
   @JsonKey()
@@ -331,48 +269,67 @@ class _$UnfreezedExImpl extends _UnfreezedEx {
   @JsonKey()
   int age;
 
+  /// Create a copy of UnfreezedEx
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$UnfreezedExCopyWith<_UnfreezedEx> get copyWith =>
+      __$UnfreezedExCopyWithImpl<_UnfreezedEx>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$UnfreezedExToJson(
+      this,
+    );
+  }
+
   @override
   String toString() {
     return 'UnfreezedEx(text: $text, name: $name, age: $age)';
   }
-
-  /// Create a copy of UnfreezedEx
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$UnfreezedExImplCopyWith<_$UnfreezedExImpl> get copyWith =>
-      __$$UnfreezedExImplCopyWithImpl<_$UnfreezedExImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$UnfreezedExImplToJson(
-      this,
-    );
-  }
 }
 
-abstract class _UnfreezedEx extends UnfreezedEx {
-  factory _UnfreezedEx({String text, String name, int age}) = _$UnfreezedExImpl;
-  _UnfreezedEx._() : super._();
+/// @nodoc
+abstract mixin class _$UnfreezedExCopyWith<$Res>
+    implements $UnfreezedExCopyWith<$Res> {
+  factory _$UnfreezedExCopyWith(
+          _UnfreezedEx value, $Res Function(_UnfreezedEx) _then) =
+      __$UnfreezedExCopyWithImpl;
+  @override
+  @useResult
+  $Res call({String text, String name, int age});
+}
 
-  factory _UnfreezedEx.fromJson(Map<String, dynamic> json) =
-      _$UnfreezedExImpl.fromJson;
+/// @nodoc
+class __$UnfreezedExCopyWithImpl<$Res> implements _$UnfreezedExCopyWith<$Res> {
+  __$UnfreezedExCopyWithImpl(this._self, this._then);
 
-  @override
-  String get text;
-  set text(String value);
-  @override
-  String get name;
-  set name(String value);
-  @override
-  int get age;
-  set age(int value);
+  final _UnfreezedEx _self;
+  final $Res Function(_UnfreezedEx) _then;
 
   /// Create a copy of UnfreezedEx
   /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UnfreezedExImplCopyWith<_$UnfreezedExImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? text = null,
+    Object? name = null,
+    Object? age = null,
+  }) {
+    return _then(_UnfreezedEx(
+      text: null == text
+          ? _self.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: null == name
+          ? _self.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      age: null == age
+          ? _self.age
+          : age // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
 }

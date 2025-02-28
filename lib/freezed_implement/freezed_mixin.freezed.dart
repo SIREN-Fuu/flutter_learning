@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -10,10 +11,6 @@ part of 'freezed_mixin.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 OsWindows _$OsWindowsFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
     case 'windows':
@@ -29,76 +26,53 @@ OsWindows _$OsWindowsFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$OsWindows {
-  String get key => throw _privateConstructorUsedError;
-  String get displayName => throw _privateConstructorUsedError;
-
-  /// Serializes this OsWindows to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  String get key;
+  String get displayName;
 
   /// Create a copy of OsWindows
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $OsWindowsCopyWith<OsWindows> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $OsWindowsCopyWith<$Res> {
-  factory $OsWindowsCopyWith(OsWindows value, $Res Function(OsWindows) then) =
-      _$OsWindowsCopyWithImpl<$Res, OsWindows>;
-  @useResult
-  $Res call({String key, String displayName});
-}
-
-/// @nodoc
-class _$OsWindowsCopyWithImpl<$Res, $Val extends OsWindows>
-    implements $OsWindowsCopyWith<$Res> {
-  _$OsWindowsCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of OsWindows
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
+  $OsWindowsCopyWith<OsWindows> get copyWith =>
+      _$OsWindowsCopyWithImpl<OsWindows>(this as OsWindows, _$identity);
+
+  /// Serializes this OsWindows to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? key = null,
-    Object? displayName = null,
-  }) {
-    return _then(_value.copyWith(
-      key: null == key
-          ? _value.key
-          : key // ignore: cast_nullable_to_non_nullable
-              as String,
-      displayName: null == displayName
-          ? _value.displayName
-          : displayName // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is OsWindows &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.displayName, displayName) ||
+                other.displayName == displayName));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, key, displayName);
+
+  @override
+  String toString() {
+    return 'OsWindows(key: $key, displayName: $displayName)';
   }
 }
 
 /// @nodoc
-abstract class _$$WindowsImplCopyWith<$Res>
-    implements $OsWindowsCopyWith<$Res> {
-  factory _$$WindowsImplCopyWith(
-          _$WindowsImpl value, $Res Function(_$WindowsImpl) then) =
-      __$$WindowsImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $OsWindowsCopyWith<$Res> {
+  factory $OsWindowsCopyWith(OsWindows value, $Res Function(OsWindows) _then) =
+      _$OsWindowsCopyWithImpl;
   @useResult
   $Res call({String key, String displayName});
 }
 
 /// @nodoc
-class __$$WindowsImplCopyWithImpl<$Res>
-    extends _$OsWindowsCopyWithImpl<$Res, _$WindowsImpl>
-    implements _$$WindowsImplCopyWith<$Res> {
-  __$$WindowsImplCopyWithImpl(
-      _$WindowsImpl _value, $Res Function(_$WindowsImpl) _then)
-      : super(_value, _then);
+class _$OsWindowsCopyWithImpl<$Res> implements $OsWindowsCopyWith<$Res> {
+  _$OsWindowsCopyWithImpl(this._self, this._then);
+
+  final OsWindows _self;
+  final $Res Function(OsWindows) _then;
 
   /// Create a copy of OsWindows
   /// with the given fields replaced by the non-null parameter values.
@@ -108,13 +82,13 @@ class __$$WindowsImplCopyWithImpl<$Res>
     Object? key = null,
     Object? displayName = null,
   }) {
-    return _then(_$WindowsImpl(
+    return _then(_self.copyWith(
       key: null == key
-          ? _value.key
+          ? _self.key
           : key // ignore: cast_nullable_to_non_nullable
               as String,
       displayName: null == displayName
-          ? _value.displayName
+          ? _self.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -123,16 +97,15 @@ class __$$WindowsImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$WindowsImpl extends Windows with Utility {
-  _$WindowsImpl(
+class Windows extends OsWindows with Utility {
+  Windows(
       {this.key = 'Windows-Key',
       this.displayName = 'Windows',
       final String? $type})
       : $type = $type ?? 'windows',
         super._();
-
-  factory _$WindowsImpl.fromJson(Map<String, dynamic> json) =>
-      _$$WindowsImplFromJson(json);
+  factory Windows.fromJson(Map<String, dynamic> json) =>
+      _$WindowsFromJson(json);
 
   @override
   @JsonKey()
@@ -144,16 +117,26 @@ class _$WindowsImpl extends Windows with Utility {
   @JsonKey(name: 'runtimeType')
   final String $type;
 
+  /// Create a copy of OsWindows
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'OsWindows.windows(key: $key, displayName: $displayName)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $WindowsCopyWith<Windows> get copyWith =>
+      _$WindowsCopyWithImpl<Windows>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$WindowsToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$WindowsImpl &&
+            other is Windows &&
             (identical(other.key, key) || other.key == key) &&
             (identical(other.displayName, displayName) ||
                 other.displayName == displayName));
@@ -163,75 +146,44 @@ class _$WindowsImpl extends Windows with Utility {
   @override
   int get hashCode => Object.hash(runtimeType, key, displayName);
 
-  /// Create a copy of OsWindows
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @pragma('vm:prefer-inline')
-  _$$WindowsImplCopyWith<_$WindowsImpl> get copyWith =>
-      __$$WindowsImplCopyWithImpl<_$WindowsImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$WindowsImplToJson(
-      this,
-    );
+  String toString() {
+    return 'OsWindows.windows(key: $key, displayName: $displayName)';
   }
 }
 
-abstract class Windows extends OsWindows implements Utility {
-  factory Windows({final String key, final String displayName}) = _$WindowsImpl;
-  Windows._() : super._();
-
-  factory Windows.fromJson(Map<String, dynamic> json) = _$WindowsImpl.fromJson;
-
-  @override
-  String get key;
-  @override
-  String get displayName;
-
-  /// Create a copy of OsWindows
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$WindowsImplCopyWith<_$WindowsImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
 /// @nodoc
-abstract class _$$WindowsNTImplCopyWith<$Res>
+abstract mixin class $WindowsCopyWith<$Res>
     implements $OsWindowsCopyWith<$Res> {
-  factory _$$WindowsNTImplCopyWith(
-          _$WindowsNTImpl value, $Res Function(_$WindowsNTImpl) then) =
-      __$$WindowsNTImplCopyWithImpl<$Res>;
+  factory $WindowsCopyWith(Windows value, $Res Function(Windows) _then) =
+      _$WindowsCopyWithImpl;
   @override
   @useResult
   $Res call({String key, String displayName});
 }
 
 /// @nodoc
-class __$$WindowsNTImplCopyWithImpl<$Res>
-    extends _$OsWindowsCopyWithImpl<$Res, _$WindowsNTImpl>
-    implements _$$WindowsNTImplCopyWith<$Res> {
-  __$$WindowsNTImplCopyWithImpl(
-      _$WindowsNTImpl _value, $Res Function(_$WindowsNTImpl) _then)
-      : super(_value, _then);
+class _$WindowsCopyWithImpl<$Res> implements $WindowsCopyWith<$Res> {
+  _$WindowsCopyWithImpl(this._self, this._then);
+
+  final Windows _self;
+  final $Res Function(Windows) _then;
 
   /// Create a copy of OsWindows
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
     Object? key = null,
     Object? displayName = null,
   }) {
-    return _then(_$WindowsNTImpl(
+    return _then(Windows(
       key: null == key
-          ? _value.key
+          ? _self.key
           : key // ignore: cast_nullable_to_non_nullable
               as String,
       displayName: null == displayName
-          ? _value.displayName
+          ? _self.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -240,16 +192,15 @@ class __$$WindowsNTImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$WindowsNTImpl extends WindowsNT with Utility {
-  _$WindowsNTImpl(
+class WindowsNT extends OsWindows with Utility {
+  WindowsNT(
       {this.key = 'WindowsNT-Key',
       this.displayName = 'WindowsNT',
       final String? $type})
       : $type = $type ?? 'windowsNT',
         super._();
-
-  factory _$WindowsNTImpl.fromJson(Map<String, dynamic> json) =>
-      _$$WindowsNTImplFromJson(json);
+  factory WindowsNT.fromJson(Map<String, dynamic> json) =>
+      _$WindowsNTFromJson(json);
 
   @override
   @JsonKey()
@@ -261,16 +212,26 @@ class _$WindowsNTImpl extends WindowsNT with Utility {
   @JsonKey(name: 'runtimeType')
   final String $type;
 
+  /// Create a copy of OsWindows
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'OsWindows.windowsNT(key: $key, displayName: $displayName)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $WindowsNTCopyWith<WindowsNT> get copyWith =>
+      _$WindowsNTCopyWithImpl<WindowsNT>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$WindowsNTToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$WindowsNTImpl &&
+            other is WindowsNT &&
             (identical(other.key, key) || other.key == key) &&
             (identical(other.displayName, displayName) ||
                 other.displayName == displayName));
@@ -280,41 +241,48 @@ class _$WindowsNTImpl extends WindowsNT with Utility {
   @override
   int get hashCode => Object.hash(runtimeType, key, displayName);
 
-  /// Create a copy of OsWindows
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @pragma('vm:prefer-inline')
-  _$$WindowsNTImplCopyWith<_$WindowsNTImpl> get copyWith =>
-      __$$WindowsNTImplCopyWithImpl<_$WindowsNTImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$WindowsNTImplToJson(
-      this,
-    );
+  String toString() {
+    return 'OsWindows.windowsNT(key: $key, displayName: $displayName)';
   }
 }
 
-abstract class WindowsNT extends OsWindows implements Utility {
-  factory WindowsNT({final String key, final String displayName}) =
-      _$WindowsNTImpl;
-  WindowsNT._() : super._();
-
-  factory WindowsNT.fromJson(Map<String, dynamic> json) =
-      _$WindowsNTImpl.fromJson;
-
+/// @nodoc
+abstract mixin class $WindowsNTCopyWith<$Res>
+    implements $OsWindowsCopyWith<$Res> {
+  factory $WindowsNTCopyWith(WindowsNT value, $Res Function(WindowsNT) _then) =
+      _$WindowsNTCopyWithImpl;
   @override
-  String get key;
-  @override
-  String get displayName;
+  @useResult
+  $Res call({String key, String displayName});
+}
+
+/// @nodoc
+class _$WindowsNTCopyWithImpl<$Res> implements $WindowsNTCopyWith<$Res> {
+  _$WindowsNTCopyWithImpl(this._self, this._then);
+
+  final WindowsNT _self;
+  final $Res Function(WindowsNT) _then;
 
   /// Create a copy of OsWindows
   /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$WindowsNTImplCopyWith<_$WindowsNTImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? key = null,
+    Object? displayName = null,
+  }) {
+    return _then(WindowsNT(
+      key: null == key
+          ? _self.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String,
+      displayName: null == displayName
+          ? _self.displayName
+          : displayName // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }
 
 OsApple _$OsAppleFromJson(Map<String, dynamic> json) {
@@ -332,74 +300,53 @@ OsApple _$OsAppleFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$OsApple {
-  String get key => throw _privateConstructorUsedError;
-  String get displayName => throw _privateConstructorUsedError;
-
-  /// Serializes this OsApple to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  String get key;
+  String get displayName;
 
   /// Create a copy of OsApple
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $OsAppleCopyWith<OsApple> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $OsAppleCopyWith<$Res> {
-  factory $OsAppleCopyWith(OsApple value, $Res Function(OsApple) then) =
-      _$OsAppleCopyWithImpl<$Res, OsApple>;
-  @useResult
-  $Res call({String key, String displayName});
-}
-
-/// @nodoc
-class _$OsAppleCopyWithImpl<$Res, $Val extends OsApple>
-    implements $OsAppleCopyWith<$Res> {
-  _$OsAppleCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of OsApple
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
+  $OsAppleCopyWith<OsApple> get copyWith =>
+      _$OsAppleCopyWithImpl<OsApple>(this as OsApple, _$identity);
+
+  /// Serializes this OsApple to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? key = null,
-    Object? displayName = null,
-  }) {
-    return _then(_value.copyWith(
-      key: null == key
-          ? _value.key
-          : key // ignore: cast_nullable_to_non_nullable
-              as String,
-      displayName: null == displayName
-          ? _value.displayName
-          : displayName // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is OsApple &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.displayName, displayName) ||
+                other.displayName == displayName));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, key, displayName);
+
+  @override
+  String toString() {
+    return 'OsApple(key: $key, displayName: $displayName)';
   }
 }
 
 /// @nodoc
-abstract class _$$MacOSImplCopyWith<$Res> implements $OsAppleCopyWith<$Res> {
-  factory _$$MacOSImplCopyWith(
-          _$MacOSImpl value, $Res Function(_$MacOSImpl) then) =
-      __$$MacOSImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $OsAppleCopyWith<$Res> {
+  factory $OsAppleCopyWith(OsApple value, $Res Function(OsApple) _then) =
+      _$OsAppleCopyWithImpl;
   @useResult
   $Res call({String key, String displayName});
 }
 
 /// @nodoc
-class __$$MacOSImplCopyWithImpl<$Res>
-    extends _$OsAppleCopyWithImpl<$Res, _$MacOSImpl>
-    implements _$$MacOSImplCopyWith<$Res> {
-  __$$MacOSImplCopyWithImpl(
-      _$MacOSImpl _value, $Res Function(_$MacOSImpl) _then)
-      : super(_value, _then);
+class _$OsAppleCopyWithImpl<$Res> implements $OsAppleCopyWith<$Res> {
+  _$OsAppleCopyWithImpl(this._self, this._then);
+
+  final OsApple _self;
+  final $Res Function(OsApple) _then;
 
   /// Create a copy of OsApple
   /// with the given fields replaced by the non-null parameter values.
@@ -409,13 +356,13 @@ class __$$MacOSImplCopyWithImpl<$Res>
     Object? key = null,
     Object? displayName = null,
   }) {
-    return _then(_$MacOSImpl(
+    return _then(_self.copyWith(
       key: null == key
-          ? _value.key
+          ? _self.key
           : key // ignore: cast_nullable_to_non_nullable
               as String,
       displayName: null == displayName
-          ? _value.displayName
+          ? _self.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -424,14 +371,12 @@ class __$$MacOSImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$MacOSImpl extends MacOS {
-  _$MacOSImpl(
+class MacOS extends OsApple {
+  MacOS(
       {this.key = 'macOS-Key', this.displayName = 'macOS', final String? $type})
       : $type = $type ?? 'macOS',
         super._();
-
-  factory _$MacOSImpl.fromJson(Map<String, dynamic> json) =>
-      _$$MacOSImplFromJson(json);
+  factory MacOS.fromJson(Map<String, dynamic> json) => _$MacOSFromJson(json);
 
   @override
   @JsonKey()
@@ -442,92 +387,73 @@ class _$MacOSImpl extends MacOS {
 
   @JsonKey(name: 'runtimeType')
   final String $type;
+
+  /// Create a copy of OsApple
+  /// with the given fields replaced by the non-null parameter values.
+  @override
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $MacOSCopyWith<MacOS> get copyWith =>
+      _$MacOSCopyWithImpl<MacOS>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$MacOSToJson(
+      this,
+    );
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is MacOS &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.displayName, displayName) ||
+                other.displayName == displayName));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, key, displayName);
 
   @override
   String toString() {
     return 'OsApple.macOS(key: $key, displayName: $displayName)';
   }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$MacOSImpl &&
-            (identical(other.key, key) || other.key == key) &&
-            (identical(other.displayName, displayName) ||
-                other.displayName == displayName));
-  }
-
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  int get hashCode => Object.hash(runtimeType, key, displayName);
-
-  /// Create a copy of OsApple
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$MacOSImplCopyWith<_$MacOSImpl> get copyWith =>
-      __$$MacOSImplCopyWithImpl<_$MacOSImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$MacOSImplToJson(
-      this,
-    );
-  }
-}
-
-abstract class MacOS extends OsApple {
-  factory MacOS({final String key, final String displayName}) = _$MacOSImpl;
-  MacOS._() : super._();
-
-  factory MacOS.fromJson(Map<String, dynamic> json) = _$MacOSImpl.fromJson;
-
-  @override
-  String get key;
-  @override
-  String get displayName;
-
-  /// Create a copy of OsApple
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MacOSImplCopyWith<_$MacOSImpl> get copyWith =>
-      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class _$$IOSImplCopyWith<$Res> implements $OsAppleCopyWith<$Res> {
-  factory _$$IOSImplCopyWith(_$IOSImpl value, $Res Function(_$IOSImpl) then) =
-      __$$IOSImplCopyWithImpl<$Res>;
+abstract mixin class $MacOSCopyWith<$Res> implements $OsAppleCopyWith<$Res> {
+  factory $MacOSCopyWith(MacOS value, $Res Function(MacOS) _then) =
+      _$MacOSCopyWithImpl;
   @override
   @useResult
   $Res call({String key, String displayName});
 }
 
 /// @nodoc
-class __$$IOSImplCopyWithImpl<$Res>
-    extends _$OsAppleCopyWithImpl<$Res, _$IOSImpl>
-    implements _$$IOSImplCopyWith<$Res> {
-  __$$IOSImplCopyWithImpl(_$IOSImpl _value, $Res Function(_$IOSImpl) _then)
-      : super(_value, _then);
+class _$MacOSCopyWithImpl<$Res> implements $MacOSCopyWith<$Res> {
+  _$MacOSCopyWithImpl(this._self, this._then);
+
+  final MacOS _self;
+  final $Res Function(MacOS) _then;
 
   /// Create a copy of OsApple
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
     Object? key = null,
     Object? displayName = null,
   }) {
-    return _then(_$IOSImpl(
+    return _then(MacOS(
       key: null == key
-          ? _value.key
+          ? _self.key
           : key // ignore: cast_nullable_to_non_nullable
               as String,
       displayName: null == displayName
-          ? _value.displayName
+          ? _self.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -536,14 +462,11 @@ class __$$IOSImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$IOSImpl extends IOS {
-  _$IOSImpl(
-      {this.key = 'iOS-Key', this.displayName = 'iOS', final String? $type})
+class IOS extends OsApple {
+  IOS({this.key = 'iOS-Key', this.displayName = 'iOS', final String? $type})
       : $type = $type ?? 'iOS',
         super._();
-
-  factory _$IOSImpl.fromJson(Map<String, dynamic> json) =>
-      _$$IOSImplFromJson(json);
+  factory IOS.fromJson(Map<String, dynamic> json) => _$IOSFromJson(json);
 
   @override
   @JsonKey()
@@ -555,16 +478,25 @@ class _$IOSImpl extends IOS {
   @JsonKey(name: 'runtimeType')
   final String $type;
 
+  /// Create a copy of OsApple
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'OsApple.iOS(key: $key, displayName: $displayName)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $IOSCopyWith<IOS> get copyWith => _$IOSCopyWithImpl<IOS>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$IOSToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$IOSImpl &&
+            other is IOS &&
             (identical(other.key, key) || other.key == key) &&
             (identical(other.displayName, displayName) ||
                 other.displayName == displayName));
@@ -574,37 +506,44 @@ class _$IOSImpl extends IOS {
   @override
   int get hashCode => Object.hash(runtimeType, key, displayName);
 
-  /// Create a copy of OsApple
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @pragma('vm:prefer-inline')
-  _$$IOSImplCopyWith<_$IOSImpl> get copyWith =>
-      __$$IOSImplCopyWithImpl<_$IOSImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$IOSImplToJson(
-      this,
-    );
+  String toString() {
+    return 'OsApple.iOS(key: $key, displayName: $displayName)';
   }
 }
 
-abstract class IOS extends OsApple {
-  factory IOS({final String key, final String displayName}) = _$IOSImpl;
-  IOS._() : super._();
-
-  factory IOS.fromJson(Map<String, dynamic> json) = _$IOSImpl.fromJson;
-
+/// @nodoc
+abstract mixin class $IOSCopyWith<$Res> implements $OsAppleCopyWith<$Res> {
+  factory $IOSCopyWith(IOS value, $Res Function(IOS) _then) = _$IOSCopyWithImpl;
   @override
-  String get key;
-  @override
-  String get displayName;
+  @useResult
+  $Res call({String key, String displayName});
+}
+
+/// @nodoc
+class _$IOSCopyWithImpl<$Res> implements $IOSCopyWith<$Res> {
+  _$IOSCopyWithImpl(this._self, this._then);
+
+  final IOS _self;
+  final $Res Function(IOS) _then;
 
   /// Create a copy of OsApple
   /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$IOSImplCopyWith<_$IOSImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? key = null,
+    Object? displayName = null,
+  }) {
+    return _then(IOS(
+      key: null == key
+          ? _self.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String,
+      displayName: null == displayName
+          ? _self.displayName
+          : displayName // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }

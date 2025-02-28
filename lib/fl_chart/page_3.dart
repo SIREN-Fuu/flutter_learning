@@ -93,7 +93,7 @@ class _Page3State extends State<Page3> {
     }
 
     return SideTitleWidget(
-      axisSide: meta.axisSide,
+      meta: meta,
       child: text,
     );
   }
@@ -363,7 +363,7 @@ class _Page3State extends State<Page3> {
             show: true,
             gradient: LinearGradient(
               colors: gradientPlusColors
-                  .map((color) => color.withValues(alpha:0.3))
+                  .map((color) => color.withValues(alpha: 0.3))
                   .toList(),
             ),
           ),

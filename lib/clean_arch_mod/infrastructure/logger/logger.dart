@@ -18,7 +18,7 @@ class DefaultLogger implements CleanArchLogger {
   final String? consoleFilterTag;
   final LogLevel consoleFilterMinLevel;
 
-  final _logLevelPrefixes = {
+  final Map<LogLevel, String> _logLevelPrefixes = {
     LogLevel.fatal: 'FATAL',
     LogLevel.error: 'ERROR',
     LogLevel.warn: 'WARN',

@@ -3,7 +3,7 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 import '../../core/types/flavor.dart';
 
-final flavorProvider = Provider((ref) {
+final Provider<Flavor> flavorProvider = Provider((ref) {
   final flavor = readFlavor();
   return flavor;
 });

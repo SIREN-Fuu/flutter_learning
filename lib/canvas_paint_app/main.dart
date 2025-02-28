@@ -1,6 +1,6 @@
 import 'dart:io';
-import 'dart:ui';
 import 'dart:ui' as ui;
+import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
     }
   }
 
-  static const offsetY = -50;
+  static const int offsetY = -50;
 
   // 描画開始イベント
   Future<void> newGestureDetector(

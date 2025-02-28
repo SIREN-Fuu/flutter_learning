@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -10,10 +11,6 @@ part of 'freezed_implements.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 OsLinux _$OsLinuxFromJson(Map<String, dynamic> json) {
   switch (json['runtimeType']) {
     case 'ubuntu':
@@ -29,74 +26,53 @@ OsLinux _$OsLinuxFromJson(Map<String, dynamic> json) {
 
 /// @nodoc
 mixin _$OsLinux {
-  String get key => throw _privateConstructorUsedError;
-  String get displayName => throw _privateConstructorUsedError;
-
-  /// Serializes this OsLinux to a JSON map.
-  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  String get key;
+  String get displayName;
 
   /// Create a copy of OsLinux
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $OsLinuxCopyWith<OsLinux> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $OsLinuxCopyWith<$Res> {
-  factory $OsLinuxCopyWith(OsLinux value, $Res Function(OsLinux) then) =
-      _$OsLinuxCopyWithImpl<$Res, OsLinux>;
-  @useResult
-  $Res call({String key, String displayName});
-}
-
-/// @nodoc
-class _$OsLinuxCopyWithImpl<$Res, $Val extends OsLinux>
-    implements $OsLinuxCopyWith<$Res> {
-  _$OsLinuxCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of OsLinux
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
+  $OsLinuxCopyWith<OsLinux> get copyWith =>
+      _$OsLinuxCopyWithImpl<OsLinux>(this as OsLinux, _$identity);
+
+  /// Serializes this OsLinux to a JSON map.
+  Map<String, dynamic> toJson();
+
   @override
-  $Res call({
-    Object? key = null,
-    Object? displayName = null,
-  }) {
-    return _then(_value.copyWith(
-      key: null == key
-          ? _value.key
-          : key // ignore: cast_nullable_to_non_nullable
-              as String,
-      displayName: null == displayName
-          ? _value.displayName
-          : displayName // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is OsLinux &&
+            (identical(other.key, key) || other.key == key) &&
+            (identical(other.displayName, displayName) ||
+                other.displayName == displayName));
+  }
+
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  int get hashCode => Object.hash(runtimeType, key, displayName);
+
+  @override
+  String toString() {
+    return 'OsLinux(key: $key, displayName: $displayName)';
   }
 }
 
 /// @nodoc
-abstract class _$$UbuntuImplCopyWith<$Res> implements $OsLinuxCopyWith<$Res> {
-  factory _$$UbuntuImplCopyWith(
-          _$UbuntuImpl value, $Res Function(_$UbuntuImpl) then) =
-      __$$UbuntuImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $OsLinuxCopyWith<$Res> {
+  factory $OsLinuxCopyWith(OsLinux value, $Res Function(OsLinux) _then) =
+      _$OsLinuxCopyWithImpl;
   @useResult
   $Res call({String key, String displayName});
 }
 
 /// @nodoc
-class __$$UbuntuImplCopyWithImpl<$Res>
-    extends _$OsLinuxCopyWithImpl<$Res, _$UbuntuImpl>
-    implements _$$UbuntuImplCopyWith<$Res> {
-  __$$UbuntuImplCopyWithImpl(
-      _$UbuntuImpl _value, $Res Function(_$UbuntuImpl) _then)
-      : super(_value, _then);
+class _$OsLinuxCopyWithImpl<$Res> implements $OsLinuxCopyWith<$Res> {
+  _$OsLinuxCopyWithImpl(this._self, this._then);
+
+  final OsLinux _self;
+  final $Res Function(OsLinux) _then;
 
   /// Create a copy of OsLinux
   /// with the given fields replaced by the non-null parameter values.
@@ -106,13 +82,13 @@ class __$$UbuntuImplCopyWithImpl<$Res>
     Object? key = null,
     Object? displayName = null,
   }) {
-    return _then(_$UbuntuImpl(
+    return _then(_self.copyWith(
       key: null == key
-          ? _value.key
+          ? _self.key
           : key // ignore: cast_nullable_to_non_nullable
               as String,
       displayName: null == displayName
-          ? _value.displayName
+          ? _self.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -121,16 +97,14 @@ class __$$UbuntuImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$UbuntuImpl extends Ubuntu {
-  _$UbuntuImpl(
+class Ubuntu extends OsLinux {
+  Ubuntu(
       {this.key = 'Ubuntu-Key',
       this.displayName = 'Ubuntu',
       final String? $type})
       : $type = $type ?? 'ubuntu',
         super._();
-
-  factory _$UbuntuImpl.fromJson(Map<String, dynamic> json) =>
-      _$$UbuntuImplFromJson(json);
+  factory Ubuntu.fromJson(Map<String, dynamic> json) => _$UbuntuFromJson(json);
 
   @override
   @JsonKey()
@@ -142,16 +116,26 @@ class _$UbuntuImpl extends Ubuntu {
   @JsonKey(name: 'runtimeType')
   final String $type;
 
+  /// Create a copy of OsLinux
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'OsLinux.ubuntu(key: $key, displayName: $displayName)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $UbuntuCopyWith<Ubuntu> get copyWith =>
+      _$UbuntuCopyWithImpl<Ubuntu>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$UbuntuToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$UbuntuImpl &&
+            other is Ubuntu &&
             (identical(other.key, key) || other.key == key) &&
             (identical(other.displayName, displayName) ||
                 other.displayName == displayName));
@@ -161,74 +145,43 @@ class _$UbuntuImpl extends Ubuntu {
   @override
   int get hashCode => Object.hash(runtimeType, key, displayName);
 
-  /// Create a copy of OsLinux
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @pragma('vm:prefer-inline')
-  _$$UbuntuImplCopyWith<_$UbuntuImpl> get copyWith =>
-      __$$UbuntuImplCopyWithImpl<_$UbuntuImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$UbuntuImplToJson(
-      this,
-    );
+  String toString() {
+    return 'OsLinux.ubuntu(key: $key, displayName: $displayName)';
   }
 }
 
-abstract class Ubuntu extends OsLinux {
-  factory Ubuntu({final String key, final String displayName}) = _$UbuntuImpl;
-  Ubuntu._() : super._();
-
-  factory Ubuntu.fromJson(Map<String, dynamic> json) = _$UbuntuImpl.fromJson;
-
-  @override
-  String get key;
-  @override
-  String get displayName;
-
-  /// Create a copy of OsLinux
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$UbuntuImplCopyWith<_$UbuntuImpl> get copyWith =>
-      throw _privateConstructorUsedError;
-}
-
 /// @nodoc
-abstract class _$$RedHatImplCopyWith<$Res> implements $OsLinuxCopyWith<$Res> {
-  factory _$$RedHatImplCopyWith(
-          _$RedHatImpl value, $Res Function(_$RedHatImpl) then) =
-      __$$RedHatImplCopyWithImpl<$Res>;
+abstract mixin class $UbuntuCopyWith<$Res> implements $OsLinuxCopyWith<$Res> {
+  factory $UbuntuCopyWith(Ubuntu value, $Res Function(Ubuntu) _then) =
+      _$UbuntuCopyWithImpl;
   @override
   @useResult
   $Res call({String key, String displayName});
 }
 
 /// @nodoc
-class __$$RedHatImplCopyWithImpl<$Res>
-    extends _$OsLinuxCopyWithImpl<$Res, _$RedHatImpl>
-    implements _$$RedHatImplCopyWith<$Res> {
-  __$$RedHatImplCopyWithImpl(
-      _$RedHatImpl _value, $Res Function(_$RedHatImpl) _then)
-      : super(_value, _then);
+class _$UbuntuCopyWithImpl<$Res> implements $UbuntuCopyWith<$Res> {
+  _$UbuntuCopyWithImpl(this._self, this._then);
+
+  final Ubuntu _self;
+  final $Res Function(Ubuntu) _then;
 
   /// Create a copy of OsLinux
   /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
   @override
+  @pragma('vm:prefer-inline')
   $Res call({
     Object? key = null,
     Object? displayName = null,
   }) {
-    return _then(_$RedHatImpl(
+    return _then(Ubuntu(
       key: null == key
-          ? _value.key
+          ? _self.key
           : key // ignore: cast_nullable_to_non_nullable
               as String,
       displayName: null == displayName
-          ? _value.displayName
+          ? _self.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -237,16 +190,14 @@ class __$$RedHatImplCopyWithImpl<$Res>
 
 /// @nodoc
 @JsonSerializable()
-class _$RedHatImpl extends RedHat {
-  _$RedHatImpl(
+class RedHat extends OsLinux {
+  RedHat(
       {this.key = 'RedHat-Key',
       this.displayName = 'RedHat',
       final String? $type})
       : $type = $type ?? 'redHat',
         super._();
-
-  factory _$RedHatImpl.fromJson(Map<String, dynamic> json) =>
-      _$$RedHatImplFromJson(json);
+  factory RedHat.fromJson(Map<String, dynamic> json) => _$RedHatFromJson(json);
 
   @override
   @JsonKey()
@@ -258,16 +209,26 @@ class _$RedHatImpl extends RedHat {
   @JsonKey(name: 'runtimeType')
   final String $type;
 
+  /// Create a copy of OsLinux
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'OsLinux.redHat(key: $key, displayName: $displayName)';
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  $RedHatCopyWith<RedHat> get copyWith =>
+      _$RedHatCopyWithImpl<RedHat>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$RedHatToJson(
+      this,
+    );
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$RedHatImpl &&
+            other is RedHat &&
             (identical(other.key, key) || other.key == key) &&
             (identical(other.displayName, displayName) ||
                 other.displayName == displayName));
@@ -277,37 +238,45 @@ class _$RedHatImpl extends RedHat {
   @override
   int get hashCode => Object.hash(runtimeType, key, displayName);
 
-  /// Create a copy of OsLinux
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @pragma('vm:prefer-inline')
-  _$$RedHatImplCopyWith<_$RedHatImpl> get copyWith =>
-      __$$RedHatImplCopyWithImpl<_$RedHatImpl>(this, _$identity);
-
-  @override
-  Map<String, dynamic> toJson() {
-    return _$$RedHatImplToJson(
-      this,
-    );
+  String toString() {
+    return 'OsLinux.redHat(key: $key, displayName: $displayName)';
   }
 }
 
-abstract class RedHat extends OsLinux {
-  factory RedHat({final String key, final String displayName}) = _$RedHatImpl;
-  RedHat._() : super._();
-
-  factory RedHat.fromJson(Map<String, dynamic> json) = _$RedHatImpl.fromJson;
-
+/// @nodoc
+abstract mixin class $RedHatCopyWith<$Res> implements $OsLinuxCopyWith<$Res> {
+  factory $RedHatCopyWith(RedHat value, $Res Function(RedHat) _then) =
+      _$RedHatCopyWithImpl;
   @override
-  String get key;
-  @override
-  String get displayName;
+  @useResult
+  $Res call({String key, String displayName});
+}
+
+/// @nodoc
+class _$RedHatCopyWithImpl<$Res> implements $RedHatCopyWith<$Res> {
+  _$RedHatCopyWithImpl(this._self, this._then);
+
+  final RedHat _self;
+  final $Res Function(RedHat) _then;
 
   /// Create a copy of OsLinux
   /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$RedHatImplCopyWith<_$RedHatImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? key = null,
+    Object? displayName = null,
+  }) {
+    return _then(RedHat(
+      key: null == key
+          ? _self.key
+          : key // ignore: cast_nullable_to_non_nullable
+              as String,
+      displayName: null == displayName
+          ? _self.displayName
+          : displayName // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }

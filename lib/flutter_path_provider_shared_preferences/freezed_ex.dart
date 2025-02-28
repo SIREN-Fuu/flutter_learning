@@ -6,7 +6,7 @@ part 'freezed_ex.freezed.dart';
 part 'freezed_ex.g.dart';
 
 @freezed
-class FreezedEx with _$FreezedEx {
+sealed class FreezedEx with _$FreezedEx {
   const factory FreezedEx({
     @Default('') String text,
     @Default('') String name,
@@ -25,7 +25,7 @@ class FreezedEx with _$FreezedEx {
 }
 
 @unfreezed
-class UnfreezedEx with _$UnfreezedEx {
+sealed class UnfreezedEx with _$UnfreezedEx {
   factory UnfreezedEx({
     @Default('') String text,
     @Default('') String name,

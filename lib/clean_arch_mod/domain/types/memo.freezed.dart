@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -11,86 +12,57 @@ part of 'memo.dart';
 
 T _$identity<T>(T value) => value;
 
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 /// @nodoc
 mixin _$Memo {
   /// ID
-  String get id => throw _privateConstructorUsedError;
+  String get id;
 
   /// ステータス
-  Status get status => throw _privateConstructorUsedError;
+  Status get status;
 
   /// 書かれた文字
-  String get text => throw _privateConstructorUsedError;
+  String get text;
 
   /// Create a copy of Memo
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  $MemoCopyWith<Memo> get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $MemoCopyWith<$Res> {
-  factory $MemoCopyWith(Memo value, $Res Function(Memo) then) =
-      _$MemoCopyWithImpl<$Res, Memo>;
-  @useResult
-  $Res call({String id, Status status, String text});
-}
-
-/// @nodoc
-class _$MemoCopyWithImpl<$Res, $Val extends Memo>
-    implements $MemoCopyWith<$Res> {
-  _$MemoCopyWithImpl(this._value, this._then);
-
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
-
-  /// Create a copy of Memo
-  /// with the given fields replaced by the non-null parameter values.
   @pragma('vm:prefer-inline')
+  $MemoCopyWith<Memo> get copyWith =>
+      _$MemoCopyWithImpl<Memo>(this as Memo, _$identity);
+
   @override
-  $Res call({
-    Object? id = null,
-    Object? status = null,
-    Object? text = null,
-  }) {
-    return _then(_value.copyWith(
-      id: null == id
-          ? _value.id
-          : id // ignore: cast_nullable_to_non_nullable
-              as String,
-      status: null == status
-          ? _value.status
-          : status // ignore: cast_nullable_to_non_nullable
-              as Status,
-      text: null == text
-          ? _value.text
-          : text // ignore: cast_nullable_to_non_nullable
-              as String,
-    ) as $Val);
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is Memo &&
+            (identical(other.id, id) || other.id == id) &&
+            (identical(other.status, status) || other.status == status) &&
+            (identical(other.text, text) || other.text == text));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, id, status, text);
+
+  @override
+  String toString() {
+    return 'Memo(id: $id, status: $status, text: $text)';
   }
 }
 
 /// @nodoc
-abstract class _$$MemoImplCopyWith<$Res> implements $MemoCopyWith<$Res> {
-  factory _$$MemoImplCopyWith(
-          _$MemoImpl value, $Res Function(_$MemoImpl) then) =
-      __$$MemoImplCopyWithImpl<$Res>;
-  @override
+abstract mixin class $MemoCopyWith<$Res> {
+  factory $MemoCopyWith(Memo value, $Res Function(Memo) _then) =
+      _$MemoCopyWithImpl;
   @useResult
   $Res call({String id, Status status, String text});
 }
 
 /// @nodoc
-class __$$MemoImplCopyWithImpl<$Res>
-    extends _$MemoCopyWithImpl<$Res, _$MemoImpl>
-    implements _$$MemoImplCopyWith<$Res> {
-  __$$MemoImplCopyWithImpl(_$MemoImpl _value, $Res Function(_$MemoImpl) _then)
-      : super(_value, _then);
+class _$MemoCopyWithImpl<$Res> implements $MemoCopyWith<$Res> {
+  _$MemoCopyWithImpl(this._self, this._then);
+
+  final Memo _self;
+  final $Res Function(Memo) _then;
 
   /// Create a copy of Memo
   /// with the given fields replaced by the non-null parameter values.
@@ -101,17 +73,17 @@ class __$$MemoImplCopyWithImpl<$Res>
     Object? status = null,
     Object? text = null,
   }) {
-    return _then(_$MemoImpl(
+    return _then(_self.copyWith(
       id: null == id
-          ? _value.id
+          ? _self.id
           : id // ignore: cast_nullable_to_non_nullable
               as String,
       status: null == status
-          ? _value.status
+          ? _self.status
           : status // ignore: cast_nullable_to_non_nullable
               as Status,
       text: null == text
-          ? _value.text
+          ? _self.text
           : text // ignore: cast_nullable_to_non_nullable
               as String,
     ));
@@ -120,9 +92,8 @@ class __$$MemoImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$MemoImpl implements _Memo {
-  const _$MemoImpl(
-      {required this.id, required this.status, required this.text});
+class _Memo implements Memo {
+  const _Memo({required this.id, required this.status, required this.text});
 
   /// ID
   @override
@@ -136,16 +107,19 @@ class _$MemoImpl implements _Memo {
   @override
   final String text;
 
+  /// Create a copy of Memo
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  String toString() {
-    return 'Memo(id: $id, status: $status, text: $text)';
-  }
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @pragma('vm:prefer-inline')
+  _$MemoCopyWith<_Memo> get copyWith =>
+      __$MemoCopyWithImpl<_Memo>(this, _$identity);
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$MemoImpl &&
+            other is _Memo &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.status, status) || other.status == status) &&
             (identical(other.text, text) || other.text == text));
@@ -154,37 +128,50 @@ class _$MemoImpl implements _Memo {
   @override
   int get hashCode => Object.hash(runtimeType, id, status, text);
 
-  /// Create a copy of Memo
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  @pragma('vm:prefer-inline')
-  _$$MemoImplCopyWith<_$MemoImpl> get copyWith =>
-      __$$MemoImplCopyWithImpl<_$MemoImpl>(this, _$identity);
+  String toString() {
+    return 'Memo(id: $id, status: $status, text: $text)';
+  }
 }
 
-abstract class _Memo implements Memo {
-  const factory _Memo(
-      {required final String id,
-      required final Status status,
-      required final String text}) = _$MemoImpl;
-
-  /// ID
+/// @nodoc
+abstract mixin class _$MemoCopyWith<$Res> implements $MemoCopyWith<$Res> {
+  factory _$MemoCopyWith(_Memo value, $Res Function(_Memo) _then) =
+      __$MemoCopyWithImpl;
   @override
-  String get id;
+  @useResult
+  $Res call({String id, Status status, String text});
+}
 
-  /// ステータス
-  @override
-  Status get status;
+/// @nodoc
+class __$MemoCopyWithImpl<$Res> implements _$MemoCopyWith<$Res> {
+  __$MemoCopyWithImpl(this._self, this._then);
 
-  /// 書かれた文字
-  @override
-  String get text;
+  final _Memo _self;
+  final $Res Function(_Memo) _then;
 
   /// Create a copy of Memo
   /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$MemoImplCopyWith<_$MemoImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  @pragma('vm:prefer-inline')
+  $Res call({
+    Object? id = null,
+    Object? status = null,
+    Object? text = null,
+  }) {
+    return _then(_Memo(
+      id: null == id
+          ? _self.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String,
+      status: null == status
+          ? _self.status
+          : status // ignore: cast_nullable_to_non_nullable
+              as Status,
+      text: null == text
+          ? _self.text
+          : text // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
 }

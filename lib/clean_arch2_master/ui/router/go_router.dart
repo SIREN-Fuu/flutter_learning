@@ -10,7 +10,7 @@ import '../../ui/router/signed_in_scope.dart';
 import '../../ui/router/version_updater.dart';
 
 /// Provide GoRouter
-final goRouterProvider = Provider(
+final Provider<GoRouter> goRouterProvider = Provider(
   (ref) {
     /// スプラッシュ画面
     final splash = GoRoute(

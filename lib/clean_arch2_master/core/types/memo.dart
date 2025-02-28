@@ -5,7 +5,7 @@ import '../../core/types/status.dart';
 part 'memo.freezed.dart';
 
 @freezed
-class Memo with _$Memo {
+sealed class Memo with _$Memo {
   const factory Memo({
     /// ID
     required String id,
