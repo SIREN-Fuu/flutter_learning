@@ -11,7 +11,7 @@ part 'main.freezed.dart';
 part 'main.g.dart';
 
 @freezed
-class Counters with _$Counters {
+sealed class Counters with _$Counters {
   const factory Counters({
     @Default(0) int testInt,
     @Default('') String testString,

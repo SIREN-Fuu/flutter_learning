@@ -18,6 +18,7 @@ mixin _$OsRedHat {
 //     _$OsRedHatFromJson(json);
   String get key;
   String get displayName;
+  Color get color;
 
   /// Create a copy of OsRedHat
   /// with the given fields replaced by the non-null parameter values.
@@ -33,16 +34,17 @@ mixin _$OsRedHat {
             other is OsRedHat &&
             (identical(other.key, key) || other.key == key) &&
             (identical(other.displayName, displayName) ||
-                other.displayName == displayName));
+                other.displayName == displayName) &&
+            (identical(other.color, color) || other.color == color));
   }
 
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  int get hashCode => Object.hash(runtimeType, key, displayName);
+  int get hashCode => Object.hash(runtimeType, key, displayName, color);
 
   @override
   String toString() {
-    return 'OsRedHat(key: $key, displayName: $displayName)';
+    return 'OsRedHat(key: $key, displayName: $displayName, color: $color)';
   }
 }
 
@@ -51,7 +53,7 @@ abstract mixin class $OsRedHatCopyWith<$Res> {
   factory $OsRedHatCopyWith(OsRedHat value, $Res Function(OsRedHat) _then) =
       _$OsRedHatCopyWithImpl;
   @useResult
-  $Res call({String key, String displayName});
+  $Res call({String key, String displayName, Color color});
 }
 
 /// @nodoc
@@ -68,6 +70,7 @@ class _$OsRedHatCopyWithImpl<$Res> implements $OsRedHatCopyWith<$Res> {
   $Res call({
     Object? key = null,
     Object? displayName = null,
+    Object? color = null,
   }) {
     return _then(OsRedHat(
       key: null == key
@@ -78,6 +81,10 @@ class _$OsRedHatCopyWithImpl<$Res> implements $OsRedHatCopyWith<$Res> {
           ? _self.displayName
           : displayName // ignore: cast_nullable_to_non_nullable
               as String,
+      color: null == color
+          ? _self.color
+          : color // ignore: cast_nullable_to_non_nullable
+              as Color,
     ));
   }
 }

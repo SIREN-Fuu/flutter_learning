@@ -2,6 +2,7 @@
 
 import 'dart:core';
 
+import 'package:flutter/material.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'freezed_implements.freezed.dart';
@@ -12,6 +13,7 @@ class OsRedHat with _$OsRedHat {
   OsRedHat({
     this.key = 'RedHat-Key',
     this.displayName = 'RedHat',
+    this.color = Colors.red,
   });
 
   // factory OsRedHat.fromJson(Map<String, dynamic> json) =>
@@ -21,6 +23,8 @@ class OsRedHat with _$OsRedHat {
   final String key;
   @override
   final String displayName;
+  @override
+  final Color color;
 
   // String toStringEx() => json.encode(toJson());
 }
